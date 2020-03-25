@@ -46,13 +46,13 @@ def getModelName(model, neurons, epochs, batch_size, acc):
         model_name += 'Dense_' + str(neurons)
     model_name += '_epochs_' + str(epochs)
     model_name += '_BS_' + str(batch_size)
-    model_name += '_acc_' + acc + '.h5'
+    model_name += '_acc_' + str(acc) + '.h5'
 
     return model_name
 
 
 def loadFile(argument: Optional = None):
-    filename = 'C:\\Users\\Admin\\Desktop\\Misko bakalarka\\final_dataset.csv'
+    filename = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset.csv'
     with open(filename, 'r') as file:
         lines = file.readlines()
 
