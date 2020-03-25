@@ -9,9 +9,10 @@ import sys
 
 # so that numpy prints the whole array
 np.set_printoptions(threshold=sys.maxsize)
+np.random.seed(7)
 
 MAX_CONTEXTS = 430  # mean length of context paths
-neurons = 150
+neurons = 200
 epochs = 3
 batch_size = 32
 
@@ -57,7 +58,7 @@ print("%s: %.4f%%" % (model.metrics_names[1], score[1]*100))
 print("%s: %.4f%%" % (model.metrics_names[0], score[0]*100))
 
 # save model and architecture to single file
-model_name = getModelName(model, neurons, epochs, batch_size)
+model_name = getModelName(model, neurons, epochs, batch_size, score[1]*100)
 model.save(model_name)
 print("Saved model to disk.")
 
@@ -67,7 +68,7 @@ print("Saved model to disk.")
 # print(predict_output[0])
 
 # create graphs for loss and accuracy
-doGraphs(history)
+doGraphs(history, model_name)
 # TODO save graphs
 
 # # load model

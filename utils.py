@@ -29,10 +29,10 @@ def cropOutputs(x):
     return x[0] * padding
 
 
-def getModelName(model, neurons, epochs, batch_size):
+def getModelName(model, neurons, epochs, batch_size, acc):
     model_name = 'models/'
     pos = 0
-    if model.layers[0].name == 'input1':
+    if model.layers[0].name == 'input_1':
         pos = 1
 
     if model.layers[pos].name == 'masking_1':
@@ -45,13 +45,14 @@ def getModelName(model, neurons, epochs, batch_size):
     elif model.layers[pos].name == 'dense_1':
         model_name += 'Dense_' + str(neurons)
     model_name += '_epochs_' + str(epochs)
-    model_name += '_BS_' + str(batch_size) + '.h5'
+    model_name += '_BS_' + str(batch_size)
+    model_name += '_acc_' + acc + '.h5'
 
     return model_name
 
 
 def loadFile(argument: Optional = None):
-    filename = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset.csv'
+    filename = 'C:\\Users\\Admin\\Desktop\\Misko bakalarka\\final_dataset.csv'
     with open(filename, 'r') as file:
         lines = file.readlines()
 
