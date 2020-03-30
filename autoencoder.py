@@ -1,8 +1,8 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from keras.models import Model
-from keras.layers import LSTM, RepeatVector, TimeDistributed, Dense, Masking, Dropout, Input
-from utils import loadFile, doGraphs, TimingCallback, getModelName
+from keras.layers import LSTM, RepeatVector, TimeDistributed, Dense, Masking, Dropout, Input, Lambda
+from utils import loadFile, doGraphs, TimingCallback, getModelName, cropOutputs
 import numpy as np
 import sys
 
@@ -11,12 +11,10 @@ np.set_printoptions(threshold=sys.maxsize)
 np.random.seed(7)
 
 neurons = 100
-epochs = 1
-batch_size = 32
+epochs = 500
+batch_size = 256
 
-# TODO activity_regularizer=regularizers.l1(10e-5) --> sparsity constraints
 # TODO dropout
-# TODO different value ranges e.g. [0, 1]
 # TODO If the initial predictions of your model are too far from this range, you might like to have a BatchNormalization (not really necessary) before or after the last Dense
 
 inputs = Input(shape=(430, 3))
@@ -25,12 +23,12 @@ encoded = LSTM(neurons)(masked_input)
 decoded = RepeatVector(430)(encoded)
 decoded = LSTM(neurons, return_sequences=True)(decoded)
 decoded = TimeDistributed(Dense(3))(decoded)
+decoded = Lambda(cropOutputs, output_shape=(430, 3))([decoded, inputs])
 model = Model(inputs, decoded)
 model.compile(optimizer='adam', loss='mse', metrics=['accuracy'])  # binary_crossentropy
 print(model.summary())
-# TODO masking
 
-# load data and split into train, validate and test (60, 20, 20)
+# load data and split into train, validate and test (70, 20, 10)
 context_paths = loadFile()
 train, validate, test = np.split(context_paths, [int(.7*len(context_paths)), int(.9*len(context_paths))])
 

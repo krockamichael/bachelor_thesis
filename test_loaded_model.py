@@ -1,6 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from keras.models import load_model
+from keras import Model
 from utils import loadFile
 import sys
 import numpy as np
@@ -9,8 +10,11 @@ import numpy as np
 np.set_printoptions(threshold=sys.maxsize)
 
 # load model
-model = load_model('models/model_LSTM_100_mask.h5')
+model = load_model('models/LSTM_100_mask_epochs_300_BS_256_acc_87.86989450454712.h5')
 print(model.summary())
+
+# get only encoder part
+encoder = Model(input=model.layers[0].input, output=model.layers[2].output)
 
 # load data
 context_paths = loadFile()
