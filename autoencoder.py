@@ -34,8 +34,8 @@ train, validate, test = np.split(context_paths, [int(.7*len(context_paths)), int
 
 cb = TimingCallback()
 print('Fitting model...')
-history = model.fit(train, train, epochs=epochs, batch_size=batch_size, verbose=1, shuffle=True,
-                    validation_data=(validate, validate), callbacks=[cb])
+history = model.fit(train, train, epochs=epochs, batch_size=batch_size, verbose=1,
+                    shuffle=True, validation_data=(validate, validate), callbacks=[cb])
 print(cb.logs)
 print(sum(cb.logs))
 
@@ -44,7 +44,7 @@ score = model.evaluate(test, test, verbose=1)
 print("%s: %.2f%%" % (model.metrics_names[1], score[1]*100))
 print("%s: %.2f%%" % (model.metrics_names[0], score[0]*100))
 
-# save model and architecture to single file
+# save model and weights to single file
 model_name = getModelName(model, neurons, epochs, batch_size, score[1]*100)
 model.save(model_name)
 print("Saved model to disk.")

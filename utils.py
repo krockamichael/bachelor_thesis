@@ -2,9 +2,30 @@ from typing import Optional
 import numpy as np
 import matplotlib.pyplot as plt
 import keras
-from keras import backend as K
+from keras import backend as K, Model
 from timeit import default_timer as timer
 from keras.engine import InputSpec, Layer
+from keras.models import load_model
+
+
+# computing an auxiliary target distribution
+def target_distribution(q_):
+    weight = q_ ** 2 / q_.sum(0)
+    return (weight.T / weight.sum(1)).T
+
+
+def getClusteringModel_andEncoder(n_clusters):
+    # load autoencoder model
+    autoencoder = load_model('models/LSTM_100_mask_epochs_300_BS_256_acc_87.86989450454712.h5')
+
+    # get only encoder part
+    encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[2].output)
+    clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
+    model = Model(inputs=encoder.input, outputs=clustering_layer)
+    model.load_weights('clustering_weights/clusters_' + str(n_clusters) + '.h5')
+    model.compile(optimizer='adam', loss='mse')  # optimizer=SGD(0.01, 0.9), loss='kld')
+
+    return model, encoder
 
 
 class TimingCallback(keras.callbacks.Callback):
@@ -49,7 +70,7 @@ class ClusteringLayer(Layer):
         assert len(input_shape) == 2
         input_dim = input_shape[1]
         self.input_spec = InputSpec(dtype=K.floatx(), shape=(None, input_dim))
-        self.clusters = self.add_weight((self.n_clusters, input_dim), initializer='glorot_uniform', name='clusters')
+        self.clusters = self.add_weight(shape=(self.n_clusters, input_dim), name='clusters', initializer='glorot_uniform')
         if self.initial_weights is not None:
             self.set_weights(self.initial_weights)
             del self.initial_weights
@@ -90,6 +111,10 @@ def cropOutputs(x):
     # if you have zeros for non-padded data, they will lose their backpropagation
 
     return x[0] * padding
+
+
+def getClusteringModelName(number):
+    return 'clusters_' + str(number) + '.h5'
 
 
 def getModelName(model, neurons, epochs, batch_size, acc):
