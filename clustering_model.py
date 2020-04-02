@@ -1,22 +1,26 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-from utils import loadFile, getClusteringModelName, getClusteringModel_andEncoder, target_distribution
+from keras.models import load_model
+from keras.optimizers import SGD
+from keras import Model
+from utils import loadFile, ClusteringLayer, getClusteringModelName, target_distribution, getClusteringModel_andEncoder
 from sklearn.cluster import KMeans
 import numpy as np
 
-n_clusters = 11  # as a start 10, 8, 7, 6, 11
+n_clusters = 9  # as a start 10, 11, 12, 13
 batch_size = 256
-
-# load clustering model and encoder
-model, encoder = getClusteringModel_andEncoder(n_clusters)
-print(model.summary())
 
 # load data
 context_paths = loadFile()
 print('Loaded data.')
 
+# load model
+model, encoder = getClusteringModel_andEncoder(n_clusters, train=True)
+print(model.summary())
+
 # init cluster centers using k-means
 kmeans = KMeans(n_clusters=n_clusters, n_init=20)
+print('Predicting "labels"...')
 y_pred = kmeans.fit_predict(encoder.predict(context_paths))
 y_pred_last = np.copy(y_pred)  # ???
 model.get_layer(name='clustering').set_weights([kmeans.cluster_centers_])
@@ -31,6 +35,7 @@ index_array = np.arange(context_paths.shape[0])
 tol = 0.001  # tolerance threshold to stop training
 
 # start training
+print('Starting training...')
 for ite in range(int(maxiter)):
     if ite % update_interval == 0:
         print('Iteration {}'.format(ite))

@@ -1,15 +1,12 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from sklearn.cluster import KMeans
-from utils import loadFile, getClusteringModel_andEncoder
-from sklearn.metrics import confusion_matrix
-import matplotlib.pyplot as plt
-import seaborn as sns
+from utils import loadFile, getClusteringModel_andEncoder, doGraphsClustering
 
-n_clusters = 11
+n_clusters = 9
 
 # load clustering model and encoder
-model, encoder = getClusteringModel_andEncoder(n_clusters)
+model, encoder = getClusteringModel_andEncoder(n_clusters, train=False)
 print(model.summary())
 
 # load data
@@ -29,26 +26,5 @@ x_encoder = encoder.predict(context_paths, verbose=1)
 print('Predicting encoder model labels...')
 y_encoder = kmeans.fit_predict(x_encoder)
 
-# create scatterplot from labels assigned to data predicted by CLUSTERING model
-plt.figure(figsize=(6, 6))
-plt.scatter(x_model[:, 0], x_model[:, 1], c=y_model)
-plt.colorbar()
-plt.title('Scatterplot - clustering')
-plt.show()
-
-# create scatterplot from labels assigned to data predicted by ENCODER model
-plt.figure(figsize=(6, 6))
-plt.scatter(x_encoder[:, 0], x_encoder[:, 1], c=y_encoder)
-plt.colorbar()
-plt.title('Scatterplot - encoder')
-plt.show()
-
-# create confusion matrix from predictions based on data predicted by clustering and encoder models
-sns.set(font_scale=3)
-confusion_matrix = confusion_matrix(y_encoder, y_model)
-plt.figure(figsize=(16, 14))
-sns.heatmap(confusion_matrix, annot=True, fmt="d", annot_kws={"size": 20})
-plt.title("Confusion matrix", fontsize=30)
-plt.ylabel('Encoder label', fontsize=25)
-plt.xlabel('Clustering label', fontsize=25)
-plt.show()
+doGraphsClustering(n_clusters, x_model, y_model, x_encoder, y_encoder)
+print('Saved graphs.')

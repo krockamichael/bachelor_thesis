@@ -1,3 +1,5 @@
+import errno
+import os
 from typing import Optional
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,6 +8,9 @@ from keras import backend as K, Model
 from timeit import default_timer as timer
 from keras.engine import InputSpec, Layer
 from keras.models import load_model
+from keras.optimizers import SGD
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
 
 # computing an auxiliary target distribution
@@ -14,16 +19,19 @@ def target_distribution(q_):
     return (weight.T / weight.sum(1)).T
 
 
-def getClusteringModel_andEncoder(n_clusters):
+def getClusteringModel_andEncoder(n_clusters, train):
     # load autoencoder model
     autoencoder = load_model('models/LSTM_100_mask_epochs_300_BS_256_acc_87.86989450454712.h5')
 
     # get only encoder part
-    encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[2].output)
+    encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[2].output, name='encoder')
+    for layer in encoder.layers:
+        layer.trainable = False
     clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
-    model = Model(inputs=encoder.input, outputs=clustering_layer)
-    model.load_weights('clustering_weights/clusters_' + str(n_clusters) + '.h5')
-    model.compile(optimizer='adam', loss='mse')  # optimizer=SGD(0.01, 0.9), loss='kld')
+    model = Model(inputs=encoder.input, outputs=clustering_layer, name='clustering_model')
+    if not train:
+        model.load_weights('clustering_weights/clusters_' + str(n_clusters) + '.h5')
+    model.compile(optimizer=SGD(0.01, 0.9), loss='kld')
 
     return model, encoder
 
@@ -172,7 +180,7 @@ def loadFile(argument: Optional = None):
         return final_data
 
 
-def doGraphs(history, model_name):
+def doGraphsAutoencoder(history, model_name):
     # summarize history for accuracy
     plt.plot(history.history['accuracy'])
     plt.plot(history.history['val_accuracy'])
@@ -180,7 +188,7 @@ def doGraphs(history, model_name):
     plt.ylabel('accuracy')
     plt.xlabel('epoch')
     plt.legend(['train', 'test'], loc='upper left')
-    plt.savefig(model_name.replace('.h5', '_accuracy.png').replace('models/', 'graphs/'))
+    plt.savefig(model_name.replace('.h5', '_accuracy.png').replace('models/', 'graphs/autoencoder/'))
     plt.show()
 
     # summarize history for loss
@@ -190,5 +198,43 @@ def doGraphs(history, model_name):
     plt.ylabel('loss')
     plt.xlabel('epoch')
     plt.legend(['train', 'test'], loc='upper left')
-    plt.savefig(model_name.replace('.h5', '_loss.png').replace('models/', 'graphs/'))
+    plt.savefig(model_name.replace('.h5', '_loss.png').replace('models/', 'graphs/autoencoder/'))
     plt.show()
+
+
+def doGraphsClustering(n_clusters, x_model, y_model, x_encoder, y_encoder):
+    path = 'graphs/clustering/clusters_' + str(n_clusters)
+    try:
+        os.mkdir(path)
+    except OSError as exc:
+        if exc.errno != errno.EEXIST:
+            raise
+        pass
+
+    # create scatterplot from labels assigned to data predicted by CLUSTERING model
+    plt.figure(figsize=(6, 6))
+    plt.scatter(x_model[:, 0], x_model[:, 1], c=y_model)
+    plt.colorbar()
+    plt.title('Scatterplot - clustering')
+    plt.savefig(path + '/scatter_clust_' + str(n_clusters) + '.png')
+    plt.show()
+
+    # create scatterplot from labels assigned to data predicted by ENCODER model
+    plt.figure(figsize=(6, 6))
+    plt.scatter(x_encoder[:, 0], x_encoder[:, 1], c=y_encoder)
+    plt.colorbar()
+    plt.title('Scatterplot - encoder')
+    plt.savefig(path + '/scatter_enc_' + str(n_clusters) + '.png')
+    plt.show()
+
+    # create confusion matrix from predictions based on data predicted by clustering and encoder models
+    sns.set(font_scale=3)
+    conf_matrix = confusion_matrix(y_encoder, y_model)
+    plt.figure(figsize=(16, 14))
+    sns.heatmap(conf_matrix, annot=True, fmt="d", annot_kws={"size": 20})
+    plt.title("Confusion matrix", fontsize=30)
+    plt.ylabel('Encoder label', fontsize=25)
+    plt.xlabel('Clustering label', fontsize=25)
+    plt.savefig(path + '/conf_m_' + str(n_clusters) + '.png')
+    plt.show()
+

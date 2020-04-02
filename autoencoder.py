@@ -2,7 +2,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from keras.models import Model
 from keras.layers import LSTM, RepeatVector, TimeDistributed, Dense, Masking, Dropout, Input, Lambda
-from utils import loadFile, doGraphs, TimingCallback, getModelName, cropOutputs
+from utils import loadFile, doGraphsAutoencoder, TimingCallback, getModelName, cropOutputs
 import numpy as np
 import sys
 
@@ -55,4 +55,4 @@ print("Saved model to disk.")
 # print(predict_output[0])
 
 # create graphs for loss and accuracy
-doGraphs(history, model_name)
+doGraphsAutoencoder(history, model_name)
