@@ -1,16 +1,17 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-from sklearn.cluster import KMeans
 from utils import loadFile, getClusteringModel_andEncoder, doGraphsClustering
+from sklearn.cluster import KMeans
 
-n_clusters = 9
+n_clusters = 7
+batch_size = 256
 
 # load clustering model and encoder
-model, encoder = getClusteringModel_andEncoder(n_clusters, train=False)
+model, encoder = getClusteringModel_andEncoder(n_clusters, batch_size, train=False)
 print(model.summary())
 
-# load data
-context_paths = loadFile()
+# load file names and data
+names, context_paths = loadFile()
 print('Loaded data.')
 
 # init cluster centers using k-means
@@ -26,5 +27,5 @@ x_encoder = encoder.predict(context_paths, verbose=1)
 print('Predicting encoder model labels...')
 y_encoder = kmeans.fit_predict(x_encoder)
 
-doGraphsClustering(n_clusters, x_model, y_model, x_encoder, y_encoder)
+doGraphsClustering(n_clusters, batch_size, x_model, y_model, x_encoder, y_encoder)
 print('Saved graphs.')

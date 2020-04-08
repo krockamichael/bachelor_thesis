@@ -28,7 +28,7 @@ def main():
                      decimals=2, length=50, fill='X', zfill='-')
     progress = 0
 
-    master_file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset.csv'
+    master_file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset_v2.csv'
     with codecs.open(master_file_path, 'w+', 'utf-8') as csvfile:
         filewriter = csv.writer(csvfile)
         MAX_CONTEXTS = 430
@@ -41,8 +41,12 @@ def main():
         for file in files:
             module_handler = ModuleHandler(file)
             context_paths = module_handler.get_context_paths()
-            file_context_paths = ''
+            file_context_paths = module_handler.data['path'].replace('.lua', '')\
+                .replace('/home/michael/luadb/etc/luarocks_test/modules/', '')\
+                .replace('/home/katka/Desktop/FIIT/BP/luadb/etc/luarocks_test/modules/', '')\
+                .replace(' ', '') + ' '
 
+            # if needed reduce number of context paths to match MAX_CONTEXTS = 430
             while len(context_paths) > MAX_CONTEXTS * 2:
                 context_paths = context_paths[0::2]  # get every second element --> halve list length, this is FAST
 
@@ -57,6 +61,7 @@ def main():
                         context_paths = [x for x in context_paths if x not in new_contexts]
                         break
 
+            # start writing to file
             for i in context_paths:
                 source_node = i[0][0] + '|' + i[0][1]
                 hashed_source_node = java_string_hashcode(source_node)
@@ -89,7 +94,7 @@ def main():
                 file_context_paths = file_context_paths[:-1]
 
             delimited = file_context_paths.split(sep=' ')
-            if len(delimited) != MAX_CONTEXTS:
+            if len(delimited) != MAX_CONTEXTS + 1:
                 exit('Too many contexts, trimming failed.')
 
             filewriter.writerow([file_context_paths])
