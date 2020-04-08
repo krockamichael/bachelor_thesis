@@ -1,16 +1,19 @@
-import errno
-import os
+import time
+
+from sklearn.metrics import confusion_matrix
+from keras import backend as K
+from keras.callbacks import Callback
+from keras.engine import InputSpec, Layer
+from keras.models import load_model, Model
+from keras.optimizers import SGD
+from timeit import default_timer as timer
+import matplotlib.pyplot as plt
+import seaborn as sns
 from typing import Optional
 import numpy as np
-import matplotlib.pyplot as plt
-import keras
-from keras import backend as K, Model
-from timeit import default_timer as timer
-from keras.engine import InputSpec, Layer
-from keras.models import load_model
-from keras.optimizers import SGD
-from sklearn.metrics import confusion_matrix
-import seaborn as sns
+import errno
+import os
+import cv2
 
 
 # computing an auxiliary target distribution
@@ -19,9 +22,9 @@ def target_distribution(q_):
     return (weight.T / weight.sum(1)).T
 
 
-def getClusteringModel_andEncoder(n_clusters, train):
+def getClusteringModel_andEncoder(n_clusters, batch_size, train):
     # load autoencoder model
-    autoencoder = load_model('models/LSTM_100_mask_epochs_300_BS_256_acc_87.86989450454712.h5')
+    autoencoder = load_model('models/best_autoencoder.h5')
 
     # get only encoder part
     encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[2].output, name='encoder')
@@ -30,13 +33,13 @@ def getClusteringModel_andEncoder(n_clusters, train):
     clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
     model = Model(inputs=encoder.input, outputs=clustering_layer, name='clustering_model')
     if not train:
-        model.load_weights('clustering_weights/clusters_' + str(n_clusters) + '.h5')
+        model.load_weights('clustering_weights/' + getClusteringModelName(n_clusters, batch_size))
     model.compile(optimizer=SGD(0.01, 0.9), loss='kld')
 
     return model, encoder
 
 
-class TimingCallback(keras.callbacks.Callback):
+class TimingCallback(Callback):
     def __init__(self, logs={}):
         self.logs = []
 
@@ -47,24 +50,8 @@ class TimingCallback(keras.callbacks.Callback):
         self.logs.append(timer() - self.starttime)
 
 
+# Clustering layer converts input sample (feature) to soft label.
 class ClusteringLayer(Layer):
-    """
-    Clustering layer converts input sample (feature) to soft label.
-
-    # Example
-    ```
-        model.add(ClusteringLayer(n_clusters=10))
-    ```
-    # Arguments
-        n_clusters: number of clusters.
-        weights: list of Numpy array with shape `(n_clusters, n_features)` witch represents the initial cluster centers.
-        alpha: degrees of freedom parameter in Student's t-distribution. Default to 1.0.
-    # Input shape
-        2D tensor with shape: `(n_samples, n_features)`.
-    # Output shape
-        2D tensor with shape: `(n_samples, n_clusters)`.
-    """
-
     def __init__(self, n_clusters, weights=None, alpha=1.0, **kwargs):
         if 'input_shape' not in kwargs and 'input_dim' in kwargs:
             kwargs['input_shape'] = (kwargs.pop('input_dim'),)
@@ -121,8 +108,8 @@ def cropOutputs(x):
     return x[0] * padding
 
 
-def getClusteringModelName(number):
-    return 'clusters_' + str(number) + '.h5'
+def getClusteringModelName(n_clusters, batch_size):
+    return 'clusters_' + str(n_clusters) + '_bs_' + str(batch_size) + '.h5'
 
 
 def getModelName(model, neurons, epochs, batch_size, acc):
@@ -147,8 +134,8 @@ def getModelName(model, neurons, epochs, batch_size, acc):
     return model_name
 
 
-def loadFile(argument: Optional = None):
-    filename = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset.csv'
+def loadFile():
+    filename = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset_v2.csv'
     with open(filename, 'r') as file:
         lines = file.readlines()
 
@@ -158,6 +145,11 @@ def loadFile(argument: Optional = None):
     singles = []  # (16000, 430, 3)
     for t in triplets:
         singles += [[trp.split(',') for trp in t]]
+
+    names = []  # get file name
+    for single in singles:
+        names += single[0]
+        single.remove(single[0])
 
     data = np.ma.array(singles).astype(np.int32)
     masked_data = np.ma.masked_equal(data, 0)  # values without zero-padding
@@ -171,13 +163,7 @@ def loadFile(argument: Optional = None):
     # final_data.std()  ==  0.5883442183749463
     # final_data.mean() == -0.0440249105206687
 
-    if argument == 'separate':
-        data_source = final_data[:, :, 0]
-        data_path = final_data[:, :, 1]
-        data_target = final_data[:, :, 2]
-        return [data_source, data_path, data_target]
-    else:
-        return final_data
+    return names, final_data
 
 
 def doGraphsAutoencoder(history, model_name):
@@ -202,8 +188,8 @@ def doGraphsAutoencoder(history, model_name):
     plt.show()
 
 
-def doGraphsClustering(n_clusters, x_model, y_model, x_encoder, y_encoder):
-    path = 'graphs/clustering/clusters_' + str(n_clusters)
+def doGraphsClustering(n_clusters, batch_size, x_model, y_model, x_encoder, y_encoder):
+    path = 'graphs/clustering/' + getClusteringModelName(n_clusters, batch_size).replace('.h5', '')
     try:
         os.mkdir(path)
     except OSError as exc:
@@ -212,18 +198,15 @@ def doGraphsClustering(n_clusters, x_model, y_model, x_encoder, y_encoder):
         pass
 
     # create scatterplot from labels assigned to data predicted by CLUSTERING model
-    plt.figure(figsize=(6, 6))
-    plt.scatter(x_model[:, 0], x_model[:, 1], c=y_model)
-    plt.colorbar()
-    plt.title('Scatterplot - clustering')
-    plt.savefig(path + '/scatter_clust_' + str(n_clusters) + '.png')
-    plt.show()
+    doClusteringScatterplot(n_clusters, path, x_model, y_model)
 
     # create scatterplot from labels assigned to data predicted by ENCODER model
     plt.figure(figsize=(6, 6))
     plt.scatter(x_encoder[:, 0], x_encoder[:, 1], c=y_encoder)
     plt.colorbar()
     plt.title('Scatterplot - encoder')
+    plt.xlabel('Label 0')
+    plt.ylabel('Label 1')
     plt.savefig(path + '/scatter_enc_' + str(n_clusters) + '.png')
     plt.show()
 
@@ -231,10 +214,46 @@ def doGraphsClustering(n_clusters, x_model, y_model, x_encoder, y_encoder):
     sns.set(font_scale=3)
     conf_matrix = confusion_matrix(y_encoder, y_model)
     plt.figure(figsize=(16, 14))
-    sns.heatmap(conf_matrix, annot=True, fmt="d", annot_kws={"size": 20})
-    plt.title("Confusion matrix", fontsize=30)
+    sns.heatmap(conf_matrix, annot=True, fmt='d', annot_kws={'size': 20})
+    plt.title('Confusion matrix', fontsize=30)
     plt.ylabel('Encoder label', fontsize=25)
     plt.xlabel('Clustering label', fontsize=25)
     plt.savefig(path + '/conf_m_' + str(n_clusters) + '.png')
     plt.show()
 
+
+def doClusteringScatterplot(n_clusters, curr_path, x_model, y_model):
+    path = curr_path + '/clust_scatterplot'
+    try:
+        os.mkdir(path)
+    except OSError as exc:
+        if exc.errno != errno.EEXIST:
+            raise
+        pass
+
+    x_axis = range(0, n_clusters)
+    y_axis = range(0, n_clusters)
+    for x in x_axis:
+        for y in y_axis:
+            if x < y:  # so we don't have duplicate graphs with inverted axes
+                plt.figure(figsize=(6, 6))
+                plt.scatter(x_model[:, x], x_model[:, y], c=y_model)
+                plt.colorbar()
+                plt.xlabel('Label ' + str(x))
+                plt.ylabel('Label ' + str(y))
+                plt.title('Scatterplot - clustering')
+                plt.savefig(path + '/label ' + str(x) + '-' + str(y) + '.png')
+                plt.show()
+
+
+def checkIfImagesAreEqueal(image_path_1, image_path_2):
+    original = cv2.imread(image_path_1)
+    duplicate = cv2.imread(image_path_2)
+
+    # 1) Check if 2 images are equals
+    if original.shape == duplicate.shape:
+        print("The images have same size and channels")
+    difference = cv2.subtract(original, duplicate)
+    b, g, r = cv2.split(difference)
+    if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
+        print("The images are completely Equal")
