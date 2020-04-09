@@ -10,17 +10,21 @@ import sys
 np.set_printoptions(threshold=sys.maxsize)
 np.random.seed(7)
 
-neurons = 100
-epochs = 500
-batch_size = 256
+neurons = 128
+epochs = 100
+batch_size = 128
 
 # TODO dropout
 # TODO If the initial predictions of your model are too far from this range, you might like to have a BatchNormalization (not really necessary) before or after the last Dense
 
 inputs = Input(shape=(430, 3))
 masked_input = Masking(mask_value=0, input_shape=(430, 3))(inputs)
-encoded = LSTM(neurons)(masked_input)
+# encoded = LSTM(neurons)(masked_input)
+# decoded = RepeatVector(430)(encoded)
+encoded = LSTM(neurons, return_sequences=True)(masked_input)
+encoded = LSTM(64, return_sequences=False)(encoded)
 decoded = RepeatVector(430)(encoded)
+encoded = LSTM(64, return_sequences=True)(decoded)
 decoded = LSTM(neurons, return_sequences=True)(decoded)
 decoded = TimeDistributed(Dense(3))(decoded)
 decoded = Lambda(cropOutputs, output_shape=(430, 3))([decoded, inputs])
@@ -29,7 +33,7 @@ model.compile(optimizer='adam', loss='mse', metrics=['accuracy'])  # binary_cros
 print(model.summary())
 
 # load data and split into train, validate and test (70, 20, 10)
-context_paths = loadFile()
+names, context_paths = loadFile()
 train, validate, test = np.split(context_paths, [int(.7*len(context_paths)), int(.9*len(context_paths))])
 
 cb = TimingCallback()
