@@ -1,5 +1,3 @@
-import time
-
 from sklearn.metrics import confusion_matrix
 from keras import backend as K
 from keras.callbacks import Callback
@@ -9,11 +7,10 @@ from keras.optimizers import SGD
 from timeit import default_timer as timer
 import matplotlib.pyplot as plt
 import seaborn as sns
-from typing import Optional
+import cv2.cv2 as cv2
 import numpy as np
 import errno
 import os
-import cv2
 
 
 # computing an auxiliary target distribution
@@ -24,10 +21,10 @@ def target_distribution(q_):
 
 def getClusteringModel_andEncoder(n_clusters, batch_size, train):
     # load autoencoder model
-    autoencoder = load_model('models/best_autoencoder.h5')
+    autoencoder = load_model('models/LSTM_128_mask_epochs_100_BS_128_acc_87.50506639480591.h5')
 
     # get only encoder part
-    encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[2].output, name='encoder')
+    encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[3].output, name='encoder')
     for layer in encoder.layers:
         layer.trainable = False
     clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
@@ -135,7 +132,7 @@ def getModelName(model, neurons, epochs, batch_size, acc):
 
 
 def loadFile():
-    filename = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset_v2.csv'
+    filename = 'final_dataset_v2.csv'
     with open(filename, 'r') as file:
         lines = file.readlines()
 
