@@ -7,7 +7,6 @@ from keras.optimizers import SGD
 from timeit import default_timer as timer
 import matplotlib.pyplot as plt
 import seaborn as sns
-import cv2.cv2 as cv2
 import numpy as np
 import errno
 import os
@@ -241,16 +240,3 @@ def doClusteringScatterplot(n_clusters, curr_path, x_model, y_model):
                 plt.title('Scatterplot - clustering')
                 plt.savefig(path + '/label ' + str(x) + '-' + str(y) + '.png')
                 plt.show()
-
-
-def checkIfImagesAreEqueal(image_path_1, image_path_2):
-    original = cv2.imread(image_path_1)
-    duplicate = cv2.imread(image_path_2)
-
-    # 1) Check if 2 images are equals
-    if original.shape == duplicate.shape:
-        print("The images have same size and channels")
-    difference = cv2.subtract(original, duplicate)
-    b, g, r = cv2.split(difference)
-    if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
-        print("The images are completely Equal")
