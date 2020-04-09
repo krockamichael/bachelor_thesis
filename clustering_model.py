@@ -57,7 +57,7 @@ for ite in range(int(maxiter)):
     loss = model.train_on_batch(x=context_paths[idx], y=p[idx])
     index = index + 1 if (index + 1) * batch_size <= context_paths.shape[0] else 0
 
-model.save_weights('clustering_weights/' + getClusteringModelName(n_clusters, batch_size))
+model.save_weights('clustering_weights/temp.h5')  # + getClusteringModelName(n_clusters, batch_size))
 print('Elapsed time: {}'.format(time.time() - start_time))
 
 # init cluster centers using k-means
