@@ -14,7 +14,7 @@ def java_string_hashcode(s):
 
 
 def main():
-    file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\data'
+    file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\data_all'
     files = list()
 
     # r=root, d=directories, f = files
@@ -41,10 +41,9 @@ def main():
         for file in files:
             module_handler = ModuleHandler(file)
             context_paths = module_handler.get_context_paths()
-            file_context_paths = module_handler.data['path'].replace('.lua', '')\
-                .replace('/home/michael/luadb/etc/luarocks_test/modules/', '')\
-                .replace('/home/katka/Desktop/FIIT/BP/luadb/etc/luarocks_test/modules/', '')\
-                .replace(' ', '') + ' '
+            file_context_paths = module_handler.data['url'].replace('.lua', '')\
+                .replace('https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/', '')\
+                .replace('https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/', '') + ' '
 
             # if needed reduce number of context paths to match MAX_CONTEXTS = 430
             while len(context_paths) > MAX_CONTEXTS * 2:
