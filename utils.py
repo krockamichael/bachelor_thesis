@@ -10,7 +10,6 @@ import seaborn as sns
 import numpy as np
 import errno
 import os
-import cv2
 
 
 # computing an auxiliary target distribution
@@ -21,10 +20,10 @@ def target_distribution(q_):
 
 def getClusteringModel_andEncoder(n_clusters, batch_size, train):
     # load autoencoder model
-    autoencoder = load_model('models/best_autoencoder.h5')
+    autoencoder = load_model('models/LSTM_128_mask_epochs_100_BS_128_acc_87.50506639480591.h5')
 
     # get only encoder part
-    encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[2].output, name='encoder')
+    encoder = Model(inputs=autoencoder.layers[0].input, outputs=autoencoder.layers[3].output, name='encoder')
     for layer in encoder.layers:
         layer.trainable = False
     clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
@@ -135,11 +134,11 @@ def loadFile():
     filename = 'final_dataset_v2.csv'
     with open(filename, 'r') as file:
         lines = file.readlines()
-    file.close()
 
+    file.close()
     print('Processing input file...')
-    triplets = [l.replace('"', '').replace('\n', '').split(" ") for l in lines]  # (18000, 430)
-    singles = []  # (18000, 430, 3)
+    triplets = [l.replace('"', '').replace('\n', '').split(" ") for l in lines]  # (16000, 430)
+    singles = []  # (16000, 430, 3)
     for t in triplets:
         singles += [[trp.split(',') for trp in t]]
 
@@ -241,16 +240,3 @@ def doClusteringScatterplot(n_clusters, curr_path, x_model, y_model):
                 plt.title('Scatterplot - clustering')
                 plt.savefig(path + '/label ' + str(x) + '-' + str(y) + '.png')
                 plt.show()
-
-
-def checkIfImagesAreEqual(image_path_1, image_path_2):
-    original = cv2.imread(image_path_1)
-    duplicate = cv2.imread(image_path_2)
-
-    # 1) Check if 2 images are equals
-    if original.shape == duplicate.shape:
-        print("The images have same size and channels")
-    difference = cv2.subtract(original, duplicate)
-    b, g, r = cv2.split(difference)
-    if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
-        print("The images are completely Equal")
