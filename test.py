@@ -1,3 +1,3 @@
-from utils import checkIfImagesAreEqueal
+from utils import checkIfImagesAreEqual
 
-checkIfImagesAreEqueal()
+checkIfImagesAreEqual()

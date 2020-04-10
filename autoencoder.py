@@ -11,7 +11,7 @@ np.set_printoptions(threshold=sys.maxsize)
 np.random.seed(7)
 
 neurons = 128
-epochs = 100
+epochs = 300
 batch_size = 128
 
 # TODO dropout

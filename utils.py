@@ -1,5 +1,3 @@
-import time
-
 from sklearn.metrics import confusion_matrix
 from keras import backend as K
 from keras.callbacks import Callback
@@ -9,7 +7,6 @@ from keras.optimizers import SGD
 from timeit import default_timer as timer
 import matplotlib.pyplot as plt
 import seaborn as sns
-from typing import Optional
 import numpy as np
 import errno
 import os
@@ -135,14 +132,14 @@ def getModelName(model, neurons, epochs, batch_size, acc):
 
 
 def loadFile():
-    filename = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\final_dataset_v2.csv'
+    filename = 'final_dataset_v2.csv'
     with open(filename, 'r') as file:
         lines = file.readlines()
-
     file.close()
+
     print('Processing input file...')
-    triplets = [l.replace('"', '').replace('\n', '').split(" ") for l in lines]  # (16000, 430)
-    singles = []  # (16000, 430, 3)
+    triplets = [l.replace('"', '').replace('\n', '').split(" ") for l in lines]  # (18000, 430)
+    singles = []  # (18000, 430, 3)
     for t in triplets:
         singles += [[trp.split(',') for trp in t]]
 
@@ -246,7 +243,7 @@ def doClusteringScatterplot(n_clusters, curr_path, x_model, y_model):
                 plt.show()
 
 
-def checkIfImagesAreEqueal(image_path_1, image_path_2):
+def checkIfImagesAreEqual(image_path_1, image_path_2):
     original = cv2.imread(image_path_1)
     duplicate = cv2.imread(image_path_2)
 
