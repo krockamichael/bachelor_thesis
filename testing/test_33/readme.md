@@ -107,3 +107,9 @@ iteration: 6720
 delta_label: 0.04438842612889084
 iteration: 6860
 delta_label: 0.05463612450679527
+iteration: 7000
+delta_label: 0.041429197720298114
+iteration: 7140
+delta_label: 0.052772906619903553
+iteration: 7280
+delta_label: 0.07770714598860148
