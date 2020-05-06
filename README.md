@@ -1,3 +1,4 @@
+# bachelor_thesis
 Keras neural network - LSTM autoencoder, clustering model
 
 autoencoder.py - source code for the autoencoder model consisting of: masking - lstm - repeatVector - lstm - timeDistributed(dense) - lambda(cropOutputs) layers
