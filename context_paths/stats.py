@@ -6,8 +6,8 @@ import numpy as np
 from context_paths.module_handler import ModuleHandler
 from console_progressbar import ProgressBar
 
-data_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\data'
-modules_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\modules'
+data_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\data_all'
+modules_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\modules'
 files = list()
 nodes = list()
 path_lengths = list()
