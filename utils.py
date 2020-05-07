@@ -126,10 +126,15 @@ def savePredictions(x_model, y_model, model_name):
     file.close()
 
 
-def loadFile():
-    with open('data/dataset.csv', 'r') as file:
-        lines = file.readlines()
-    file.close()
+def loadFile(path=None):
+    if path is not None:
+        with open(path, 'r') as file:
+            lines = file.readlines()
+        file.close()
+    else:
+        with open('data/dataset.csv', 'r') as file:
+            lines = file.readlines()
+        file.close()
 
     print('Processing input file...')
     triplets = [l.replace('"', '').replace('\n', '').split(" ") for l in lines]  # (18000, 430)

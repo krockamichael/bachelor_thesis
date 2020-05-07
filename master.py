@@ -318,6 +318,11 @@ test 33:
     - laoded autoencoder from 2
     - 9 labels
     RESULT -- trash
+    
+test 34:
+    - master autoencoder
+    - 7 lables
+    
         
 """
 
@@ -338,7 +343,7 @@ LSTM_num = 2
 neurons = 128
 epochs = 20
 batch_size_auto = 128
-n_clusters = 9
+n_clusters = 7
 batch_size_clust = 256
 maxiter = 8000
 tol = 0.001
@@ -387,7 +392,7 @@ with open(read_me_filename, 'w+') as f:
 names, context_paths = loadFile()
 train, validate, test = np.split(context_paths, [int(.7*len(context_paths)), int(.9*len(context_paths))])
 print('Loaded data.')
-#
+
 # # start training autoencoder model
 # cb = TimingCallback()
 # history = autoencoder.fit(train, train, epochs=epochs, batch_size=batch_size_auto, verbose=2, shuffle=True, validation_data=(validate, validate), callbacks=[cb])
@@ -410,7 +415,7 @@ print('Loaded data.')
 # # create graphs for model loss and accuracy & save them
 # doGraphsAutoencoder_v2(history, destination_folder)
 
-autoencoder = load_model('testing/test_2/LSTM_128_mask_epochs_20_BS_128_acc_81.78999423980713.h5')
+autoencoder = load_model('master_autoencoder.h5')
 
 
 # ----------------------------------------------------------------------------------------------------------------------
