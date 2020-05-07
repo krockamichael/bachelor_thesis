@@ -326,7 +326,7 @@ test 33:
 # TODO if 3 LSTM layers produce good results, try to match n_clusters with the number of neurons in the last LSTM layer - or the other way around
 
 # FIXME
-destination_folder = 'testing/test_33/'
+destination_folder = 'testing/test_34/'
 try:
     os.mkdir(destination_folder)
 except OSError as exc:
