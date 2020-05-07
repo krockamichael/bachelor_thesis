@@ -317,7 +317,7 @@ test 32:
 test 33:
     - laoded autoencoder from 2
     - 9 labels
-    RESULT --
+    RESULT -- trash
         
 """
 
