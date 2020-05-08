@@ -223,20 +223,21 @@
 # predict_output_2 = model_2.predict(predict_sample, verbose=0)
 #
 # print('a')
-
+#
+# import os
+# os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 # import csv
 # from utils import loadFile
-from keras.models import load_model
+# from keras.models import load_model
 # import pandas as pd
 # from ClusteringLayer import ClusteringLayer
 #
-model = load_model('testing/test_2/LSTM_128_mask_epochs_20_BS_128_acc_81.78999423980713.h5')
-print('a')
-# destination_folder = ''
-# n_clusters = 7
+# destination_folder = 'testing/test_32/'
+# n_clusters = 8
 #
+# model = load_model(destination_folder + 'clustering_model.h5', custom_objects={'ClusteringLayer': ClusteringLayer})
 # names, context_paths = loadFile()
-# x_model = model.predict(context_paths, verbose=0)
+# x_model = model.predict(context_paths, verbose=1)
 # y_model = x_model.argmax(1)
 #
 # filename = destination_folder + 'temp.csv'
@@ -249,12 +250,6 @@ print('a')
 # # Load data to a dataframe
 # # percentages and labels
 # df = pd.read_csv(destination_folder + 'temp.csv', delimiter=',', header=None)
-#
-# # print the maximum percentage of confidence for each label
-# # print the number of samples per label
-# print(df.iloc[:, 0:n_clusters].max())
-# print(df[n_clusters].value_counts())
-#
 #
 # # Create csv files with labels as titles
 # # content is name of data sample (source code file)
@@ -269,3 +264,12 @@ print('a')
 #                 name_storage[i].append(name)
 #                 thewriter.writerow([name])
 #         file.close()
+
+from keras.models import load_model
+from ClusteringLayer import ClusteringLayer
+from keras.utils.vis_utils import plot_model
+import os
+os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
+destination_folder = 'testing/test_39/'
+model = load_model('testing/test_37/LSTM_128_mask_epochs_20_BS_128_acc_81.95578455924988.h5')
+plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=True)

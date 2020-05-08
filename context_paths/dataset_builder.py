@@ -14,7 +14,7 @@ def java_string_hashcode(s):
 
 
 def main():
-    file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\data_all'
+    file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\data_all'
     files = list()
 
     # r=root, d=directories, f = files
@@ -28,7 +28,7 @@ def main():
                      decimals=2, length=50, fill='X', zfill='-')
     progress = 0
 
-    master_file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\Bakalárska práca\\Ubuntu\\luadb\\etc\\luarocks_test\\dataset.csv'
+    master_file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\dataset.csv'
     with codecs.open(master_file_path, 'w+', 'utf-8') as csvfile:
         filewriter = csv.writer(csvfile)
         MAX_CONTEXTS = 430

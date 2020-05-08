@@ -1,7 +1,4 @@
 import os
-
-from keras.engine.saving import load_model
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from keras.layers import LSTM, RepeatVector, TimeDistributed, Dense, Masking, Input, Lambda
 from utils import loadFile, doGraphsAutoencoder_v2, TimingCallback, getModelName, cropOutputs, getLastEncoderLayer, \
@@ -9,7 +6,8 @@ from utils import loadFile, doGraphsAutoencoder_v2, TimingCallback, getModelName
 from ClusteringLayer import ClusteringLayer
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
-from keras.models import Model
+from keras.models import Model, load_model
+from keras.optimizers import SGD
 from keras import regularizers
 import seaborn as sns
 import numpy as np
@@ -322,8 +320,46 @@ test 33:
 test 34:
     - master autoencoder
     - 7 lables
+    - adam optimizer in clustering model
+    RESULT -- trash
+
+test 35:
+    - master autoencoder
+    - 7 labels
+    - SGD(0.01, 0.9) optimizer in clustering model
+    - tol == 0.001
+    RESULT -- 6 / 7 labels
     
-        
+test 36:
+    - master autoencoder
+    - 6 labels
+    - SGD(0.01, 0.9) optimizer in clustering model
+    - tol == 0.0015
+    RESULT -- used 4 / 6 categories
+           -- used a 5th category but only 8 members
+           -- trash
+           
+test 37:
+    - autoencoder setup from test 2
+    - correct_dataset
+    - 7 labels
+    - tol == 0.001
+    RESULT -- is ok
+    
+test 38:
+    - autoencoder from 37
+    - 10 labels
+    RESULT -- okay
+    
+test 39:
+    - autoencoder from 37
+    - 20 labels
+    RESULT -- okay
+    
+test 30:
+    - autoencoder from 37
+    - 50 labels
+    RESULT -- 
 """
 
 
@@ -331,7 +367,7 @@ test 34:
 # TODO if 3 LSTM layers produce good results, try to match n_clusters with the number of neurons in the last LSTM layer - or the other way around
 
 # FIXME
-destination_folder = 'testing/test_34/'
+destination_folder = 'testing/test_40/'
 try:
     os.mkdir(destination_folder)
 except OSError as exc:
@@ -343,7 +379,7 @@ LSTM_num = 2
 neurons = 128
 epochs = 20
 batch_size_auto = 128
-n_clusters = 7
+n_clusters = 50
 batch_size_clust = 256
 maxiter = 8000
 tol = 0.001
@@ -371,10 +407,8 @@ with open(read_me_filename, 'w+') as f:
 # inputs = Input(shape=(430, 3))
 # masked_input = Masking(mask_value=0, input_shape=(430, 3))(inputs)
 # encoded = LSTM(neurons, return_sequences=True)(masked_input)
-# encoded = LSTM(64, return_sequences=True, activity_regularizer=regularizers.l1(10e-5))(encoded)
-# encoded = LSTM(32, return_sequences=False)(encoded)
+# encoded = LSTM(64, return_sequences=False, activity_regularizer=regularizers.l1(10e-5))(encoded)
 # decoded = RepeatVector(430)(encoded)
-# decoded = LSTM(32, return_sequences=True)(decoded)
 # decoded = LSTM(64, return_sequences=True)(decoded)
 # decoded = LSTM(neurons, return_sequences=True)(decoded)
 # decoded = TimeDistributed(Dense(3))(decoded)
@@ -389,10 +423,10 @@ with open(read_me_filename, 'w+') as f:
 #     autoencoder.summary(print_fn=lambda row: fh.write(row + '\n'))
 
 # load data and split into train, validate and test (70, 20, 10)
-names, context_paths = loadFile()
+names, context_paths = loadFile('data/correct_dataset.csv')
 train, validate, test = np.split(context_paths, [int(.7*len(context_paths)), int(.9*len(context_paths))])
 print('Loaded data.')
-
+#
 # # start training autoencoder model
 # cb = TimingCallback()
 # history = autoencoder.fit(train, train, epochs=epochs, batch_size=batch_size_auto, verbose=2, shuffle=True, validation_data=(validate, validate), callbacks=[cb])
@@ -415,7 +449,7 @@ print('Loaded data.')
 # # create graphs for model loss and accuracy & save them
 # doGraphsAutoencoder_v2(history, destination_folder)
 
-autoencoder = load_model('master_autoencoder.h5')
+autoencoder = load_model('testing/test_37/LSTM_128_mask_epochs_20_BS_128_acc_81.95578455924988.h5')
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -426,7 +460,7 @@ for layer in encoder.layers:
     layer.trainable = False
 clustering_layer = ClusteringLayer(n_clusters, name='clustering')(encoder.output)
 model = Model(inputs=encoder.input, outputs=clustering_layer, name='clustering_model')
-model.compile(optimizer='adam', loss='kld')
+model.compile(optimizer=SGD(0.01, 0.9), loss='kld')
 print(model.summary())
 
 # print clustering model summary to file
@@ -435,6 +469,7 @@ with open(model_sum_filename, 'w+') as fh:
     model.summary(print_fn=lambda row: fh.write(row + '\n'))
 
 # initialize cluster centers using k-means
+print('\nInitializing k-means algorithm to set intial centroids.')
 kmeans = KMeans(n_clusters=n_clusters, n_init=20)  # TODO try different n_init
 y_pred = kmeans.fit_predict(encoder.predict(context_paths))
 y_pred_last = np.copy(y_pred)
@@ -522,6 +557,7 @@ for i in range(0, n_clusters):
         file.close()
 
 # create pairplot for predicted labels
+print('Creating pairplot...')
 sns.set(style='ticks')
 sns.pairplot(df, hue=n_clusters)
 plt.savefig(destination_folder + str(n_clusters) + '_predictions.png')

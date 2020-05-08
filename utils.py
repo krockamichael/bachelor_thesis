@@ -132,7 +132,7 @@ def loadFile(path=None):
             lines = file.readlines()
         file.close()
     else:
-        with open('data/dataset.csv', 'r') as file:
+        with open('data/correct_dataset.csv', 'r') as file:
             lines = file.readlines()
         file.close()
 
