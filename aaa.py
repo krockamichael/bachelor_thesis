@@ -265,11 +265,15 @@
 #                 thewriter.writerow([name])
 #         file.close()
 
-from keras.models import load_model
-from ClusteringLayer import ClusteringLayer
-from keras.utils.vis_utils import plot_model
-import os
-os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
-destination_folder = 'testing/test_39/'
-model = load_model('testing/test_37/LSTM_128_mask_epochs_20_BS_128_acc_81.95578455924988.h5')
-plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=True)
+'''PLOT MODELS'''
+# from keras.models import load_model
+# from ClusteringLayer import ClusteringLayer
+# from keras.utils.vis_utils import plot_model
+# import os
+# os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
+# destination_folder = 'testing/test_39/'
+# model = load_model('testing/test_37/LSTM_128_mask_epochs_20_BS_128_acc_81.95578455924988.h5')
+# plot_model(model, to_file='autoencoder_plot.png', show_shapes=True, show_layer_names=True)
+
+from utils import loadFile
+names, data = loadFile()

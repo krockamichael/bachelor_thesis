@@ -152,10 +152,8 @@ def loadFile(path=None):
 
     # normalise data
     print('Normalising data...')
-    # DATASET masked_data.mean() == -120.57979590730959
-    # DATASET masked_data.std() == 1115300671.9887397
-    # no_duplicates_DATASET masked_data.mean() == 1015.0810487060508
-    # no_duplicates_DATASET masked_data.std() == 1108213954.9788578
+    # correct_DATASET masked_data.mean() == -120.57979590730959
+    # correct_DATASET masked_data.std() == 1115300671.9887397
     normalised_masked_data = (masked_data - masked_data.mean()) / masked_data.std()  # perform z-normalisation
     final_data = normalised_masked_data.filled(0)  # refill masked values with 0
     # final_data.max()  ==  1.9242677998256246

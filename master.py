@@ -404,17 +404,17 @@ with open(read_me_filename, 'w+') as f:
 
 # ----------------------------------------------------------------------------------------------------------------------
 # AUTOENCODER
-# inputs = Input(shape=(430, 3))
-# masked_input = Masking(mask_value=0, input_shape=(430, 3))(inputs)
-# encoded = LSTM(neurons, return_sequences=True)(masked_input)
-# encoded = LSTM(64, return_sequences=False, activity_regularizer=regularizers.l1(10e-5))(encoded)
-# decoded = RepeatVector(430)(encoded)
-# decoded = LSTM(64, return_sequences=True)(decoded)
-# decoded = LSTM(neurons, return_sequences=True)(decoded)
-# decoded = TimeDistributed(Dense(3))(decoded)
-# decoded = Lambda(cropOutputs, output_shape=(430, 3))([decoded, inputs])
-# autoencoder = Model(inputs=inputs, outputs=decoded, name='autoencoder')
-# autoencoder.compile(optimizer='adam', loss='mse', metrics=['accuracy'])
+inputs = Input(shape=(430, 3))
+masked_input = Masking(mask_value=0, input_shape=(430, 3))(inputs)
+encoded = LSTM(neurons, return_sequences=True)(masked_input)
+encoded = LSTM(64, return_sequences=False, activity_regularizer=regularizers.l1(10e-5))(encoded)
+decoded = RepeatVector(430)(encoded)
+decoded = LSTM(64, return_sequences=True)(decoded)
+decoded = LSTM(neurons, return_sequences=True)(decoded)
+decoded = TimeDistributed(Dense(3))(decoded)
+decoded = Lambda(cropOutputs, output_shape=(430, 3))([decoded, inputs])
+autoencoder = Model(inputs=inputs, outputs=decoded, name='autoencoder')
+autoencoder.compile(optimizer='adam', loss='mse', metrics=['accuracy'])
 # print(autoencoder.summary())
 #
 # # print autoencoder summary to file
