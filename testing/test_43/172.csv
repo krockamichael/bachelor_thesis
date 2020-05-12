@@ -1,0 +1,9 @@
+concurrentlua/share/lua/5.1/concurrent/distributed/network
+faketorio/share/lua/5.3/luarocks/tools/patch
+faketorio/share/lua/5.3/luarocks/path
+kong-plugin-mithril/share/lua/5.3/kong/plugins/mithril/handler
+luarocks/share/lua/5.3/luarocks/tools/patch
+luarocks/share/lua/5.3/luarocks/path
+luchia/share/lua/5.3/luchia/core/server
+nginx-lua-prometheus/share/lua/5.3/nginx/prometheus
+xmlua/share/lua/5.3/xmlua/xml-sax-parser

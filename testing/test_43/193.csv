@@ -1,0 +1,4 @@
+filament/share/lua/5.3/filament
+ldk-cli/share/lua/5.3/ldk/cli/reader
+lua-resty-exec/share/lua/5.3/resty/exec/socket
+lua-testlongstring/share/lua/5.3/Test/LongString

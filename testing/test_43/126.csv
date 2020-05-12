@@ -1,0 +1,11 @@
+ansikit/share/lua/5.3/ansikit/sequence
+debugkit/share/lua/5.3/ansikit/sequence
+formatter/share/lua/5.1/pl/array2d
+formatter/share/lua/5.1/pl/class
+formatter/share/lua/5.1/pl/strict
+ltypekit-parser/share/lua/5.3/ansikit/sequence
+lua-resty-jit-uuid/share/lua/5.3/resty/jit-uuid
+luacs/share/lua/5.3/luacs/parser
+luadoc/share/lua/5.3/luadoc/util
+xmlua/share/lua/5.3/luacs/parser
+zipwriter/share/lua/5.3/ZipWriter/encrypt/aes

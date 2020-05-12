@@ -1,0 +1,15 @@
+crayon/share/lua/5.3/requests
+gimlet-cocktail/share/lua/5.3/gimlet/router
+gimlet-render/share/lua/5.3/gimlet/router
+ipfinder/share/lua/5.3/requests
+kong-auth-key-jwt-server/share/lua/5.3/requests
+kong-plugin-jwt-up/share/lua/5.1/kong/plugins/jwt-up/jwt_parser
+kong-segment-log/share/lua/5.1/kong/plugins/segment-log/jwt_parser
+krpc/share/lua/5.1/krpc/test/test_client
+libssh2/share/lua/5.3/libssh2/sftp
+lua-testlongstring/share/lua/5.3/Test/Builder
+lua-testmore/share/lua/5.3/Test/Builder
+parquet/share/lua/5.1/thrift/protocol/TProtocol
+prefix_tree/share/lua/5.3/prefix_tree
+tablesalt/share/lua/5.1/TableSalt
+thrift/share/lua/5.1/thrift/protocol/TProtocol

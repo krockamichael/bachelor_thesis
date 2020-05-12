@@ -1,0 +1,16 @@
+ansi/share/lua/5.3/ansi/term
+caas/share/lua/5.3/caas/luvhttpd
+concurrentlua/share/lua/5.1/concurrent/distributed/link
+faketorio/share/lua/5.3/luarocks/build/builtin
+github/share/lua/5.3/httpclient/ngx_driver
+httpclient/share/lua/5.3/httpclient/ngx_driver
+jwt/share/lua/5.3/jwt
+jwt-jitsi/share/lua/5.3/jwt
+kong-auth-key-jwt-server/share/lua/5.3/httpclient/ngx_driver
+lua-resty-mail/share/lua/5.3/resty/mail/smtp
+luafft/share/lua/5.3/luafft
+luarocks/share/lua/5.3/luarocks/build/builtin
+parquet/share/lua/5.1/thrift/transport/TSocket
+thrift/share/lua/5.1/thrift/transport/TSocket
+upnpclient/share/lua/5.3/httpclient/ngx_driver
+vanilla/share/lua/5.1/vanilla/v/response

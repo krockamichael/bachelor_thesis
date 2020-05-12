@@ -1,0 +1,4 @@
+aspect/share/lua/5.3/aspect/filters
+faketorio/share/lua/5.3/luarocks/fs/win32
+luarocks/share/lua/5.3/luarocks/fs/win32
+valua/share/lua/5.3/valua

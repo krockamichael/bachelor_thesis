@@ -1,0 +1,5 @@
+json2lua/share/lua/5.3/lua-nucleo/tpretty
+lua-cassandra/share/lua/5.1/cassandra/socket
+lua-nucleo/share/lua/5.3/lua-nucleo/tpretty
+lua-resty-requests/share/lua/5.3/resty/socket
+lua-resty-socket/share/lua/5.3/resty/socket

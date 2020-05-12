@@ -1,0 +1,16 @@
+aspect/share/lua/5.3/aspect/utils
+kong-enhanced-oidc/share/lua/5.3/resty/session/storage/dshm
+kong-oidc/share/lua/5.3/resty/session/storage/dshm
+kong-oidc-adfs/share/lua/5.3/resty/session/storage/dshm
+kong-oidc-ng/share/lua/5.3/resty/session/storage/dshm
+kong-oidc-v2/share/lua/5.3/resty/session/storage/dshm
+kong-oidc-ws-rbac/share/lua/5.3/resty/session/storage/dshm
+loop/share/lua/5.3/loop/component/wrapped
+lua-api-gateway-aws/share/lua/5.3/api-gateway/aws/AwsService
+lua-resty-balancer/share/lua/5.3/resty/roundrobin
+lua-resty-openidc/share/lua/5.3/resty/session/storage/dshm
+lua-resty-session/share/lua/5.3/resty/session/storage/dshm
+lua-schema-validation/share/lua/5.1/validation
+openrtm/share/lua/5.3/loop/component/wrapped
+sample_rtcomponent/share/lua/5.3/loop/component/wrapped
+x-lua-api-gateway-aws/share/lua/5.3/api-gateway/aws/AwsService

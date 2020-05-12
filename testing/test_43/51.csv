@@ -1,0 +1,17 @@
+kong-enhanced-oidc/share/lua/5.3/resty/session/storage/memcache
+kong-enhanced-oidc/share/lua/5.3/resty/session/storage/redis
+kong-oidc/share/lua/5.3/resty/session/storage/memcache
+kong-oidc/share/lua/5.3/resty/session/storage/redis
+kong-oidc-adfs/share/lua/5.3/resty/session/storage/memcache
+kong-oidc-adfs/share/lua/5.3/resty/session/storage/redis
+kong-oidc-ng/share/lua/5.3/resty/session/storage/memcache
+kong-oidc-ng/share/lua/5.3/resty/session/storage/redis
+kong-oidc-v2/share/lua/5.3/resty/session/storage/memcache
+kong-oidc-v2/share/lua/5.3/resty/session/storage/redis
+kong-oidc-ws-rbac/share/lua/5.3/resty/session/storage/memcache
+kong-oidc-ws-rbac/share/lua/5.3/resty/session/storage/redis
+lua-resty-openidc/share/lua/5.3/resty/session/storage/memcache
+lua-resty-openidc/share/lua/5.3/resty/session/storage/redis
+lua-resty-session/share/lua/5.3/resty/session/storage/memcache
+lua-resty-session/share/lua/5.3/resty/session/storage/redis
+resty-route/share/lua/5.3/resty/route/router

@@ -1,0 +1,13 @@
+array/share/lua/5.3/array
+aspect/share/lua/5.3/aspect/ast/ops
+cpml-ci/share/lua/5.1/cpml/modules/color
+eaw-abstraction-layer/share/lua/5.3/eaw-abstraction-layer/core/environment
+escher/share/lua/5.3/escher
+f/share/lua/5.3/f/table
+github/share/lua/5.3/github
+lbuilder/share/lua/5.3/lbuilder
+lnet/share/lua/5.3/net/init
+luaorm/share/lua/5.3/LuaORM/LuaORM/Query/Condition/Equation
+lummander/share/lua/5.3/f/table
+objectlua/lib/luarocks/rocks-5.3/objectlua/0.4.10-1/test/TestObject
+strong/share/lua/5.3/strong

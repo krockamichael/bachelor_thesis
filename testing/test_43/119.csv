@@ -1,0 +1,12 @@
+dd-lua-tester/share/lua/5.3/jsonpath
+ddt/share/lua/5.3/jsonpath
+json2lua/share/lua/5.3/lua-nucleo/dsl/common_load_schema
+log4l/share/lua/5.3/log4l
+lua-coat/share/lua/5.3/Coat/Types
+lua-nucleo/share/lua/5.3/lua-nucleo/dsl/common_load_schema
+lunajson/share/lua/5.3/lunajson/sax
+sandbox/share/lua/5.3/sandbox
+stuart/share/lua/5.3/lunajson/sax
+stuart-ml/share/lua/5.3/lunajson/sax
+stuart-redis/share/lua/5.1/lunajson/sax
+stuart-sql/share/lua/5.1/lunajson/sax

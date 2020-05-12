@@ -1,0 +1,8 @@
+aesfileencrypt/lib/luarocks/rocks-5.3/aesfileencrypt/0.1.3-1/test/test
+app_scheduler/share/lua/5.3/app_scheduler
+faketorio/share/lua/5.3/luarocks/cmd/write_rockspec
+lift/share/lua/5.3/lift/task
+lua-resty-influx/share/lua/5.3/resty/influx/buffer
+luarocks/share/lua/5.3/luarocks/cmd/write_rockspec
+nozzle/share/lua/5.3/nozzle/generic
+pop3/lib/luarocks/rocks-5.3/pop3/0.1.6-1/test/test-message

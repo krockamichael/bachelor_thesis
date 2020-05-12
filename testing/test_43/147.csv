@@ -1,0 +1,17 @@
+cgilua/share/lua/5.3/cgilua/lp
+cue/share/lua/5.1/cue/init
+feedparser/share/lua/5.3/feedparser/XMLElement
+formatter/share/lua/5.1/pl/stringio
+github/share/lua/5.3/github/parsers
+json2lua/share/lua/5.3/json/decode/state
+jsonrpc4lua/share/lua/5.3/cgilua/lp
+latclient/share/lua/5.3/latclient/lp_mod
+lua-api-gateway-aws/share/lua/5.3/api-gateway/aws/httpclient/http
+lua-spore/share/lua/5.3/json/decode/state
+lua2json/share/lua/5.3/json/decode/state
+luadoc/share/lua/5.3/luadoc/taglet/standard
+luadoc/share/lua/5.3/luadoc/doclet/html
+luahue/share/lua/5.3/json/decode/state
+luajson/share/lua/5.3/json/decode/state
+solr/share/lua/5.3/json/decode/state
+x-lua-api-gateway-aws/share/lua/5.3/api-gateway/aws/httpclient/http

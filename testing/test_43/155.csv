@@ -1,0 +1,8 @@
+kong-enhanced-oidc/share/lua/5.3/resty/session
+kong-oidc/share/lua/5.3/resty/session
+kong-oidc-adfs/share/lua/5.3/resty/session
+kong-oidc-ng/share/lua/5.3/resty/session
+kong-oidc-v2/share/lua/5.3/resty/session
+kong-oidc-ws-rbac/share/lua/5.3/resty/session
+lua-resty-openidc/share/lua/5.3/resty/session
+lua-resty-session/share/lua/5.3/resty/session

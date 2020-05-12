@@ -1,0 +1,17 @@
+faketorio/share/lua/5.3/luarocks/core/cfg
+ipfinder/share/lua/5.3/ipfinder
+lovebird/share/lua/5.3/lovebird
+lpeglabel/share/lua/5.3/relabel
+lua-gnuplot/share/lua/5.3/gnuplot
+lua-parser/share/lua/5.3/relabel
+luaflow/share/lua/5.3/relabel
+luahaml/share/lua/5.3/haml/ext
+luarocks/share/lua/5.3/luarocks/core/cfg
+lummander/share/lua/5.3/lummander/lummander
+molde/share/lua/5.3/relabel
+nginx-lua-waf/share/lua/5.3/waf/init
+parser-gen/share/lua/5.3/relabel
+resty-smtp/share/lua/5.1/resty/smtp/ltn12
+stacktraceplus/share/lua/5.3/StackTracePlus
+tuple/share/lua/5.3/tuple
+vanilla/share/lua/5.1/resty/session/storage/memcache

@@ -1,0 +1,13 @@
+aspect/share/lua/5.3/aspect/config
+binarystream/share/lua/5.3/binarystream
+classy/share/lua/5.3/classy
+classyng/share/lua/5.3/classyng
+delaunay/share/lua/5.3/delaunay
+hump/share/lua/5.3/hump/vector
+irc-engine/share/lua/5.3/irce/init
+jumper/share/lua/5.3/jumper/pathfinder
+loop/share/lua/5.3/loop/debug/Verbose
+lzmq-ffi/share/lua/5.3/lzmq/impl/threads
+openrtm/share/lua/5.3/loop/debug/Verbose
+protobuf/share/lua/5.1/protobuf/encoder
+sample_rtcomponent/share/lua/5.3/loop/debug/Verbose

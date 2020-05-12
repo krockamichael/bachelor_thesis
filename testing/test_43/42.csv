@@ -1,0 +1,16 @@
+bump/share/lua/5.3/bump
+kong-plugin-aws-lambda/share/lua/5.3/kong/plugins/aws-lambda/iam-ecs-credentials
+loop/share/lua/5.3/loop/debug/Matcher
+lua-erento-uuid/share/lua/5.3/resty/uuid
+lua-resty-passwdqc/share/lua/5.3/resty/passwdqc
+lua-resty-scrypt/share/lua/5.3/resty/scrypt
+lua-resty-uuid/share/lua/5.3/resty/uuid
+luadoc/share/lua/5.3/logging
+lualogging/share/lua/5.3/logging
+luarepl/share/lua/5.3/repl/plugins/pretty_print
+luasoap/share/lua/5.3/soap
+luasyslog/share/lua/5.3/logging
+luchia/share/lua/5.3/logging
+open-tiny-util/share/lua/5.3/tiny/util/uuid
+openrtm/share/lua/5.3/loop/debug/Matcher
+sample_rtcomponent/share/lua/5.3/loop/debug/Matcher

@@ -1,0 +1,10 @@
+halo/share/lua/5.3/halo/util
+json2lua/share/lua/5.3/json/decode/composite
+lift/share/lua/5.3/lift/config
+lua-resty-upstream/share/lua/5.3/resty/upstream/api
+lua-spore/share/lua/5.3/json/decode/composite
+lua2json/share/lua/5.3/json/decode/composite
+luahue/share/lua/5.3/json/decode/composite
+luajson/share/lua/5.3/json/decode/composite
+rockspec2cmake/share/lua/5.3/rockspec2cmake/CMakeBuilder
+solr/share/lua/5.3/json/decode/composite
