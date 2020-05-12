@@ -1,20 +1,32 @@
-import pandas as pd
-import plotly.offline as py
+import matplotlib.pyplot as plt
 import plotly.graph_objs as go
+import plotly.offline as py
+import seaborn as sns
+import pandas as pd
 
 # Import the 3 dimensionality reduction methods
-from sklearn.manifold import TSNE
-from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
 
-file_number = 39
-n_clusters = 20
-csv_name = 'testing/test_' + str(file_number) + '/temp.csv'
 
-df = pd.read_csv(csv_name, delimiter=',', header=None)
+# FIXME
+n_clusters = 200
+file_number = 43
+destination_folder = 'testing/test_{}/'.format(file_number)
+
+# ------------------------------------------------------------------------------ load data
+df = pd.read_csv(destination_folder + 'temp.csv', delimiter=',', header=None)
 X = df.iloc[:, :df.columns[-2]]
 Target = df[df.columns[-2]]
 
+# ------------------------------------------------------------------------------ create pairplot
+print('Creating pairplot...')
+df.rename(columns={n_clusters: 'Label'}, inplace=True)
+sns.set(style='ticks')
+sns.pairplot(df, hue='Label')
+plt.savefig(destination_folder + str(n_clusters) + '_predictions.png')
+plt.show()
 
 # ------------------------------------------------------------------------------ PCA
 # Call the PCA method with 50 components.

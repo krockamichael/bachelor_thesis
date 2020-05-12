@@ -1,7 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from context_paths.module_handler import ModuleHandler
-from ClusteringLayer import ClusteringLayer
+from utils import ClusteringLayer
 from keras.models import load_model
 import numpy as np
 
@@ -15,9 +15,7 @@ def java_string_hashcode(s):
 
 
 MAX_CONTEXTS = 430
-# filepath = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\modules\\30log\\share\\lua\\5.1\\30log.lua'
-# TODO change path to json file
-jsonpath = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\data_all\\30log\\AST1.json'
+jsonpath = 'data/data_json/30log/AST1.json'
 
 # get context paths
 module_handler = ModuleHandler(jsonpath)
@@ -67,7 +65,6 @@ if file_context_paths[-1] == ' ':
     file_context_paths = file_context_paths[:-1]
 
 # double check if the number of context paths is correct
-# TODO can be removed
 delimited = file_context_paths.split(sep=' ')
 if len(delimited) != MAX_CONTEXTS:
     exit('Too many contexts, trimming failed.')
@@ -83,14 +80,13 @@ masked_data = np.ma.masked_equal(data, 0)  # values without zero-padding, to per
 
 # normalise data, get mean and std from training, here its hardcoded
 print('Normalising data...')
-masked_data_mean = -120.57979590730959
-masked_data_std = 1115300671.9887397
+masked_data_mean = 21.11153407758736
+masked_data_std = 1157761522.5453846
 normalised_masked_data = (masked_data - masked_data_mean) / masked_data_std  # perform z-normalisation
 final_data = normalised_masked_data.filled(0)  # refill masked values with 0
 
 # load model and generate label
-# TODO change path to model
-model_path = 'full_clust_models/full_LSTM_2_clusters_7_bs_128/full_LSTM_2_clusters_7_bs_128.h5'
+model_path = 'testing/test_41/clustering_model_10.h5'
 model = load_model(model_path, custom_objects={'ClusteringLayer': ClusteringLayer})
 print('Clustering model predicting...')
 x_model = model.predict(final_data)

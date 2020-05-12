@@ -1,6 +1,1 @@
-data/*.csv filter=lfs diff=lfs merge=lfs -text
 data/dataset.csv filter=lfs diff=lfs merge=lfs -text
-data/CLEAN_dataset.csv filter=lfs diff=lfs merge=lfs -text
-data/no_duplicates_dataset.csv filter=lfs diff=lfs merge=lfs -text
-data/ONLY_BIG_dataset.csv filter=lfs diff=lfs merge=lfs -text
-*.csv filter=lfs diff=lfs merge=lfs -text

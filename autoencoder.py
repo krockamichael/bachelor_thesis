@@ -2,18 +2,13 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from keras.models import Model
 from keras import regularizers
-from keras.layers import LSTM, RepeatVector, TimeDistributed, Dense, Masking, Dropout, Input, Lambda
+from keras.layers import LSTM, RepeatVector, TimeDistributed, Dense, Masking, Input, Lambda
 from utils import loadFile, doGraphsAutoencoder, TimingCallback, getModelName, cropOutputs
 import numpy as np
-import pandas as pd
 
 neurons = 128
 epochs = 10
 batch_size = 128
-
-# TODO sparsity constraints
-# TODO dropout
-# TODO If the initial predictions of your model are too far from this range, you might like to have a BatchNormalization (not really necessary) before or after the last Dense
 
 inputs = Input(shape=(430, 3))
 masked_input = Masking(mask_value=0, input_shape=(430, 3))(inputs)
@@ -47,7 +42,7 @@ score = model.evaluate(test, test, verbose=1)
 print("%s: %.2f%%" % (model.metrics_names[1], score[1]*100))
 print("%s: %.2f%%" % (model.metrics_names[0], score[0]*100))
 
-# save model and weights to single file
+# save model to file
 model_name = getModelName(model, neurons, epochs, batch_size, score[1]*100)
 model.save(model_name)
 print("Saved model to disk.")
