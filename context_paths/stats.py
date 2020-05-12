@@ -6,8 +6,24 @@ import numpy as np
 from context_paths.module_handler import ModuleHandler
 from console_progressbar import ProgressBar
 
-data_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\data_all'
-modules_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\modules'
+# update data_path to point to folder where all json files are stored IF a different dataset is selected
+data_path = '../data/data_json'
+# update modules_path to point to folder where all downloaded modules are stored IF a different dataset is selected
+modules_path = '../data/modules'
+
+"""
+this script calcaulates interesting statistics from the dataset such as the number of:
+    - downloaded repositories
+    - successfully processed repositories
+    - processed modules == json files in data_path
+    - processed modules with nodes_count > 0 (some have 0 nodes (e.g. init.lua))
+    - minimum, maximum, mean and median of nodes across all modules
+    - minimum, maximum, mean and median LENGTH of paths across all modules
+    - minimum, maximum, mean and median COUNT of context_paths across all modules
+        - context_path is a triplet of (source_leaf, path, target_leaf)
+        - for more info check bachelor thesis documentation chapter 6.2.1 or chapter 4.1
+"""
+
 files = list()
 nodes = list()
 path_lengths = list()
@@ -25,7 +41,6 @@ pb = ProgressBar(total=len(files), prefix='0 files', suffix='{} files'.format(le
 progress = 0
 
 for file in files:
-
     # there was some problem with files encoding,
     # e.g. /home/katka/Desktop/skola/BP/luadb/etc/luarocks_test/data/ads1015/AST39.json
     # so we just want to have it encoded as utf-8 or ascii

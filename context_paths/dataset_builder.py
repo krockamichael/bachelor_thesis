@@ -14,7 +14,9 @@ def java_string_hashcode(s):
 
 
 def main():
-    file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\data_all'
+    # FIXME
+    # update file_path to point to folder where all json files are stored
+    file_path = '../data/data_json'
     files = list()
 
     # r=root, d=directories, f = files
@@ -28,7 +30,9 @@ def main():
                      decimals=2, length=50, fill='X', zfill='-')
     progress = 0
 
-    master_file_path = 'C:\\Users\\krock\\Desktop\\FIIT\\BP\\Ubuntu\\luadb\\etc\\luarocks_test\\dataset.csv'
+    # FIXME
+    # update master_file_path to point to the destination folder where dataset.csv will be generated
+    master_file_path = '../data/dataset_1.csv'
     with codecs.open(master_file_path, 'w+', 'utf-8') as csvfile:
         filewriter = csv.writer(csvfile)
         MAX_CONTEXTS = 430
