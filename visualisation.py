@@ -65,7 +65,7 @@ layout = dict(title='PCA (Principal Component Analysis)',
               showlegend=True)
 
 fig = dict(data=data, layout=layout)
-py.plot(fig, filename=str(file_number) + '_PCA-styled-scatter.html')
+py.plot(fig, filename=destination_folder + str(file_number) + '_PCA-styled-scatter.html')
 
 
 # ------------------------------------------------------------------------------ LDA
@@ -102,7 +102,7 @@ layout = dict(title='LDA (Linear Discriminant Analysis)',
               showlegend=True)
 
 fig = dict(data=data, layout=layout)
-py.plot(fig, filename=str(file_number) + '_LDA-styled-scatter.html')
+py.plot(fig, filename=destination_folder + str(file_number) + '_LDA-styled-scatter.html')
 
 
 # ------------------------------------------------------------------------------ T-SNE
@@ -139,4 +139,4 @@ layout = dict(title='TSNE (T-Distributed Stochastic Neighbour Embedding)',
               showlegend=True)
 
 fig = dict(data=data, layout=layout)
-py.plot(fig, filename=str(file_number) + '_T-SNE-styled-scatter.html')
+py.plot(fig, filename=destination_folder + str(file_number) + '_T-SNE-styled-scatter.html')
