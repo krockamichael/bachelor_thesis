@@ -1,0 +1,178 @@
+commands = {}
+dependencies = {
+   luamqtt = {
+      ["3.1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     3, 0, -999.99999, revision = 2, string = "3.0rc1-2"
+                  }
+               }
+            },
+            name = "luasocket"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   mqtt = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.bit53"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.bitwrap"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.client"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.ioloop"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.luasocket"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.luasocket_ssl"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.ngxsocket"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.protocol"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.protocol4"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.protocol5"] = {
+      "luamqtt/3.1.0-2"
+   },
+   ["mqtt.tools"] = {
+      "luamqtt/3.1.0-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   luamqtt = {
+      ["3.1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               mqtt = "mqtt/init.lua",
+               ["mqtt.bit53"] = "mqtt/bit53.lua",
+               ["mqtt.bitwrap"] = "mqtt/bitwrap.lua",
+               ["mqtt.client"] = "mqtt/client.lua",
+               ["mqtt.ioloop"] = "mqtt/ioloop.lua",
+               ["mqtt.luasocket"] = "mqtt/luasocket.lua",
+               ["mqtt.luasocket_ssl"] = "mqtt/luasocket_ssl.lua",
+               ["mqtt.ngxsocket"] = "mqtt/ngxsocket.lua",
+               ["mqtt.protocol"] = "mqtt/protocol.lua",
+               ["mqtt.protocol4"] = "mqtt/protocol4.lua",
+               ["mqtt.protocol5"] = "mqtt/protocol5.lua",
+               ["mqtt.tools"] = "mqtt/tools.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   }
+}

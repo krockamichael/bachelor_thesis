@@ -1,0 +1,899 @@
+commands = {
+   channeld = {
+      "oil/0.5-2"
+   },
+   idl2lua = {
+      "oil/0.5-2"
+   },
+   ird = {
+      "oil/0.5-2"
+   },
+   nsd = {
+      "oil/0.5-2"
+   },
+   precompiler = {
+      "loop/2.3beta-1"
+   },
+   preloader = {
+      "loop/2.3beta-1"
+   }
+}
+dependencies = {
+   loop = {
+      ["2.3beta-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luaidl = {
+      ["1.0.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   oil = {
+      ["0.5-2"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, string = "2.0"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     2, 3, -100000, string = "2.3beta"
+                  }
+               }
+            },
+            name = "loop"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     1, 0, 5, string = "1.0.5"
+                  }
+               }
+            },
+            name = "luaidl"
+         }
+      }
+   }
+}
+modules = {
+   idl2lua = {
+      "oil/0.5-2"
+   },
+   ["loop.base"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.cached"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.collection.MapWithArrayOfKeys"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.collection.ObjectCache"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.collection.OrderedSet"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.collection.PriorityQueue"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.collection.UnorderedArray"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.collection.UnorderedArraySet"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.compiler.Arguments"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.compiler.Conditional"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.compiler.Expression"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.component.base"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.component.contained"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.component.dynamic"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.component.intercepted"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.component.wrapped"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.debug.Inspector"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.debug.Matcher"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.debug.Verbose"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.debug.Viewer"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.multiple"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.object.Exception"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.object.Publisher"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.object.Wrapper"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.scoped"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.serial.FileStream"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.serial.Serializer"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.serial.SocketStream"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.serial.StringStream"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.simple"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.table"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.thread.CoSocket"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.thread.IOScheduler"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.thread.Scheduler"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.thread.SocketScheduler"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ["loop.thread.Timer"] = {
+      "loop/2.3beta-1",
+      "oil/0.5-2"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   luaidl = {
+      "luaidl/1.0.5-1",
+      "oil/0.5-2"
+   },
+   ["luaidl.lex"] = {
+      "luaidl/1.0.5-1",
+      "oil/0.5-2"
+   },
+   ["luaidl.pre"] = {
+      "luaidl/1.0.5-1",
+      "oil/0.5-2"
+   },
+   ["luaidl.sin"] = {
+      "luaidl/1.0.5-1",
+      "oil/0.5-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   oil = {
+      "oil/0.5-2"
+   },
+   ["oil.Exception"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.basic.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.basic.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.basic.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.cooperative.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.cooperative.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.corba.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.corba.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.corba.intercepted.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.corba.intercepted.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.corba.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.ludo.byref"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.ludo.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.ludo.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.ludo.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.typed.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.typed.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.arch.typed.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.assert"] = {
+      "oil/0.5-2"
+   },
+   ["oil.bit"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.basic.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.basic.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.basic.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.cooperative.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.cooperative.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.corba.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.corba.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.corba.gencode"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.corba.intercepted.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.corba.intercepted.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.corba.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.lua.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.lua.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.ludo.byref"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.ludo.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.ludo.common"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.ludo.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.typed.client"] = {
+      "oil/0.5-2"
+   },
+   ["oil.builder.typed.server"] = {
+      "oil/0.5-2"
+   },
+   ["oil.compat"] = {
+      "oil/0.5-2"
+   },
+   ["oil.component"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.Codec"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.CodecGen"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.Exception"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.Indexer"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.Listener"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.Messenger"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.Referrer"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.giop.Requester"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.idl"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.idl.Compiler"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.idl.Importer"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.idl.Indexer"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.idl.Registry"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.idl.ir"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.idl.sysex"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.iiop.Profiler"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.intercepted.Listener"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.intercepted.Requester"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.ConsumerAdmin"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.EventFactory"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.EventQueue"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.ProxyPushConsumer"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.ProxyPushSupplier"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.SingleDeferredDispatcher"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.SingleSynchronousDispatcher"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.event.SupplierAdmin"] = {
+      "oil/0.5-2"
+   },
+   ["oil.corba.services.naming"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Acceptor"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Channels"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Connector"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Dispatcher"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Proxies"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Proxies.asynchronous"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Proxies.protected"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Proxies.synchronous"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Proxies.utils"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Receiver"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Servants"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.base.Sockets"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.cooperative.Receiver"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.intercepted.Listener"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.intercepted.Requester"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.lua.Dispatcher"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.lua.Proxies"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.typed.Dispatcher"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.typed.Proxies"] = {
+      "oil/0.5-2"
+   },
+   ["oil.kernel.typed.Servants"] = {
+      "oil/0.5-2"
+   },
+   ["oil.ludo.Codec"] = {
+      "oil/0.5-2"
+   },
+   ["oil.ludo.CodecByRef"] = {
+      "oil/0.5-2"
+   },
+   ["oil.ludo.Listener"] = {
+      "oil/0.5-2"
+   },
+   ["oil.ludo.Referrer"] = {
+      "oil/0.5-2"
+   },
+   ["oil.ludo.Requester"] = {
+      "oil/0.5-2"
+   },
+   ["oil.oo"] = {
+      "oil/0.5-2"
+   },
+   ["oil.port"] = {
+      "oil/0.5-2"
+   },
+   ["oil.properties"] = {
+      "oil/0.5-2"
+   },
+   ["oil.verbose"] = {
+      "oil/0.5-2"
+   },
+   precompiler = {
+      "oil/0.5-2"
+   },
+   preloader = {
+      "oil/0.5-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2",
+      "oil/0.5-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2",
+      "oil/0.5-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2",
+      "oil/0.5-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2",
+      "oil/0.5-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2",
+      "oil/0.5-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2",
+      "oil/0.5-2"
+   }
+}
+repository = {
+   loop = {
+      ["2.3beta-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               precompiler = "precompiler.lua",
+               preloader = "preloader.lua"
+            },
+            dependencies = {},
+            modules = {
+               ["loop.base"] = "loop/base.lua",
+               ["loop.cached"] = "loop/cached.lua",
+               ["loop.collection.MapWithArrayOfKeys"] = "loop/collection/MapWithArrayOfKeys.lua",
+               ["loop.collection.ObjectCache"] = "loop/collection/ObjectCache.lua",
+               ["loop.collection.OrderedSet"] = "loop/collection/OrderedSet.lua",
+               ["loop.collection.PriorityQueue"] = "loop/collection/PriorityQueue.lua",
+               ["loop.collection.UnorderedArray"] = "loop/collection/UnorderedArray.lua",
+               ["loop.collection.UnorderedArraySet"] = "loop/collection/UnorderedArraySet.lua",
+               ["loop.compiler.Arguments"] = "loop/compiler/Arguments.lua",
+               ["loop.compiler.Conditional"] = "loop/compiler/Conditional.lua",
+               ["loop.compiler.Expression"] = "loop/compiler/Expression.lua",
+               ["loop.component.base"] = "loop/component/base.lua",
+               ["loop.component.contained"] = "loop/component/contained.lua",
+               ["loop.component.dynamic"] = "loop/component/dynamic.lua",
+               ["loop.component.intercepted"] = "loop/component/intercepted.lua",
+               ["loop.component.wrapped"] = "loop/component/wrapped.lua",
+               ["loop.debug.Inspector"] = "loop/debug/Inspector.lua",
+               ["loop.debug.Matcher"] = "loop/debug/Matcher.lua",
+               ["loop.debug.Verbose"] = "loop/debug/Verbose.lua",
+               ["loop.debug.Viewer"] = "loop/debug/Viewer.lua",
+               ["loop.multiple"] = "loop/multiple.lua",
+               ["loop.object.Exception"] = "loop/object/Exception.lua",
+               ["loop.object.Publisher"] = "loop/object/Publisher.lua",
+               ["loop.object.Wrapper"] = "loop/object/Wrapper.lua",
+               ["loop.scoped"] = "loop/scoped.lua",
+               ["loop.serial.FileStream"] = "loop/serial/FileStream.lua",
+               ["loop.serial.Serializer"] = "loop/serial/Serializer.lua",
+               ["loop.serial.SocketStream"] = "loop/serial/SocketStream.lua",
+               ["loop.serial.StringStream"] = "loop/serial/StringStream.lua",
+               ["loop.simple"] = "loop/simple.lua",
+               ["loop.table"] = "loop/table.lua",
+               ["loop.thread.CoSocket"] = "loop/thread/CoSocket.lua",
+               ["loop.thread.IOScheduler"] = "loop/thread/IOScheduler.lua",
+               ["loop.thread.Scheduler"] = "loop/thread/Scheduler.lua",
+               ["loop.thread.SocketScheduler"] = "loop/thread/SocketScheduler.lua",
+               ["loop.thread.Timer"] = "loop/thread/Timer.lua"
+            }
+         }
+      }
+   },
+   luaidl = {
+      ["1.0.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luaidl = "luaidl.lua",
+               ["luaidl.lex"] = "luaidl/lex.lua",
+               ["luaidl.pre"] = "luaidl/pre.lua",
+               ["luaidl.sin"] = "luaidl/sin.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   oil = {
+      ["0.5-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               channeld = "channeld.lua",
+               idl2lua = "idl2lua.lua",
+               ird = "ird.lua",
+               nsd = "nsd.lua"
+            },
+            dependencies = {
+               loop = "2.3beta-1",
+               luaidl = "1.0.5-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               idl2lua = "idl2lua.lua",
+               ["loop.base"] = "loop/base.lua",
+               ["loop.cached"] = "loop/cached.lua",
+               ["loop.collection.MapWithArrayOfKeys"] = "loop/collection/MapWithArrayOfKeys.lua",
+               ["loop.collection.ObjectCache"] = "loop/collection/ObjectCache.lua",
+               ["loop.collection.OrderedSet"] = "loop/collection/OrderedSet.lua",
+               ["loop.collection.PriorityQueue"] = "loop/collection/PriorityQueue.lua",
+               ["loop.collection.UnorderedArray"] = "loop/collection/UnorderedArray.lua",
+               ["loop.collection.UnorderedArraySet"] = "loop/collection/UnorderedArraySet.lua",
+               ["loop.compiler.Arguments"] = "loop/compiler/Arguments.lua",
+               ["loop.compiler.Conditional"] = "loop/compiler/Conditional.lua",
+               ["loop.compiler.Expression"] = "loop/compiler/Expression.lua",
+               ["loop.component.base"] = "loop/component/base.lua",
+               ["loop.component.contained"] = "loop/component/contained.lua",
+               ["loop.component.dynamic"] = "loop/component/dynamic.lua",
+               ["loop.component.intercepted"] = "loop/component/intercepted.lua",
+               ["loop.component.wrapped"] = "loop/component/wrapped.lua",
+               ["loop.debug.Inspector"] = "loop/debug/Inspector.lua",
+               ["loop.debug.Matcher"] = "loop/debug/Matcher.lua",
+               ["loop.debug.Verbose"] = "loop/debug/Verbose.lua",
+               ["loop.debug.Viewer"] = "loop/debug/Viewer.lua",
+               ["loop.multiple"] = "loop/multiple.lua",
+               ["loop.object.Exception"] = "loop/object/Exception.lua",
+               ["loop.object.Publisher"] = "loop/object/Publisher.lua",
+               ["loop.object.Wrapper"] = "loop/object/Wrapper.lua",
+               ["loop.scoped"] = "loop/scoped.lua",
+               ["loop.serial.FileStream"] = "loop/serial/FileStream.lua",
+               ["loop.serial.Serializer"] = "loop/serial/Serializer.lua",
+               ["loop.serial.SocketStream"] = "loop/serial/SocketStream.lua",
+               ["loop.serial.StringStream"] = "loop/serial/StringStream.lua",
+               ["loop.simple"] = "loop/simple.lua",
+               ["loop.table"] = "loop/table.lua",
+               ["loop.thread.CoSocket"] = "loop/thread/CoSocket.lua",
+               ["loop.thread.IOScheduler"] = "loop/thread/IOScheduler.lua",
+               ["loop.thread.Scheduler"] = "loop/thread/Scheduler.lua",
+               ["loop.thread.SocketScheduler"] = "loop/thread/SocketScheduler.lua",
+               ["loop.thread.Timer"] = "loop/thread/Timer.lua",
+               luaidl = "luaidl.lua",
+               ["luaidl.lex"] = "luaidl/lex.lua",
+               ["luaidl.pre"] = "luaidl/pre.lua",
+               ["luaidl.sin"] = "luaidl/sin.lua",
+               oil = "oil.lua",
+               ["oil.Exception"] = "oil/Exception.lua",
+               ["oil.arch"] = "oil/arch.lua",
+               ["oil.arch.basic.client"] = "oil/arch/basic/client.lua",
+               ["oil.arch.basic.common"] = "oil/arch/basic/common.lua",
+               ["oil.arch.basic.server"] = "oil/arch/basic/server.lua",
+               ["oil.arch.cooperative.common"] = "oil/arch/cooperative/common.lua",
+               ["oil.arch.cooperative.server"] = "oil/arch/cooperative/server.lua",
+               ["oil.arch.corba.client"] = "oil/arch/corba/client.lua",
+               ["oil.arch.corba.common"] = "oil/arch/corba/common.lua",
+               ["oil.arch.corba.intercepted.client"] = "oil/arch/corba/intercepted/client.lua",
+               ["oil.arch.corba.intercepted.server"] = "oil/arch/corba/intercepted/server.lua",
+               ["oil.arch.corba.server"] = "oil/arch/corba/server.lua",
+               ["oil.arch.ludo.byref"] = "oil/arch/ludo/byref.lua",
+               ["oil.arch.ludo.client"] = "oil/arch/ludo/client.lua",
+               ["oil.arch.ludo.common"] = "oil/arch/ludo/common.lua",
+               ["oil.arch.ludo.server"] = "oil/arch/ludo/server.lua",
+               ["oil.arch.typed.client"] = "oil/arch/typed/client.lua",
+               ["oil.arch.typed.common"] = "oil/arch/typed/common.lua",
+               ["oil.arch.typed.server"] = "oil/arch/typed/server.lua",
+               ["oil.assert"] = "oil/assert.lua",
+               ["oil.bit"] = "oil/bit.so",
+               ["oil.builder"] = "oil/builder.lua",
+               ["oil.builder.basic.client"] = "oil/builder/basic/client.lua",
+               ["oil.builder.basic.common"] = "oil/builder/basic/common.lua",
+               ["oil.builder.basic.server"] = "oil/builder/basic/server.lua",
+               ["oil.builder.cooperative.common"] = "oil/builder/cooperative/common.lua",
+               ["oil.builder.cooperative.server"] = "oil/builder/cooperative/server.lua",
+               ["oil.builder.corba.client"] = "oil/builder/corba/client.lua",
+               ["oil.builder.corba.common"] = "oil/builder/corba/common.lua",
+               ["oil.builder.corba.gencode"] = "oil/builder/corba/gencode.lua",
+               ["oil.builder.corba.intercepted.client"] = "oil/builder/corba/intercepted/client.lua",
+               ["oil.builder.corba.intercepted.server"] = "oil/builder/corba/intercepted/server.lua",
+               ["oil.builder.corba.server"] = "oil/builder/corba/server.lua",
+               ["oil.builder.lua.client"] = "oil/builder/lua/client.lua",
+               ["oil.builder.lua.server"] = "oil/builder/lua/server.lua",
+               ["oil.builder.ludo.byref"] = "oil/builder/ludo/byref.lua",
+               ["oil.builder.ludo.client"] = "oil/builder/ludo/client.lua",
+               ["oil.builder.ludo.common"] = "oil/builder/ludo/common.lua",
+               ["oil.builder.ludo.server"] = "oil/builder/ludo/server.lua",
+               ["oil.builder.typed.client"] = "oil/builder/typed/client.lua",
+               ["oil.builder.typed.server"] = "oil/builder/typed/server.lua",
+               ["oil.compat"] = "oil/compat.lua",
+               ["oil.component"] = "oil/component.lua",
+               ["oil.corba.giop"] = "oil/corba/giop.lua",
+               ["oil.corba.giop.Codec"] = "oil/corba/giop/Codec.lua",
+               ["oil.corba.giop.CodecGen"] = "oil/corba/giop/CodecGen.lua",
+               ["oil.corba.giop.Exception"] = "oil/corba/giop/Exception.lua",
+               ["oil.corba.giop.Indexer"] = "oil/corba/giop/Indexer.lua",
+               ["oil.corba.giop.Listener"] = "oil/corba/giop/Listener.lua",
+               ["oil.corba.giop.Messenger"] = "oil/corba/giop/Messenger.lua",
+               ["oil.corba.giop.Referrer"] = "oil/corba/giop/Referrer.lua",
+               ["oil.corba.giop.Requester"] = "oil/corba/giop/Requester.lua",
+               ["oil.corba.idl"] = "oil/corba/idl.lua",
+               ["oil.corba.idl.Compiler"] = "oil/corba/idl/Compiler.lua",
+               ["oil.corba.idl.Importer"] = "oil/corba/idl/Importer.lua",
+               ["oil.corba.idl.Indexer"] = "oil/corba/idl/Indexer.lua",
+               ["oil.corba.idl.Registry"] = "oil/corba/idl/Registry.lua",
+               ["oil.corba.idl.ir"] = "oil/corba/idl/ir.lua",
+               ["oil.corba.idl.sysex"] = "oil/corba/idl/sysex.lua",
+               ["oil.corba.iiop.Profiler"] = "oil/corba/iiop/Profiler.lua",
+               ["oil.corba.intercepted.Listener"] = "oil/corba/intercepted/Listener.lua",
+               ["oil.corba.intercepted.Requester"] = "oil/corba/intercepted/Requester.lua",
+               ["oil.corba.services.event"] = "oil/corba/services/event.lua",
+               ["oil.corba.services.event.ConsumerAdmin"] = "oil/corba/services/event/ConsumerAdmin.lua",
+               ["oil.corba.services.event.EventFactory"] = "oil/corba/services/event/EventFactory.lua",
+               ["oil.corba.services.event.EventQueue"] = "oil/corba/services/event/EventQueue.lua",
+               ["oil.corba.services.event.ProxyPushConsumer"] = "oil/corba/services/event/ProxyPushConsumer.lua",
+               ["oil.corba.services.event.ProxyPushSupplier"] = "oil/corba/services/event/ProxyPushSupplier.lua",
+               ["oil.corba.services.event.SingleDeferredDispatcher"] = "oil/corba/services/event/SingleDeferredDispatcher.lua",
+               ["oil.corba.services.event.SingleSynchronousDispatcher"] = "oil/corba/services/event/SingleSynchronousDispatcher.lua",
+               ["oil.corba.services.event.SupplierAdmin"] = "oil/corba/services/event/SupplierAdmin.lua",
+               ["oil.corba.services.naming"] = "oil/corba/services/naming.lua",
+               ["oil.kernel.base.Acceptor"] = "oil/kernel/base/Acceptor.lua",
+               ["oil.kernel.base.Channels"] = "oil/kernel/base/Channels.lua",
+               ["oil.kernel.base.Connector"] = "oil/kernel/base/Connector.lua",
+               ["oil.kernel.base.Dispatcher"] = "oil/kernel/base/Dispatcher.lua",
+               ["oil.kernel.base.Proxies"] = "oil/kernel/base/Proxies.lua",
+               ["oil.kernel.base.Proxies.asynchronous"] = "oil/kernel/base/Proxies/asynchronous.lua",
+               ["oil.kernel.base.Proxies.protected"] = "oil/kernel/base/Proxies/protected.lua",
+               ["oil.kernel.base.Proxies.synchronous"] = "oil/kernel/base/Proxies/synchronous.lua",
+               ["oil.kernel.base.Proxies.utils"] = "oil/kernel/base/Proxies/utils.lua",
+               ["oil.kernel.base.Receiver"] = "oil/kernel/base/Receiver.lua",
+               ["oil.kernel.base.Servants"] = "oil/kernel/base/Servants.lua",
+               ["oil.kernel.base.Sockets"] = "oil/kernel/base/Sockets.lua",
+               ["oil.kernel.cooperative.Receiver"] = "oil/kernel/cooperative/Receiver.lua",
+               ["oil.kernel.intercepted.Listener"] = "oil/kernel/intercepted/Listener.lua",
+               ["oil.kernel.intercepted.Requester"] = "oil/kernel/intercepted/Requester.lua",
+               ["oil.kernel.lua.Dispatcher"] = "oil/kernel/lua/Dispatcher.lua",
+               ["oil.kernel.lua.Proxies"] = "oil/kernel/lua/Proxies.lua",
+               ["oil.kernel.typed.Dispatcher"] = "oil/kernel/typed/Dispatcher.lua",
+               ["oil.kernel.typed.Proxies"] = "oil/kernel/typed/Proxies.lua",
+               ["oil.kernel.typed.Servants"] = "oil/kernel/typed/Servants.lua",
+               ["oil.ludo.Codec"] = "oil/ludo/Codec.lua",
+               ["oil.ludo.CodecByRef"] = "oil/ludo/CodecByRef.lua",
+               ["oil.ludo.Listener"] = "oil/ludo/Listener.lua",
+               ["oil.ludo.Referrer"] = "oil/ludo/Referrer.lua",
+               ["oil.ludo.Requester"] = "oil/ludo/Requester.lua",
+               ["oil.oo"] = "oil/oo.lua",
+               ["oil.port"] = "oil/port.lua",
+               ["oil.properties"] = "oil/properties.lua",
+               ["oil.verbose"] = "oil/verbose.lua",
+               precompiler = "precompiler.lua",
+               preloader = "preloader.lua",
+               socket = "socket.lua",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   }
+}

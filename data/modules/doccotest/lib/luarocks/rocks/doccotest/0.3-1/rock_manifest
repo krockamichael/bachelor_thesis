@@ -1,0 +1,16 @@
+rock_manifest = {
+   bin = {
+      doccotest = "c4b0c3e7c76a1667dbf74e85dffb5e97"
+   },
+   doc = {
+      LICENSE = "0a5c3f5186ebbcedabecd505bc30c13f",
+      ["README.md"] = "30a1c79efe96a7d476431d5c463864e7"
+   },
+   ["doccotest-0.3-1.rockspec"] = "66254a1497d5cb6cdeee3b166e11592e",
+   lua = {
+      doccotest = {
+         ["en.lua"] = "410e74ad3f2276c787204b338be4da5b"
+      },
+      ["doccotest.lua"] = "bf76f24f4eafc4499d68fecfd7f28d36"
+   }
+}

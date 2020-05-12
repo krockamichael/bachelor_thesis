@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-shepherd"] = {
+      ["0.5.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.shepherd.api"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.daos"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.handler"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.migrations.postgres"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.misc.config"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.misc.migrate"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.schema"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.views.index"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   },
+   ["kong.plugins.shepherd.views.layout"] = {
+      "kong-plugin-shepherd/0.5.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-shepherd"] = {
+      ["0.5.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.shepherd.api"] = "kong/plugins/shepherd/api.lua",
+               ["kong.plugins.shepherd.daos"] = "kong/plugins/shepherd/daos.lua",
+               ["kong.plugins.shepherd.handler"] = "kong/plugins/shepherd/handler.lua",
+               ["kong.plugins.shepherd.migrations.postgres"] = "kong/plugins/shepherd/migrations/postgres.lua",
+               ["kong.plugins.shepherd.misc.config"] = "kong/plugins/shepherd/misc/config.lua",
+               ["kong.plugins.shepherd.misc.migrate"] = "kong/plugins/shepherd/misc/migrate.lua",
+               ["kong.plugins.shepherd.schema"] = "kong/plugins/shepherd/schema.lua",
+               ["kong.plugins.shepherd.views.index"] = "kong/plugins/shepherd/views/index.lua",
+               ["kong.plugins.shepherd.views.layout"] = "kong/plugins/shepherd/views/layout.lua"
+            }
+         }
+      }
+   }
+}

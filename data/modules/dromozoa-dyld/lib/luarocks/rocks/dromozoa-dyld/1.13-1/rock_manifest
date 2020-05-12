@@ -1,0 +1,12 @@
+rock_manifest = {
+   doc = {
+      COPYING = "d32239bcb673463ab874e80d47fae504",
+      ["README.md"] = "330e64dcb06c8803f7bb7ffaaf6d7326"
+   },
+   ["dromozoa-dyld-1.13-1.rockspec"] = "3ef55d56b80dd879ce3a4628f2e75af4",
+   lib = {
+      dromozoa = {
+         ["dyld.so"] = "b6b60f822eef345a3fcf0338ca02c672"
+      }
+   }
+}

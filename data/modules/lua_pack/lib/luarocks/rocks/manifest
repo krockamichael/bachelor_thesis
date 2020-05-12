@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   lua_pack = {
+      ["1.0.5-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lua_pack = {
+      "lua_pack/1.0.5-0"
+   }
+}
+repository = {
+   lua_pack = {
+      ["1.0.5-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lua_pack = "lua_pack.so"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,482 @@
+commands = {
+   luarocks = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks-5.1"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks-admin"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks-admin-5.1"] = {
+      "luarocks/2.4.3-1"
+   },
+   rover = {
+      "lua-rover/scm-1"
+   }
+}
+dependencies = {
+   argparse = {
+      ["0.5.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-rover"] = {
+      ["scm-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 5, 0, string = "0.5.0"
+                  }
+               }
+            },
+            name = "argparse"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 4, 3, string = "2.4.3"
+                  }
+               }
+            },
+            name = "luarocks"
+         }
+      }
+   },
+   luarocks = {
+      ["2.4.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.5.0-1"
+   },
+   ["luarocks.add"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.admin_remove"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.build"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.build.builtin"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.build.cmake"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.build.command"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.build.make"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.cache"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.cfg"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.command_line"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.config_cmd"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.deps"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.dir"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.doc"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.download"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.cvs"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.git"] = {
+      "lua-rover/scm-1",
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.git_file"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.git_http"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.git_https"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.git_ssh"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.hg"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.hg_http"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.hg_https"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.hg_ssh"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.sscm"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fetch.svn"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fs"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fs.lua"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fs.tools"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fs.unix"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fs.unix.tools"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fs.win32"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.fs.win32.tools"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.help"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.index"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.install"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.lint"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.list"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.loader"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.make"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.make_manifest"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.manif"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.manif_core"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.new_version"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.pack"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.path"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.path_cmd"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.persist"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.purge"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.refresh_cache"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.remove"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.repos"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.require"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.search"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.show"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.site_config"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.tools.patch"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.tools.tar"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.tools.zip"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.type_check"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.unpack"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.upload"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.upload.api"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.upload.multipart"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.util"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.validate"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["luarocks.write_rockspec"] = {
+      "luarocks/2.4.3-1"
+   },
+   ["rover.cli"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.cli.exec"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.cli.inspect"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.cli.install"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.cli.lock"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.cli.update"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.dsl"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.env"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.exec"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.inspect"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.install"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.lock"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.rockspec"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.roverfile"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.setup"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.tree"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.update"] = {
+      "lua-rover/scm-1"
+   },
+   ["rover.vendor"] = {
+      "lua-rover/scm-1"
+   }
+}
+repository = {
+   argparse = {
+      ["0.5.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   ["lua-rover"] = {
+      ["scm-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               rover = "rover"
+            },
+            dependencies = {
+               argparse = "0.5.0-1",
+               luarocks = "2.4.3-1"
+            },
+            modules = {
+               ["luarocks.fetch.git"] = "luarocks/fetch/git.lua",
+               ["rover.cli"] = "rover/cli.lua",
+               ["rover.cli.exec"] = "rover/cli/exec.lua",
+               ["rover.cli.inspect"] = "rover/cli/inspect.lua",
+               ["rover.cli.install"] = "rover/cli/install.lua",
+               ["rover.cli.lock"] = "rover/cli/lock.lua",
+               ["rover.cli.update"] = "rover/cli/update.lua",
+               ["rover.dsl"] = "rover/dsl.lua",
+               ["rover.env"] = "rover/env.lua",
+               ["rover.exec"] = "rover/exec.lua",
+               ["rover.inspect"] = "rover/inspect.lua",
+               ["rover.install"] = "rover/install.lua",
+               ["rover.lock"] = "rover/lock.lua",
+               ["rover.rockspec"] = "rover/rockspec.lua",
+               ["rover.roverfile"] = "rover/roverfile.lua",
+               ["rover.setup"] = "rover/setup.lua",
+               ["rover.tree"] = "rover/tree.lua",
+               ["rover.update"] = "rover/update.lua",
+               ["rover.vendor"] = "rover/vendor.lua"
+            }
+         }
+      }
+   },
+   luarocks = {
+      ["2.4.3-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luarocks = "luarocks",
+               ["luarocks-5.1"] = "luarocks-5.1",
+               ["luarocks-admin"] = "luarocks-admin",
+               ["luarocks-admin-5.1"] = "luarocks-admin-5.1"
+            },
+            dependencies = {},
+            modules = {
+               ["luarocks.add"] = "luarocks/add.lua",
+               ["luarocks.admin_remove"] = "luarocks/admin_remove.lua",
+               ["luarocks.build"] = "luarocks/build.lua",
+               ["luarocks.build.builtin"] = "luarocks/build/builtin.lua",
+               ["luarocks.build.cmake"] = "luarocks/build/cmake.lua",
+               ["luarocks.build.command"] = "luarocks/build/command.lua",
+               ["luarocks.build.make"] = "luarocks/build/make.lua",
+               ["luarocks.cache"] = "luarocks/cache.lua",
+               ["luarocks.cfg"] = "luarocks/cfg.lua",
+               ["luarocks.command_line"] = "luarocks/command_line.lua",
+               ["luarocks.config_cmd"] = "luarocks/config_cmd.lua",
+               ["luarocks.deps"] = "luarocks/deps.lua",
+               ["luarocks.dir"] = "luarocks/dir.lua",
+               ["luarocks.doc"] = "luarocks/doc.lua",
+               ["luarocks.download"] = "luarocks/download.lua",
+               ["luarocks.fetch"] = "luarocks/fetch.lua",
+               ["luarocks.fetch.cvs"] = "luarocks/fetch/cvs.lua",
+               ["luarocks.fetch.git"] = "luarocks/fetch/git.lua",
+               ["luarocks.fetch.git_file"] = "luarocks/fetch/git_file.lua",
+               ["luarocks.fetch.git_http"] = "luarocks/fetch/git_http.lua",
+               ["luarocks.fetch.git_https"] = "luarocks/fetch/git_https.lua",
+               ["luarocks.fetch.git_ssh"] = "luarocks/fetch/git_ssh.lua",
+               ["luarocks.fetch.hg"] = "luarocks/fetch/hg.lua",
+               ["luarocks.fetch.hg_http"] = "luarocks/fetch/hg_http.lua",
+               ["luarocks.fetch.hg_https"] = "luarocks/fetch/hg_https.lua",
+               ["luarocks.fetch.hg_ssh"] = "luarocks/fetch/hg_ssh.lua",
+               ["luarocks.fetch.sscm"] = "luarocks/fetch/sscm.lua",
+               ["luarocks.fetch.svn"] = "luarocks/fetch/svn.lua",
+               ["luarocks.fs"] = "luarocks/fs.lua",
+               ["luarocks.fs.lua"] = "luarocks/fs/lua.lua",
+               ["luarocks.fs.tools"] = "luarocks/fs/tools.lua",
+               ["luarocks.fs.unix"] = "luarocks/fs/unix.lua",
+               ["luarocks.fs.unix.tools"] = "luarocks/fs/unix/tools.lua",
+               ["luarocks.fs.win32"] = "luarocks/fs/win32.lua",
+               ["luarocks.fs.win32.tools"] = "luarocks/fs/win32/tools.lua",
+               ["luarocks.help"] = "luarocks/help.lua",
+               ["luarocks.index"] = "luarocks/index.lua",
+               ["luarocks.install"] = "luarocks/install.lua",
+               ["luarocks.lint"] = "luarocks/lint.lua",
+               ["luarocks.list"] = "luarocks/list.lua",
+               ["luarocks.loader"] = "luarocks/loader.lua",
+               ["luarocks.make"] = "luarocks/make.lua",
+               ["luarocks.make_manifest"] = "luarocks/make_manifest.lua",
+               ["luarocks.manif"] = "luarocks/manif.lua",
+               ["luarocks.manif_core"] = "luarocks/manif_core.lua",
+               ["luarocks.new_version"] = "luarocks/new_version.lua",
+               ["luarocks.pack"] = "luarocks/pack.lua",
+               ["luarocks.path"] = "luarocks/path.lua",
+               ["luarocks.path_cmd"] = "luarocks/path_cmd.lua",
+               ["luarocks.persist"] = "luarocks/persist.lua",
+               ["luarocks.purge"] = "luarocks/purge.lua",
+               ["luarocks.refresh_cache"] = "luarocks/refresh_cache.lua",
+               ["luarocks.remove"] = "luarocks/remove.lua",
+               ["luarocks.repos"] = "luarocks/repos.lua",
+               ["luarocks.require"] = "luarocks/require.lua",
+               ["luarocks.search"] = "luarocks/search.lua",
+               ["luarocks.show"] = "luarocks/show.lua",
+               ["luarocks.site_config"] = "luarocks/site_config.lua",
+               ["luarocks.tools.patch"] = "luarocks/tools/patch.lua",
+               ["luarocks.tools.tar"] = "luarocks/tools/tar.lua",
+               ["luarocks.tools.zip"] = "luarocks/tools/zip.lua",
+               ["luarocks.type_check"] = "luarocks/type_check.lua",
+               ["luarocks.unpack"] = "luarocks/unpack.lua",
+               ["luarocks.upload"] = "luarocks/upload.lua",
+               ["luarocks.upload.api"] = "luarocks/upload/api.lua",
+               ["luarocks.upload.multipart"] = "luarocks/upload/multipart.lua",
+               ["luarocks.util"] = "luarocks/util.lua",
+               ["luarocks.validate"] = "luarocks/validate.lua",
+               ["luarocks.write_rockspec"] = "luarocks/write_rockspec.lua"
+            }
+         }
+      }
+   }
+}

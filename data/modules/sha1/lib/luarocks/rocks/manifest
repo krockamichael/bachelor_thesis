@@ -1,0 +1,63 @@
+commands = {}
+dependencies = {
+   sha1 = {
+      ["0.6.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   sha1 = {
+      "sha1/0.6.0-1"
+   },
+   ["sha1.bit32_ops"] = {
+      "sha1/0.6.0-1"
+   },
+   ["sha1.bit_ops"] = {
+      "sha1/0.6.0-1"
+   },
+   ["sha1.common"] = {
+      "sha1/0.6.0-1"
+   },
+   ["sha1.lua53_ops"] = {
+      "sha1/0.6.0-1"
+   },
+   ["sha1.pure_lua_ops"] = {
+      "sha1/0.6.0-1"
+   }
+}
+repository = {
+   sha1 = {
+      ["0.6.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               sha1 = "sha1/init.lua",
+               ["sha1.bit32_ops"] = "sha1/bit32_ops.lua",
+               ["sha1.bit_ops"] = "sha1/bit_ops.lua",
+               ["sha1.common"] = "sha1/common.lua",
+               ["sha1.lua53_ops"] = "sha1/lua53_ops.lua",
+               ["sha1.pure_lua_ops"] = "sha1/pure_lua_ops.lua"
+            }
+         }
+      }
+   }
+}

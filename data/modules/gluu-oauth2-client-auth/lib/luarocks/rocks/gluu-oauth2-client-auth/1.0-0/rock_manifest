@@ -1,0 +1,21 @@
+rock_manifest = {
+   ["gluu-oauth2-client-auth-1.0-0.rockspec"] = "950b879fa62a33852e064823ab69d137",
+   lua = {
+      kong = {
+         plugins = {
+            ["gluu-oauth2-client-auth"] = {
+               ["access.lua"] = "4a8ecda7b1b0f220724b88d73222cdea",
+               ["api.lua"] = "7d1dc094b87a65122f19057f0b8b57b6",
+               ["daos.lua"] = "ada29d7f79295167ed0dbe32f5317621",
+               ["handler.lua"] = "434c19bcd46068a6c17d4d3941439937",
+               ["helper.lua"] = "88ea92dbb50111fddd0336bd6986dcdd",
+               migrations = {
+                  ["cassandra.lua"] = "ad439bfdaee255cbdf7453f6ff79ff25",
+                  ["postgres.lua"] = "4264d4dfdd9a5778644143d9f16392e4"
+               },
+               ["schema.lua"] = "faab882361d078d9e95ad2de6e9f7571"
+            }
+         }
+      }
+   }
+}

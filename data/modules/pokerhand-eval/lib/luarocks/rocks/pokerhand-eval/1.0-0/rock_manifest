@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "47075413259b68b3c4918e79a3e73353",
+      ["README.md"] = "ad1282163bf4f1805eb78334afc4dd94"
+   },
+   lua = {
+      holdem = {
+         ["analysis.lua"] = "673d66cbdb908126721169bc6444c918",
+         ["card.lua"] = "80f50202cfc066ae51950dc2452af5a1",
+         ["lookup.lua"] = "b960427d7bd8eb7bb4cca6d3fc05b6b0",
+         ["prob.lua"] = "ab007cb9865756171cc7c1bb7b56af7b"
+      }
+   },
+   ["pokerhand-eval-1.0-0.rockspec"] = "629a9dac7a0b9bb3358ec67f7954b44a"
+}

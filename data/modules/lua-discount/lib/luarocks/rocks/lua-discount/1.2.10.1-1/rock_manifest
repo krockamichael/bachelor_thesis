@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "726825f17a275c4c978814dc0c4c61da",
+      ["README.mkd"] = "94779b00f899b4801e3fef7624af5782"
+   },
+   lib = {
+      ["discount.so"] = "4c8f7d6ec681091aaf696d73aeb686bd"
+   },
+   ["lua-discount-1.2.10.1-1.rockspec"] = "1e066e5728bdf833a162365ed36c29d2"
+}

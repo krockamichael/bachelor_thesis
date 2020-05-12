@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   htmlparser = {
+      ["0.3.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   htmlparser = {
+      "htmlparser/0.3.6-1"
+   },
+   ["htmlparser.ElementNode"] = {
+      "htmlparser/0.3.6-1"
+   },
+   ["htmlparser.voidelements"] = {
+      "htmlparser/0.3.6-1"
+   }
+}
+repository = {
+   htmlparser = {
+      ["0.3.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               htmlparser = "htmlparser.lua",
+               ["htmlparser.ElementNode"] = "htmlparser/ElementNode.lua",
+               ["htmlparser.voidelements"] = "htmlparser/voidelements.lua"
+            }
+         }
+      }
+   }
+}

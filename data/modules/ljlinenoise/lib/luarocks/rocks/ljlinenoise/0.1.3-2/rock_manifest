@@ -1,0 +1,23 @@
+rock_manifest = {
+   bin = {
+      ljrepl = "6c253ba3441c125b6bce873acb45cc85",
+      lrepl = "1de1b5852ed304821b13ff4ecd4a7c98"
+   },
+   docs = {
+      ["index.md"] = "cbf775d8ad946b3efc8636c96d0a0d1f",
+      ["ljlinenoise.md"] = "8270fddac07463378b53285c1a92a5bc"
+   },
+   ["ljlinenoise-0.1.3-2.rockspec"] = "93ff28b00462aa3c821c60d928f310f2",
+   lua = {
+      ["linenoise.lua"] = "bb62e80d504ff5871a41a7d4b51508fa"
+   },
+   test = {
+      ["00-require.t"] = "1f05c1a44eb319d1c5e8aef9ec9f6348",
+      ["01-syscall.t"] = "6d41e12764593c889fa7cc5256284344",
+      ["02-except.t"] = "6f741e9e00643264eb3432d8f3d6535f",
+      ["11-history.t"] = "d19128aea2b522e2c31ddf8896b4d58e",
+      ["12-edit.t"] = "0b2ebb871c6d5422bd2994bee3c1b0ee",
+      ["21-lrepl.t"] = "39886ea3863840d26544c40ad7e1997e",
+      ["22-ljrepl.t"] = "c7016f8a0a2603e5be5882141b058dd3"
+   }
+}

@@ -1,0 +1,19 @@
+rock_manifest = {
+   ["cluacov-0.1.1-1.rockspec"] = "212cd21d18157d7efb25ba2f2f134417",
+   doc = {
+      ["CHANGELOG.md"] = "ae0466ca7d6204ae9ba99485b9cd5905",
+      LICENSE = "ccc72fdd74104ea7f0e9c8e8fb2db898",
+      ["README.md"] = "00c88778c198a86f0660c81e3397a0a6"
+   },
+   lib = {
+      cluacov = {
+         ["deepactivelines.so"] = "06446a1695fc0046fb64dd63338b5f18",
+         ["hook.so"] = "0adceaf805dad7ff8ecc9b1e1c2c45ee"
+      }
+   },
+   lua = {
+      cluacov = {
+         ["version.lua"] = "cfcc68192492690307ea94df62ac7d57"
+      }
+   }
+}

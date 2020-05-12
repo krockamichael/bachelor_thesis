@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "76ee43c413416fe4ed4d962106b67a4b",
+      ["README.txt"] = "f67aebed8c5e5df9ab05d9d9e3b06221"
+   },
+   lib = {
+      ["signal.so"] = "b4f1db0332b83e0d01bfd6468d9c4c73"
+   },
+   ["lua_signal-1.2.0-1.rockspec"] = "8822c3d05549012b3085f80b9c8da6a4"
+}

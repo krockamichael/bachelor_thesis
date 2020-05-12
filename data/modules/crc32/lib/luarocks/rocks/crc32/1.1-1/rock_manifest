@@ -1,0 +1,10 @@
+rock_manifest = {
+   ["crc32-1.1-1.rockspec"] = "7adbd1e4c50d8a2f9ff7b41a70328a05",
+   doc = {
+      COPYING = "b79383d48cfeac4fdd6ffb1926fd7ba5",
+      ["Readme.md"] = "78bace9f56562534ef8db0472113a21d"
+   },
+   lib = {
+      ["crc32.so"] = "a44c569681d0240bf759d917d70a7ff4"
+   }
+}

@@ -1,0 +1,147 @@
+commands = {
+   luam = {
+      "luamacro/2.5.1-1"
+   }
+}
+dependencies = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luamacro = {
+      ["2.5.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~=",
+                  version = {
+                     0, 11, string = "0.11"
+                  }
+               }
+            },
+            name = "lpeg"
+         }
+      }
+   }
+}
+modules = {
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   macro = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.Getter"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.TokenList"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.all"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.assert"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.builtin"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.clexer"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.do"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.forall"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.ifelse"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.lambda"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.lc"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.lexer"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.lib.class"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.lib.test"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.module"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.try"] = {
+      "luamacro/2.5.1-1"
+   },
+   ["macro.with"] = {
+      "luamacro/2.5.1-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   luamacro = {
+      ["2.5.1-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luam = "luam"
+            },
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               macro = "macro.lua",
+               ["macro.Getter"] = "macro/Getter.lua",
+               ["macro.TokenList"] = "macro/TokenList.lua",
+               ["macro.all"] = "macro/all.lua",
+               ["macro.assert"] = "macro/assert.lua",
+               ["macro.builtin"] = "macro/builtin.lua",
+               ["macro.clexer"] = "macro/clexer.lua",
+               ["macro.do"] = "macro/do.lua",
+               ["macro.forall"] = "macro/forall.lua",
+               ["macro.ifelse"] = "macro/ifelse.lua",
+               ["macro.lambda"] = "macro/lambda.lua",
+               ["macro.lc"] = "macro/lc.lua",
+               ["macro.lexer"] = "macro/lexer.lua",
+               ["macro.lib.class"] = "macro/lib/class.lua",
+               ["macro.lib.test"] = "macro/lib/test.lua",
+               ["macro.module"] = "macro/module.lua",
+               ["macro.try"] = "macro/try.lua",
+               ["macro.with"] = "macro/with.lua"
+            }
+         }
+      }
+   }
+}

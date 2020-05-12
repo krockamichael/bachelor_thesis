@@ -1,0 +1,246 @@
+commands = {
+   lua = {
+      "luainlua/0.1-0"
+   }
+}
+dependencies = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luainlua = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "bit32"
+         },
+         {
+            constraints = {},
+            name = "argparse"
+         }
+      }
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.7.0-1"
+   },
+   bit32 = {
+      "bit32/5.3.0-1"
+   },
+   ["luainlua.bytecode.dump"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.bytecode.ir"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.bytecode.opcode"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.bytecode.reader"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.bytecode.undump"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.bytecode.writer"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.cfg.cfg"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.cfg.liveness"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.cfg.local_origin"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.common.graph"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.common.utils"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.common.worklist"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.generate_parser"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.hll.hll"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.hll.inlineable"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.ll1.elimination"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.ll1.ll1"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua.ast"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua.base_visitor"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua.compiler"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua.decompiler"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua.parser"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua.parser_table"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.lua.tokenizer"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.luac"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.parsing.lex"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.parsing.ll1_grammar"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.parsing.ll1_parsing_table"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.parsing.ll1_tokenizer"] = {
+      "luainlua/0.1-0"
+   },
+   ["luainlua.parsing.re"] = {
+      "luainlua/0.1-0"
+   }
+}
+repository = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit32 = "bit32.so"
+            }
+         }
+      }
+   },
+   luainlua = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               lua = "lua.lua"
+            },
+            dependencies = {
+               argparse = "0.7.0-1",
+               bit32 = "5.3.0-1"
+            },
+            modules = {
+               ["luainlua.bytecode.dump"] = "luainlua/bytecode/dump.lua",
+               ["luainlua.bytecode.ir"] = "luainlua/bytecode/ir.lua",
+               ["luainlua.bytecode.opcode"] = "luainlua/bytecode/opcode.lua",
+               ["luainlua.bytecode.reader"] = "luainlua/bytecode/reader.lua",
+               ["luainlua.bytecode.undump"] = "luainlua/bytecode/undump.lua",
+               ["luainlua.bytecode.writer"] = "luainlua/bytecode/writer.lua",
+               ["luainlua.cfg.cfg"] = "luainlua/cfg/cfg.lua",
+               ["luainlua.cfg.liveness"] = "luainlua/cfg/liveness.lua",
+               ["luainlua.cfg.local_origin"] = "luainlua/cfg/local_origin.lua",
+               ["luainlua.common.graph"] = "luainlua/common/graph.lua",
+               ["luainlua.common.utils"] = "luainlua/common/utils.lua",
+               ["luainlua.common.worklist"] = "luainlua/common/worklist.lua",
+               ["luainlua.generate_parser"] = "luainlua/generate_parser.lua",
+               ["luainlua.hll.hll"] = "luainlua/hll/hll.lua",
+               ["luainlua.hll.inlineable"] = "luainlua/hll/inlineable.lua",
+               ["luainlua.ll1.elimination"] = "luainlua/ll1/elimination.lua",
+               ["luainlua.ll1.ll1"] = "luainlua/ll1/ll1.lua",
+               ["luainlua.lua"] = "luainlua/lua.lua",
+               ["luainlua.lua.ast"] = "luainlua/lua/ast.lua",
+               ["luainlua.lua.base_visitor"] = "luainlua/lua/base_visitor.lua",
+               ["luainlua.lua.compiler"] = "luainlua/lua/compiler.lua",
+               ["luainlua.lua.decompiler"] = "luainlua/lua/decompiler.lua",
+               ["luainlua.lua.parser"] = "luainlua/lua/parser.lua",
+               ["luainlua.lua.parser_table"] = "luainlua/lua/parser_table.lua",
+               ["luainlua.lua.tokenizer"] = "luainlua/lua/tokenizer.lua",
+               ["luainlua.luac"] = "luainlua/luac.lua",
+               ["luainlua.parsing.lex"] = "luainlua/parsing/lex.lua",
+               ["luainlua.parsing.ll1_grammar"] = "luainlua/parsing/ll1_grammar.lua",
+               ["luainlua.parsing.ll1_parsing_table"] = "luainlua/parsing/ll1_parsing_table.lua",
+               ["luainlua.parsing.ll1_tokenizer"] = "luainlua/parsing/ll1_tokenizer.lua",
+               ["luainlua.parsing.re"] = "luainlua/parsing/re.lua"
+            }
+         }
+      }
+   }
+}

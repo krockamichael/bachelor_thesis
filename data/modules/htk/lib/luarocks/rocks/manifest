@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   htk = {
+      ["3.4.0-2"] = {}
+   }
+}
+modules = {
+   htk = {
+      "htk/3.4.0-2"
+   }
+}
+repository = {
+   htk = {
+      ["3.4.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               htk = "htk.lua"
+            }
+         }
+      }
+   }
+}

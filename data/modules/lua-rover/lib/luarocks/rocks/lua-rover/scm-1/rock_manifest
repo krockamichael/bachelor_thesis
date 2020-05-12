@@ -1,0 +1,38 @@
+rock_manifest = {
+   bin = {
+      rover = "645d594e147f94589c50c1d351415694"
+   },
+   doc = {
+      ["README.md"] = "2c6d205b6d7d2f0988e43b0714d6b412"
+   },
+   lua = {
+      luarocks = {
+         fetch = {
+            ["git.lua"] = "6508a23ca6da14733df4ea6b5b1e302c"
+         }
+      },
+      rover = {
+         cli = {
+            ["exec.lua"] = "f8974d538c5746b5b283445acb2fc17f",
+            ["inspect.lua"] = "294986fb420e33eefbab44938ebee7ee",
+            ["install.lua"] = "0516cdb2b377aadfa4c09e90774fc2e7",
+            ["lock.lua"] = "7d0fb73f8ea41d8cfe8200418cd16299",
+            ["update.lua"] = "e971c4e982a8c7eb6c60adce4488ddaf"
+         },
+         ["cli.lua"] = "1cbdbdf55eaec693e34afe8325dc84a9",
+         ["dsl.lua"] = "843a2137c6f7839648b1267858d4b781",
+         ["env.lua"] = "1b92d55930de80398fb31070a77cd7d5",
+         ["exec.lua"] = "753be2479fd3a97adb104a9ede7c47bb",
+         ["inspect.lua"] = "7224255baffc76f7b314f0b73592cc6b",
+         ["install.lua"] = "8a2dd3c6811f90cb4cd07788d63d58f4",
+         ["lock.lua"] = "3e3633bbbe955e50acfab333c4dc4a33",
+         ["rockspec.lua"] = "f658f16c80fa25e3a1f26e8c451b4bab",
+         ["roverfile.lua"] = "85f6bcc7e16a8ec1cd71713701bcd32d",
+         ["setup.lua"] = "97014cadd4715fec5490fad4ba029b6b",
+         ["tree.lua"] = "24e9d35404327e2eaff37af8d76bedbe",
+         ["update.lua"] = "6b5a2ce03adb924cfb8125bcab31ef56",
+         ["vendor.lua"] = "c17f7f42cb15bcc39846e2b37e2809a9"
+      }
+   },
+   ["lua-rover-scm-1.rockspec"] = "69fdb423dd3defe7aaf81b49dc2b97e2"
+}

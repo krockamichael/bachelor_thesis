@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lrexlib-posix"] = {
+      ["2.9.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   rex_posix = {
+      "lrexlib-posix/2.9.0-1"
+   }
+}
+repository = {
+   ["lrexlib-posix"] = {
+      ["2.9.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rex_posix = "rex_posix.so"
+            }
+         }
+      }
+   }
+}

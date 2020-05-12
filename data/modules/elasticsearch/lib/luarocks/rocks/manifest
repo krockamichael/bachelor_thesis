@@ -1,0 +1,798 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["lunit.sh"] = {
+      "lunitx/0.8-1"
+   }
+}
+dependencies = {
+   elasticsearch = {
+      ["1.0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luasocket"
+         },
+         {
+            constraints = {},
+            name = "lua-cjson"
+         },
+         {
+            constraints = {},
+            name = "lunitx"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lunitx = {
+      ["0.8-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 5, string = "5.5"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   elasticsearch = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Cat"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Client"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Cluster"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Indices"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Logger"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Nodes"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Settings"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Snapshot"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Tasks"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.Transport"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.connection.Connection"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.connectionpool.ConnectionPool"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.connectionpool.SniffConnectionPool"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.connectionpool.StaticConnectionPool"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Bulk"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Aliases"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Allocation"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.CatEndpoint"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Count"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.FieldData"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Health"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Help"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Indices"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Master"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.NodeAttrs"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Nodes"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.PendingTasks"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Plugins"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Recovery"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Repositories"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Segments"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Shards"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.Snapshots"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cat.ThreadPool"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cluster.GetSettings"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cluster.Health"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cluster.PendingTasks"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cluster.PutSettings"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cluster.Reroute"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cluster.State"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Cluster.Stats"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Count"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.CountPercolate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Delete"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.DeleteByQuery"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.DeleteTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Endpoint"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Explain"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.FieldStats"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Get"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.GetTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Index"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Analyze"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.ClearCache"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Close"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Create"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Delete"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.DeleteAlias"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.DeleteMapping"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.DeleteTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.DeleteWarmer"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Exists"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.ExistsAlias"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.ExistsTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.ExistsType"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Flush"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.ForceMerge"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Get"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetAlias"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetAliases"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetFieldMapping"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetMapping"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetSettings"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetUpgrade"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.GetWarmer"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.IndicesEndpoint"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Open"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Optimize"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.PostUpgrade"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.PutAlias"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.PutMapping"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.PutSettings"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.PutTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.PutWarmer"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Recovery"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Refresh"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Seal"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Segments"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.ShardStores"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Stats"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.Status"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.UpdateAliases"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Indices.ValidateQuery"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Info"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.MGet"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.MPercolate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.MSearch"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.MTermVectors"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Mlt"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Nodes.HotThreads"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Nodes.Info"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Nodes.NodesEndpoint"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Nodes.Shutdown"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Nodes.Stats"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Percolate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Ping"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.PutTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.ReIndex"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.RenderSearchTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Scroll"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Search"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.SearchExists"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.SearchShards"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.SearchTemplate"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.Create"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.CreateRepository"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.Delete"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.DeleteRepository"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.Get"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.GetRepository"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.Restore"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.SnapshotEndpoint"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.Status"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Snapshot.VerifyRepository"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Suggest"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Tasks.Cancel"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Tasks.Get"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Tasks.TasksEndpoint"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.TemplateEndpoint"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.TermVectors"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.Update"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.endpoints.UpdateByQuery"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.helpers"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.parser"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.selector.RandomSelector"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.selector.RoundRobinSelector"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.selector.Selector"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   ["elasticsearch.selector.StickyRoundRobinSelector"] = {
+      "elasticsearch/1.0.0-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lunit = {
+      "lunitx/0.8-1"
+   },
+   ["lunit.console"] = {
+      "lunitx/0.8-1"
+   },
+   lunitx = {
+      "lunitx/0.8-1"
+   },
+   ["lunitx.atexit"] = {
+      "lunitx/0.8-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   elasticsearch = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1",
+               luasocket = "3.0rc1-2",
+               lunitx = "0.8-1"
+            },
+            modules = {
+               elasticsearch = "elasticsearch.lua",
+               ["elasticsearch.Cat"] = "elasticsearch/Cat.lua",
+               ["elasticsearch.Client"] = "elasticsearch/Client.lua",
+               ["elasticsearch.Cluster"] = "elasticsearch/Cluster.lua",
+               ["elasticsearch.Indices"] = "elasticsearch/Indices.lua",
+               ["elasticsearch.Logger"] = "elasticsearch/Logger.lua",
+               ["elasticsearch.Nodes"] = "elasticsearch/Nodes.lua",
+               ["elasticsearch.Settings"] = "elasticsearch/Settings.lua",
+               ["elasticsearch.Snapshot"] = "elasticsearch/Snapshot.lua",
+               ["elasticsearch.Tasks"] = "elasticsearch/Tasks.lua",
+               ["elasticsearch.Transport"] = "elasticsearch/Transport.lua",
+               ["elasticsearch.connection.Connection"] = "elasticsearch/connection/Connection.lua",
+               ["elasticsearch.connectionpool.ConnectionPool"] = "elasticsearch/connectionpool/ConnectionPool.lua",
+               ["elasticsearch.connectionpool.SniffConnectionPool"] = "elasticsearch/connectionpool/SniffConnectionPool.lua",
+               ["elasticsearch.connectionpool.StaticConnectionPool"] = "elasticsearch/connectionpool/StaticConnectionPool.lua",
+               ["elasticsearch.endpoints.Bulk"] = "elasticsearch/endpoints/Bulk.lua",
+               ["elasticsearch.endpoints.Cat.Aliases"] = "elasticsearch/endpoints/Cat/Aliases.lua",
+               ["elasticsearch.endpoints.Cat.Allocation"] = "elasticsearch/endpoints/Cat/Allocation.lua",
+               ["elasticsearch.endpoints.Cat.CatEndpoint"] = "elasticsearch/endpoints/Cat/CatEndpoint.lua",
+               ["elasticsearch.endpoints.Cat.Count"] = "elasticsearch/endpoints/Cat/Count.lua",
+               ["elasticsearch.endpoints.Cat.FieldData"] = "elasticsearch/endpoints/Cat/FieldData.lua",
+               ["elasticsearch.endpoints.Cat.Health"] = "elasticsearch/endpoints/Cat/Health.lua",
+               ["elasticsearch.endpoints.Cat.Help"] = "elasticsearch/endpoints/Cat/Help.lua",
+               ["elasticsearch.endpoints.Cat.Indices"] = "elasticsearch/endpoints/Cat/Indices.lua",
+               ["elasticsearch.endpoints.Cat.Master"] = "elasticsearch/endpoints/Cat/Master.lua",
+               ["elasticsearch.endpoints.Cat.NodeAttrs"] = "elasticsearch/endpoints/Cat/NodeAttrs.lua",
+               ["elasticsearch.endpoints.Cat.Nodes"] = "elasticsearch/endpoints/Cat/Nodes.lua",
+               ["elasticsearch.endpoints.Cat.PendingTasks"] = "elasticsearch/endpoints/Cat/PendingTasks.lua",
+               ["elasticsearch.endpoints.Cat.Plugins"] = "elasticsearch/endpoints/Cat/Plugins.lua",
+               ["elasticsearch.endpoints.Cat.Recovery"] = "elasticsearch/endpoints/Cat/Recovery.lua",
+               ["elasticsearch.endpoints.Cat.Repositories"] = "elasticsearch/endpoints/Cat/Repositories.lua",
+               ["elasticsearch.endpoints.Cat.Segments"] = "elasticsearch/endpoints/Cat/Segments.lua",
+               ["elasticsearch.endpoints.Cat.Shards"] = "elasticsearch/endpoints/Cat/Shards.lua",
+               ["elasticsearch.endpoints.Cat.Snapshots"] = "elasticsearch/endpoints/Cat/Snapshots.lua",
+               ["elasticsearch.endpoints.Cat.ThreadPool"] = "elasticsearch/endpoints/Cat/ThreadPool.lua",
+               ["elasticsearch.endpoints.Cluster.GetSettings"] = "elasticsearch/endpoints/Cluster/GetSettings.lua",
+               ["elasticsearch.endpoints.Cluster.Health"] = "elasticsearch/endpoints/Cluster/Health.lua",
+               ["elasticsearch.endpoints.Cluster.PendingTasks"] = "elasticsearch/endpoints/Cluster/PendingTasks.lua",
+               ["elasticsearch.endpoints.Cluster.PutSettings"] = "elasticsearch/endpoints/Cluster/PutSettings.lua",
+               ["elasticsearch.endpoints.Cluster.Reroute"] = "elasticsearch/endpoints/Cluster/Reroute.lua",
+               ["elasticsearch.endpoints.Cluster.State"] = "elasticsearch/endpoints/Cluster/State.lua",
+               ["elasticsearch.endpoints.Cluster.Stats"] = "elasticsearch/endpoints/Cluster/Stats.lua",
+               ["elasticsearch.endpoints.Count"] = "elasticsearch/endpoints/Count.lua",
+               ["elasticsearch.endpoints.CountPercolate"] = "elasticsearch/endpoints/CountPercolate.lua",
+               ["elasticsearch.endpoints.Delete"] = "elasticsearch/endpoints/Delete.lua",
+               ["elasticsearch.endpoints.DeleteByQuery"] = "elasticsearch/endpoints/DeleteByQuery.lua",
+               ["elasticsearch.endpoints.DeleteTemplate"] = "elasticsearch/endpoints/DeleteTemplate.lua",
+               ["elasticsearch.endpoints.Endpoint"] = "elasticsearch/endpoints/Endpoint.lua",
+               ["elasticsearch.endpoints.Explain"] = "elasticsearch/endpoints/Explain.lua",
+               ["elasticsearch.endpoints.FieldStats"] = "elasticsearch/endpoints/FieldStats.lua",
+               ["elasticsearch.endpoints.Get"] = "elasticsearch/endpoints/Get.lua",
+               ["elasticsearch.endpoints.GetTemplate"] = "elasticsearch/endpoints/GetTemplate.lua",
+               ["elasticsearch.endpoints.Index"] = "elasticsearch/endpoints/Index.lua",
+               ["elasticsearch.endpoints.Indices.Analyze"] = "elasticsearch/endpoints/Indices/Analyze.lua",
+               ["elasticsearch.endpoints.Indices.ClearCache"] = "elasticsearch/endpoints/Indices/ClearCache.lua",
+               ["elasticsearch.endpoints.Indices.Close"] = "elasticsearch/endpoints/Indices/Close.lua",
+               ["elasticsearch.endpoints.Indices.Create"] = "elasticsearch/endpoints/Indices/Create.lua",
+               ["elasticsearch.endpoints.Indices.Delete"] = "elasticsearch/endpoints/Indices/Delete.lua",
+               ["elasticsearch.endpoints.Indices.DeleteAlias"] = "elasticsearch/endpoints/Indices/DeleteAlias.lua",
+               ["elasticsearch.endpoints.Indices.DeleteMapping"] = "elasticsearch/endpoints/Indices/DeleteMapping.lua",
+               ["elasticsearch.endpoints.Indices.DeleteTemplate"] = "elasticsearch/endpoints/Indices/DeleteTemplate.lua",
+               ["elasticsearch.endpoints.Indices.DeleteWarmer"] = "elasticsearch/endpoints/Indices/DeleteWarmer.lua",
+               ["elasticsearch.endpoints.Indices.Exists"] = "elasticsearch/endpoints/Indices/Exists.lua",
+               ["elasticsearch.endpoints.Indices.ExistsAlias"] = "elasticsearch/endpoints/Indices/ExistsAlias.lua",
+               ["elasticsearch.endpoints.Indices.ExistsTemplate"] = "elasticsearch/endpoints/Indices/ExistsTemplate.lua",
+               ["elasticsearch.endpoints.Indices.ExistsType"] = "elasticsearch/endpoints/Indices/ExistsType.lua",
+               ["elasticsearch.endpoints.Indices.Flush"] = "elasticsearch/endpoints/Indices/Flush.lua",
+               ["elasticsearch.endpoints.Indices.ForceMerge"] = "elasticsearch/endpoints/Indices/ForceMerge.lua",
+               ["elasticsearch.endpoints.Indices.Get"] = "elasticsearch/endpoints/Indices/Get.lua",
+               ["elasticsearch.endpoints.Indices.GetAlias"] = "elasticsearch/endpoints/Indices/GetAlias.lua",
+               ["elasticsearch.endpoints.Indices.GetAliases"] = "elasticsearch/endpoints/Indices/GetAliases.lua",
+               ["elasticsearch.endpoints.Indices.GetFieldMapping"] = "elasticsearch/endpoints/Indices/GetFieldMapping.lua",
+               ["elasticsearch.endpoints.Indices.GetMapping"] = "elasticsearch/endpoints/Indices/GetMapping.lua",
+               ["elasticsearch.endpoints.Indices.GetSettings"] = "elasticsearch/endpoints/Indices/GetSettings.lua",
+               ["elasticsearch.endpoints.Indices.GetTemplate"] = "elasticsearch/endpoints/Indices/GetTemplate.lua",
+               ["elasticsearch.endpoints.Indices.GetUpgrade"] = "elasticsearch/endpoints/Indices/GetUpgrade.lua",
+               ["elasticsearch.endpoints.Indices.GetWarmer"] = "elasticsearch/endpoints/Indices/GetWarmer.lua",
+               ["elasticsearch.endpoints.Indices.IndicesEndpoint"] = "elasticsearch/endpoints/Indices/IndicesEndpoint.lua",
+               ["elasticsearch.endpoints.Indices.Open"] = "elasticsearch/endpoints/Indices/Open.lua",
+               ["elasticsearch.endpoints.Indices.Optimize"] = "elasticsearch/endpoints/Indices/Optimize.lua",
+               ["elasticsearch.endpoints.Indices.PostUpgrade"] = "elasticsearch/endpoints/Indices/PostUpgrade.lua",
+               ["elasticsearch.endpoints.Indices.PutAlias"] = "elasticsearch/endpoints/Indices/PutAlias.lua",
+               ["elasticsearch.endpoints.Indices.PutMapping"] = "elasticsearch/endpoints/Indices/PutMapping.lua",
+               ["elasticsearch.endpoints.Indices.PutSettings"] = "elasticsearch/endpoints/Indices/PutSettings.lua",
+               ["elasticsearch.endpoints.Indices.PutTemplate"] = "elasticsearch/endpoints/Indices/PutTemplate.lua",
+               ["elasticsearch.endpoints.Indices.PutWarmer"] = "elasticsearch/endpoints/Indices/PutWarmer.lua",
+               ["elasticsearch.endpoints.Indices.Recovery"] = "elasticsearch/endpoints/Indices/Recovery.lua",
+               ["elasticsearch.endpoints.Indices.Refresh"] = "elasticsearch/endpoints/Indices/Refresh.lua",
+               ["elasticsearch.endpoints.Indices.Seal"] = "elasticsearch/endpoints/Indices/Seal.lua",
+               ["elasticsearch.endpoints.Indices.Segments"] = "elasticsearch/endpoints/Indices/Segments.lua",
+               ["elasticsearch.endpoints.Indices.ShardStores"] = "elasticsearch/endpoints/Indices/ShardStores.lua",
+               ["elasticsearch.endpoints.Indices.Stats"] = "elasticsearch/endpoints/Indices/Stats.lua",
+               ["elasticsearch.endpoints.Indices.Status"] = "elasticsearch/endpoints/Indices/Status.lua",
+               ["elasticsearch.endpoints.Indices.UpdateAliases"] = "elasticsearch/endpoints/Indices/UpdateAliases.lua",
+               ["elasticsearch.endpoints.Indices.ValidateQuery"] = "elasticsearch/endpoints/Indices/ValidateQuery.lua",
+               ["elasticsearch.endpoints.Info"] = "elasticsearch/endpoints/Info.lua",
+               ["elasticsearch.endpoints.MGet"] = "elasticsearch/endpoints/MGet.lua",
+               ["elasticsearch.endpoints.MPercolate"] = "elasticsearch/endpoints/MPercolate.lua",
+               ["elasticsearch.endpoints.MSearch"] = "elasticsearch/endpoints/MSearch.lua",
+               ["elasticsearch.endpoints.MTermVectors"] = "elasticsearch/endpoints/MTermVectors.lua",
+               ["elasticsearch.endpoints.Mlt"] = "elasticsearch/endpoints/Mlt.lua",
+               ["elasticsearch.endpoints.Nodes.HotThreads"] = "elasticsearch/endpoints/Nodes/HotThreads.lua",
+               ["elasticsearch.endpoints.Nodes.Info"] = "elasticsearch/endpoints/Nodes/Info.lua",
+               ["elasticsearch.endpoints.Nodes.NodesEndpoint"] = "elasticsearch/endpoints/Nodes/NodesEndpoint.lua",
+               ["elasticsearch.endpoints.Nodes.Shutdown"] = "elasticsearch/endpoints/Nodes/Shutdown.lua",
+               ["elasticsearch.endpoints.Nodes.Stats"] = "elasticsearch/endpoints/Nodes/Stats.lua",
+               ["elasticsearch.endpoints.Percolate"] = "elasticsearch/endpoints/Percolate.lua",
+               ["elasticsearch.endpoints.Ping"] = "elasticsearch/endpoints/Ping.lua",
+               ["elasticsearch.endpoints.PutTemplate"] = "elasticsearch/endpoints/PutTemplate.lua",
+               ["elasticsearch.endpoints.ReIndex"] = "elasticsearch/endpoints/ReIndex.lua",
+               ["elasticsearch.endpoints.RenderSearchTemplate"] = "elasticsearch/endpoints/RenderSearchTemplate.lua",
+               ["elasticsearch.endpoints.Scroll"] = "elasticsearch/endpoints/Scroll.lua",
+               ["elasticsearch.endpoints.Search"] = "elasticsearch/endpoints/Search.lua",
+               ["elasticsearch.endpoints.SearchExists"] = "elasticsearch/endpoints/SearchExists.lua",
+               ["elasticsearch.endpoints.SearchShards"] = "elasticsearch/endpoints/SearchShards.lua",
+               ["elasticsearch.endpoints.SearchTemplate"] = "elasticsearch/endpoints/SearchTemplate.lua",
+               ["elasticsearch.endpoints.Snapshot.Create"] = "elasticsearch/endpoints/Snapshot/Create.lua",
+               ["elasticsearch.endpoints.Snapshot.CreateRepository"] = "elasticsearch/endpoints/Snapshot/CreateRepository.lua",
+               ["elasticsearch.endpoints.Snapshot.Delete"] = "elasticsearch/endpoints/Snapshot/Delete.lua",
+               ["elasticsearch.endpoints.Snapshot.DeleteRepository"] = "elasticsearch/endpoints/Snapshot/DeleteRepository.lua",
+               ["elasticsearch.endpoints.Snapshot.Get"] = "elasticsearch/endpoints/Snapshot/Get.lua",
+               ["elasticsearch.endpoints.Snapshot.GetRepository"] = "elasticsearch/endpoints/Snapshot/GetRepository.lua",
+               ["elasticsearch.endpoints.Snapshot.Restore"] = "elasticsearch/endpoints/Snapshot/Restore.lua",
+               ["elasticsearch.endpoints.Snapshot.SnapshotEndpoint"] = "elasticsearch/endpoints/Snapshot/SnapshotEndpoint.lua",
+               ["elasticsearch.endpoints.Snapshot.Status"] = "elasticsearch/endpoints/Snapshot/Status.lua",
+               ["elasticsearch.endpoints.Snapshot.VerifyRepository"] = "elasticsearch/endpoints/Snapshot/VerifyRepository.lua",
+               ["elasticsearch.endpoints.Suggest"] = "elasticsearch/endpoints/Suggest.lua",
+               ["elasticsearch.endpoints.Tasks.Cancel"] = "elasticsearch/endpoints/Tasks/Cancel.lua",
+               ["elasticsearch.endpoints.Tasks.Get"] = "elasticsearch/endpoints/Tasks/Get.lua",
+               ["elasticsearch.endpoints.Tasks.TasksEndpoint"] = "elasticsearch/endpoints/Tasks/TasksEndpoint.lua",
+               ["elasticsearch.endpoints.TemplateEndpoint"] = "elasticsearch/endpoints/TemplateEndpoint.lua",
+               ["elasticsearch.endpoints.TermVectors"] = "elasticsearch/endpoints/TermVectors.lua",
+               ["elasticsearch.endpoints.Update"] = "elasticsearch/endpoints/Update.lua",
+               ["elasticsearch.endpoints.UpdateByQuery"] = "elasticsearch/endpoints/UpdateByQuery.lua",
+               ["elasticsearch.helpers"] = "elasticsearch/helpers.lua",
+               ["elasticsearch.parser"] = "elasticsearch/parser.lua",
+               ["elasticsearch.selector.RandomSelector"] = "elasticsearch/selector/RandomSelector.lua",
+               ["elasticsearch.selector.RoundRobinSelector"] = "elasticsearch/selector/RoundRobinSelector.lua",
+               ["elasticsearch.selector.Selector"] = "elasticsearch/selector/Selector.lua",
+               ["elasticsearch.selector.StickyRoundRobinSelector"] = "elasticsearch/selector/StickyRoundRobinSelector.lua"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   lunitx = {
+      ["0.8-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["lunit.sh"] = "lunit.sh"
+            },
+            dependencies = {},
+            modules = {
+               lunit = "lunit.lua",
+               ["lunit.console"] = "lunit/console.lua",
+               lunitx = "lunitx.lua",
+               ["lunitx.atexit"] = "lunitx/atexit.lua"
+            }
+         }
+      }
+   }
+}

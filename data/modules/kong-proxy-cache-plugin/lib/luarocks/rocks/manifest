@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ["kong-proxy-cache-plugin"] = {
+      ["1.3.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.proxy-cache.api"] = {
+      "kong-proxy-cache-plugin/1.3.0-0"
+   },
+   ["kong.plugins.proxy-cache.cache_key"] = {
+      "kong-proxy-cache-plugin/1.3.0-0"
+   },
+   ["kong.plugins.proxy-cache.handler"] = {
+      "kong-proxy-cache-plugin/1.3.0-0"
+   },
+   ["kong.plugins.proxy-cache.schema"] = {
+      "kong-proxy-cache-plugin/1.3.0-0"
+   },
+   ["kong.plugins.proxy-cache.strategies"] = {
+      "kong-proxy-cache-plugin/1.3.0-0"
+   },
+   ["kong.plugins.proxy-cache.strategies.memory"] = {
+      "kong-proxy-cache-plugin/1.3.0-0"
+   }
+}
+repository = {
+   ["kong-proxy-cache-plugin"] = {
+      ["1.3.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.proxy-cache.api"] = "kong/plugins/proxy-cache/api.lua",
+               ["kong.plugins.proxy-cache.cache_key"] = "kong/plugins/proxy-cache/cache_key.lua",
+               ["kong.plugins.proxy-cache.handler"] = "kong/plugins/proxy-cache/handler.lua",
+               ["kong.plugins.proxy-cache.schema"] = "kong/plugins/proxy-cache/schema.lua",
+               ["kong.plugins.proxy-cache.strategies"] = "kong/plugins/proxy-cache/strategies/init.lua",
+               ["kong.plugins.proxy-cache.strategies.memory"] = "kong/plugins/proxy-cache/strategies/memory.lua"
+            }
+         }
+      }
+   }
+}

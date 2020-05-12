@@ -1,0 +1,206 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["amqp-client"] = {
+      ["1.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["kong-plugin-amqp"] = {
+      ["0.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 3, 0, string = "1.3.0"
+                  }
+               }
+            },
+            name = "amqp-client"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 1, 0, string = "2.1.0"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 1, string = "1.1"
+                  }
+               }
+            },
+            name = "lua-resty-uuid"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-uuid"] = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   amqp = {
+      "amqp-client/1.3.0-1"
+   },
+   ["amqp.buffer"] = {
+      "amqp-client/1.3.0-1"
+   },
+   ["amqp.consts"] = {
+      "amqp-client/1.3.0-1"
+   },
+   ["amqp.frame"] = {
+      "amqp-client/1.3.0-1"
+   },
+   ["amqp.logger"] = {
+      "amqp-client/1.3.0-1"
+   },
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["kong.plugins.amqp.handler"] = {
+      "kong-plugin-amqp/0.0.1-1"
+   },
+   ["kong.plugins.amqp.schema"] = {
+      "kong-plugin-amqp/0.0.1-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["resty.uuid"] = {
+      "lua-resty-uuid/1.1-1"
+   }
+}
+repository = {
+   ["amqp-client"] = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               amqp = "amqp/init.lua",
+               ["amqp.buffer"] = "amqp/buffer.lua",
+               ["amqp.consts"] = "amqp/consts.lua",
+               ["amqp.frame"] = "amqp/frame.lua",
+               ["amqp.logger"] = "amqp/logger.lua"
+            }
+         }
+      }
+   },
+   ["kong-plugin-amqp"] = {
+      ["0.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["amqp-client"] = "1.3.0-1",
+               ["lua-cjson"] = "2.1.0.6-1",
+               ["lua-resty-uuid"] = "1.1-1"
+            },
+            modules = {
+               ["kong.plugins.amqp.handler"] = "kong/plugins/amqp/handler.lua",
+               ["kong.plugins.amqp.schema"] = "kong/plugins/amqp/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-uuid"] = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.uuid"] = "resty/uuid.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ["kong-consumer-rate-limiting"] = {
+      ["1.0.0-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.consumer-rate-limiting.api"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.controller"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.daos"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.gateway"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.handler"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.migrations.cassandra"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.migrations.postgres"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.schema"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   },
+   ["kong.plugins.consumer-rate-limiting.timeutils"] = {
+      "kong-consumer-rate-limiting/1.0.0-0"
+   }
+}
+repository = {
+   ["kong-consumer-rate-limiting"] = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.consumer-rate-limiting.api"] = "kong/plugins/consumer-rate-limiting/api.lua",
+               ["kong.plugins.consumer-rate-limiting.controller"] = "kong/plugins/consumer-rate-limiting/controller.lua",
+               ["kong.plugins.consumer-rate-limiting.daos"] = "kong/plugins/consumer-rate-limiting/daos.lua",
+               ["kong.plugins.consumer-rate-limiting.gateway"] = "kong/plugins/consumer-rate-limiting/gateway.lua",
+               ["kong.plugins.consumer-rate-limiting.handler"] = "kong/plugins/consumer-rate-limiting/handler.lua",
+               ["kong.plugins.consumer-rate-limiting.migrations.cassandra"] = "kong/plugins/consumer-rate-limiting/migrations/cassandra.lua",
+               ["kong.plugins.consumer-rate-limiting.migrations.postgres"] = "kong/plugins/consumer-rate-limiting/migrations/postgres.lua",
+               ["kong.plugins.consumer-rate-limiting.schema"] = "kong/plugins/consumer-rate-limiting/schema.lua",
+               ["kong.plugins.consumer-rate-limiting.timeutils"] = "kong/plugins/consumer-rate-limiting/timeutils.lua"
+            }
+         }
+      }
+   }
+}

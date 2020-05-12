@@ -1,0 +1,453 @@
+commands = {
+   ["minittp-server"] = {
+      "lua-minittp/0.4-5"
+   }
+}
+dependencies = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   copas = {
+      ["2.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, string = "2.1"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 14, string = "1.14"
+                  }
+               }
+            },
+            name = "coxpcall"
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {}
+   },
+   ["lua-minittp"] = {
+      ["0.4-5"] = {
+         {
+            constraints = {},
+            name = "copas"
+         },
+         {
+            constraints = {},
+            name = "luaposix"
+         }
+      }
+   },
+   luaposix = {
+      ["34.1.1-1"] = {
+         {
+            constraints = {},
+            name = "bit32"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bit32 = {
+      "bit32/5.3.0-1"
+   },
+   copas = {
+      "copas/2.0.2-1"
+   },
+   ["copas.ftp"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.http"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.limit"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.smtp"] = {
+      "copas/2.0.2-1"
+   },
+   coxpcall = {
+      "coxpcall/1.17.0-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   minittp = {
+      "lua-minittp/0.4-5"
+   },
+   minittp_engine = {
+      "lua-minittp/0.4-5"
+   },
+   minittp_fcgi = {
+      "lua-minittp/0.4-5"
+   },
+   minittp_io = {
+      "lua-minittp/0.4-5"
+   },
+   minittp_util = {
+      "lua-minittp/0.4-5"
+   },
+   posix = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix._base"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix._strict"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.compat"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.ctype"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.deprecated"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.dirent"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.errno"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.fcntl"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.fnmatch"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.glob"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.grp"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.libgen"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.poll"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.pwd"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sched"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.signal"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.stdio"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.stdlib"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.msg"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.resource"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.socket"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.stat"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.statvfs"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.time"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.times"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.utsname"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.sys.wait"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.syslog"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.termio"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.time"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.unistd"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.util"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.utime"] = {
+      "luaposix/34.1.1-1"
+   },
+   ["posix.version"] = {
+      "luaposix/34.1.1-1"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit32 = "bit32.so"
+            }
+         }
+      }
+   },
+   copas = {
+      ["2.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               coxpcall = "1.17.0-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               copas = "copas.lua",
+               ["copas.ftp"] = "copas/ftp.lua",
+               ["copas.http"] = "copas/http.lua",
+               ["copas.limit"] = "copas/limit.lua",
+               ["copas.smtp"] = "copas/smtp.lua"
+            }
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               coxpcall = "coxpcall.lua"
+            }
+         }
+      }
+   },
+   ["lua-minittp"] = {
+      ["0.4-5"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["minittp-server"] = "minittp-server"
+            },
+            dependencies = {
+               bit32 = "5.3.0-1",
+               copas = "2.0.2-1",
+               coxpcall = "1.17.0-1",
+               luaposix = "34.1.1-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               minittp = "minittp.lua",
+               minittp_engine = "minittp_engine.lua",
+               minittp_fcgi = "minittp_fcgi.lua",
+               minittp_io = "minittp_io.lua",
+               minittp_util = "minittp_util.lua"
+            }
+         }
+      }
+   },
+   luaposix = {
+      ["34.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bit32 = "5.3.0-1"
+            },
+            modules = {
+               posix = "posix/init.lua",
+               ["posix._base"] = "posix/_base.lua",
+               ["posix._strict"] = "posix/_strict.lua",
+               ["posix.compat"] = "posix/compat.lua",
+               ["posix.ctype"] = "posix/ctype.so",
+               ["posix.deprecated"] = "posix/deprecated.lua",
+               ["posix.dirent"] = "posix/dirent.so",
+               ["posix.errno"] = "posix/errno.so",
+               ["posix.fcntl"] = "posix/fcntl.so",
+               ["posix.fnmatch"] = "posix/fnmatch.so",
+               ["posix.glob"] = "posix/glob.so",
+               ["posix.grp"] = "posix/grp.so",
+               ["posix.libgen"] = "posix/libgen.so",
+               ["posix.poll"] = "posix/poll.so",
+               ["posix.pwd"] = "posix/pwd.so",
+               ["posix.sched"] = "posix/sched.so",
+               ["posix.signal"] = "posix/signal.so",
+               ["posix.stdio"] = "posix/stdio.so",
+               ["posix.stdlib"] = "posix/stdlib.so",
+               ["posix.sys"] = "posix/sys.lua",
+               ["posix.sys.msg"] = "posix/sys/msg.so",
+               ["posix.sys.resource"] = "posix/sys/resource.so",
+               ["posix.sys.socket"] = "posix/sys/socket.so",
+               ["posix.sys.stat"] = "posix/sys/stat.so",
+               ["posix.sys.statvfs"] = "posix/sys/statvfs.so",
+               ["posix.sys.time"] = "posix/sys/time.so",
+               ["posix.sys.times"] = "posix/sys/times.so",
+               ["posix.sys.utsname"] = "posix/sys/utsname.so",
+               ["posix.sys.wait"] = "posix/sys/wait.so",
+               ["posix.syslog"] = "posix/syslog.so",
+               ["posix.termio"] = "posix/termio.so",
+               ["posix.time"] = "posix/time.so",
+               ["posix.unistd"] = "posix/unistd.so",
+               ["posix.util"] = "posix/util.lua",
+               ["posix.utime"] = "posix/utime.so",
+               ["posix.version"] = "posix/version.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   }
+}

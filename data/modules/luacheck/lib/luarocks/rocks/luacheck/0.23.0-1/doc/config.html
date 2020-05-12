@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuration file &mdash; luacheck 0.22.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Inline options" href="inline.html" />
+    <link rel="prev" title="Command line interface" href="cli.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> luacheck
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.22.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">List of warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command line interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration file</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#config-options">Config options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-sets-of-globals">Custom sets of globals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#per-file-and-per-path-overrides">Per-file and per-path overrides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-per-path-std-overrides">Default per-path std overrides</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="inline.html">Inline options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module.html">Luacheck module</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">luacheck</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Configuration file</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/config.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration-file">
+<h1>Configuration file<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">luacheck</span></code> tries to load configuration from <code class="docutils literal notranslate"><span class="pre">.luacheckrc</span></code> file in the current directory. If not found, it will look for it in the parent directory and so on, going up until it reaches file system root. Path to config can be set using <code class="docutils literal notranslate"><span class="pre">--config</span></code> option, in which case it will be used during recursive loading. Paths within config are interpreted relatively to the directory from which it was loaded.</p>
+<p>Config loading can be disabled using <code class="docutils literal notranslate"><span class="pre">--no-config</span></code> flag.</p>
+<p>If neither of <code class="docutils literal notranslate"><span class="pre">--config</span></code>, <code class="docutils literal notranslate"><span class="pre">--no-config</span></code>, and <code class="docutils literal notranslate"><span class="pre">--no-default-config</span></code> options are used, <code class="docutils literal notranslate"><span class="pre">luacheck</span></code> will attempt to load configuration from value of <code class="docutils literal notranslate"><span class="pre">--default-config</span></code> option,
+or <code class="docutils literal notranslate"><span class="pre">%LOCALAPPDATA%\Luacheck\.luacheckrc</span></code> on Windows, <code class="docutils literal notranslate"><span class="pre">~/Library/Application</span> <span class="pre">Support/Luacheck/.luacheckrc</span></code> on OS X/macOS, and <code class="docutils literal notranslate"><span class="pre">$XDG_CONFIG_HOME/luacheck/.luacheckrc</span></code>
+or <code class="docutils literal notranslate"><span class="pre">~/.config/luacheck/.luacheckrc</span></code> on other systems by default. Paths within default config are interpreted relatively to the current directory.</p>
+<p>Config is simply a Lua script executed by <code class="docutils literal notranslate"><span class="pre">luacheck</span></code>. It may set various options by assigning to globals or by returning a table with option names as keys.</p>
+<p>Options loaded from config have the lowest priority: it’s possible to overwrite them with CLI options or inline options.</p>
+<div class="section" id="config-options">
+<span id="options"></span><h2>Config options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="45%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Type</th>
+<th class="head">Default value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">quiet</span></code></td>
+<td>Integer in range 0..3</td>
+<td><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">color</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">true</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">codes</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ranges</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">formatter</span></code></td>
+<td>String or function</td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">cache</span></code></td>
+<td>Boolean or string</td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">jobs</span></code></td>
+<td>Positive integer</td>
+<td><code class="docutils literal notranslate"><span class="pre">1</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">exclude_files</span></code></td>
+<td>Array of strings</td>
+<td><code class="docutils literal notranslate"><span class="pre">{}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">include_files</span></code></td>
+<td>Array of strings</td>
+<td>(Include all files)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">global</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">true</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">unused</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">true</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">redefined</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">true</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">unused_args</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">true</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">unused_secondaries</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">true</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">self</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">true</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">std</span></code></td>
+<td>String or set of standard globals</td>
+<td><code class="docutils literal notranslate"><span class="pre">&quot;max&quot;</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">globals</span></code></td>
+<td>Array of strings or field definition map</td>
+<td><code class="docutils literal notranslate"><span class="pre">{}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">new_globals</span></code></td>
+<td>Array of strings or field definition map</td>
+<td>(Do not overwrite)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">read_globals</span></code></td>
+<td>Array of strings or field definition map</td>
+<td><code class="docutils literal notranslate"><span class="pre">{}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">new_read_globals</span></code></td>
+<td>Array of strings or field definition map</td>
+<td>(Do not overwrite)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">not_globals</span></code></td>
+<td>Array of strings</td>
+<td><code class="docutils literal notranslate"><span class="pre">{}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">compat</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">allow_defined</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">allow_defined_top</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">module</span></code></td>
+<td>Boolean</td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">max_line_length</span></code></td>
+<td>Number or <code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">120</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">max_code_line_length</span></code></td>
+<td>Number or <code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">120</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">max_string_line_length</span></code></td>
+<td>Number or <code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">120</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">max_comment_line_length</span></code></td>
+<td>Number or <code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">120</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">max_cyclomatic_complexity</span></code></td>
+<td>Number or <code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">false</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ignore</span></code></td>
+<td>Array of patterns (see <a class="reference internal" href="cli.html#patterns"><span class="std std-ref">Patterns</span></a>)</td>
+<td><code class="docutils literal notranslate"><span class="pre">{}</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">enable</span></code></td>
+<td>Array of patterns</td>
+<td><code class="docutils literal notranslate"><span class="pre">{}</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">only</span></code></td>
+<td>Array of patterns</td>
+<td>(Do not filter)</td>
+</tr>
+</tbody>
+</table>
+<p>An example of a config which makes <code class="docutils literal notranslate"><span class="pre">luacheck</span></code> ensure that only globals from the portable intersection of Lua 5.1, Lua 5.2, Lua 5.3 and LuaJIT 2.0 are used, as well as disables detection of unused arguments:</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;min&quot;</span>
+<span class="n">ignore</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;212&quot;</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="custom-sets-of-globals">
+<span id="custom-stds"></span><h2>Custom sets of globals<a class="headerlink" href="#custom-sets-of-globals" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">std</span></code> option allows setting a custom standard set of globals using a table. This table can have two fields: <code class="docutils literal notranslate"><span class="pre">globals</span></code> and <code class="docutils literal notranslate"><span class="pre">read_globals</span></code>.
+Both of them should contain a field definition map defining some globals. The simplest way to define globals is to list their names:</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">std</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="n">globals</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">},</span> <span class="c1">-- these globals can be set and accessed.</span>
+   <span class="n">read_globals</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;baz&quot;</span><span class="p">,</span> <span class="s2">&quot;quux&quot;</span><span class="p">}</span> <span class="c1">-- these globals can only be accessed.</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>For globals defined like this Luacheck will additionally consider any fields within them defined. To define a global with a restricted set of fields, use
+global name as key and a table as value. In that table, <code class="docutils literal notranslate"><span class="pre">fields</span></code> subtable can contain the fields in the same format:</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">std</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="n">read_globals</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">-- Defining read-only global `foo`...</span>
+         <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">field1</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">-- `foo.field1` is now defined...</span>
+               <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
+                  <span class="n">nested_field</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- `foo.field1.nested_field` is now defined...</span>
+               <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="n">field2</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- `foo.field2` is defined.</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Globals and fields can be marked read-only or not using <code class="docutils literal notranslate"><span class="pre">read_only</span></code> property with a boolean value.
+Property <code class="docutils literal notranslate"><span class="pre">other_fields</span></code> controls whether the global or field can also contain other unspecified fields:</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">std</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="n">read_globals</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">-- `foo` and its fields are read-only by default (because they are within `read_globals` table).</span>
+         <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">bar</span> <span class="o">=</span> <span class="p">{</span>
+               <span class="n">read_only</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- `foo.bar` is not read-only, can be set.</span>
+               <span class="n">other_fields</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- `foo.bar[anything]` is defined and can be set or mutated (inherited from `foo.bar`).</span>
+               <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
+                  <span class="n">baz</span> <span class="o">=</span> <span class="p">{</span><span class="n">read_only</span> <span class="o">=</span> <span class="kc">true</span><span class="p">},</span> <span class="c1">-- `foo.bar.baz` is read-only as an exception.</span>
+               <span class="p">}</span>
+            <span class="p">}</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Custom sets can be given names by mutating global <code class="docutils literal notranslate"><span class="pre">stds</span></code> variable, so that they can then be used in <code class="docutils literal notranslate"><span class="pre">--std</span></code> CLI option
+and <code class="docutils literal notranslate"><span class="pre">std</span></code> inline and config option.</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">stds</span><span class="p">.</span><span class="n">some_lib</span> <span class="o">=</span> <span class="p">{...}</span>
+<span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;min+some_lib&quot;</span>
+</pre></div>
+</td></tr></table></div>
+<p>In config, <code class="docutils literal notranslate"><span class="pre">globals</span></code>, <code class="docutils literal notranslate"><span class="pre">new_globals</span></code>, <code class="docutils literal notranslate"><span class="pre">read_globals</span></code>, and <code class="docutils literal notranslate"><span class="pre">new_read_globals</span></code> can also contain definitions in same format:</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">read_globals</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="n">server</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="c1">-- Allow mutating `server.sessions` with any keys...</span>
+         <span class="n">sessions</span> <span class="o">=</span> <span class="p">{</span><span class="n">read_only</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">other_fields</span> <span class="o">=</span> <span class="kc">true</span><span class="p">},</span>
+         <span class="c1">-- other fields...</span>
+      <span class="p">}</span>
+   <span class="p">},</span>
+   <span class="c1">--- other globals...</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="per-file-and-per-path-overrides">
+<h2>Per-file and per-path overrides<a class="headerlink" href="#per-file-and-per-path-overrides" title="Permalink to this headline">¶</a></h2>
+<p>The environment in which <code class="docutils literal notranslate"><span class="pre">luacheck</span></code> loads the config contains a special global <code class="docutils literal notranslate"><span class="pre">files</span></code>. When checking a file <code class="docutils literal notranslate"><span class="pre">&lt;path&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">luacheck</span></code> will override options from the main config with entries from <code class="docutils literal notranslate"><span class="pre">files[&lt;glob&gt;]</span></code> if <code class="docutils literal notranslate"><span class="pre">&lt;glob&gt;</span></code> matches <code class="docutils literal notranslate"><span class="pre">&lt;path&gt;</span></code>, applying entries for more general globs first. For example, the following config re-enables detection of unused arguments only for files in <code class="docutils literal notranslate"><span class="pre">src/dir</span></code>, but not for files ending with <code class="docutils literal notranslate"><span class="pre">_special.lua</span></code>:</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;min&quot;</span>
+<span class="n">ignore</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;212&quot;</span><span class="p">}</span>
+<span class="n">files</span><span class="p">[</span><span class="s2">&quot;src/dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">enable</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;212&quot;</span><span class="p">}}</span>
+<span class="n">files</span><span class="p">[</span><span class="s2">&quot;src/dir/**/*_special.lua&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">ignore</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;212&quot;</span><span class="p">}}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">files</span></code> table supports autovivification, so that</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">[</span><span class="s2">&quot;src/dir&quot;</span><span class="p">].</span><span class="n">enable</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;212&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">[</span><span class="s2">&quot;src/dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">enable</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;212&quot;</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>are equivalent.</p>
+</div>
+<div class="section" id="default-per-path-std-overrides">
+<h2>Default per-path std overrides<a class="headerlink" href="#default-per-path-std-overrides" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">luacheck</span></code> uses a set of default per-path overrides:</p>
+<div class="highlight-lua notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">files</span><span class="p">[</span><span class="s2">&quot;**/spec/**/*_spec.lua&quot;</span><span class="p">].</span><span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;+busted&quot;</span>
+<span class="n">files</span><span class="p">[</span><span class="s2">&quot;**/test/**/*_spec.lua&quot;</span><span class="p">].</span><span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;+busted&quot;</span>
+<span class="n">files</span><span class="p">[</span><span class="s2">&quot;**/tests/**/*_spec.lua&quot;</span><span class="p">].</span><span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;+busted&quot;</span>
+<span class="n">files</span><span class="p">[</span><span class="s2">&quot;**/*.rockspec&quot;</span><span class="p">].</span><span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;+rockspec&quot;</span>
+<span class="n">files</span><span class="p">[</span><span class="s2">&quot;**/*.luacheckrc&quot;</span><span class="p">].</span><span class="n">std</span> <span class="o">=</span> <span class="s2">&quot;+luacheckrc&quot;</span>
+</pre></div>
+</td></tr></table></div>
+<p>Each of these can be overriden by setting a different <code class="docutils literal notranslate"><span class="pre">std</span></code> value for the corresponding key in <code class="docutils literal notranslate"><span class="pre">files</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="inline.html" class="btn btn-neutral float-right" title="Inline options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cli.html" class="btn btn-neutral" title="Command line interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2018, Peter Melnichenko.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.22.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

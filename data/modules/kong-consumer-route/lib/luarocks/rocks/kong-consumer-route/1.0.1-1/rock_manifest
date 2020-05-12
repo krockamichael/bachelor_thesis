@@ -1,0 +1,21 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "c599712b36aff0d19296b586d8f1a310"
+   },
+   ["kong-consumer-route-1.0.1-1.rockspec"] = "1527ed059045cfabda2836f06227c704",
+   lua = {
+      kong = {
+         plugins = {
+            ["consumer-route"] = {
+               ["api.lua"] = "6df35f9f1ed53fe24bb1306f7d55b57e",
+               ["daos.lua"] = "9e7609d15085e63364469c8cdbbffb17",
+               ["handler.lua"] = "4d124da37c808e9bec127663981fc691",
+               migrations = {
+                  ["postgres.lua"] = "3c94072f27fa1120837a2e63374b9dab"
+               },
+               ["schema.lua"] = "a3816b6ad953a3484f402cf3a53990be"
+            }
+         }
+      }
+   }
+}

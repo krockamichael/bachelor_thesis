@@ -1,0 +1,33 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "7ab0290dd5dc67b5a764d87328cad4d1",
+      ["README.md"] = "10b83049b0e85466009a5f136ba968d3"
+   },
+   ["kong-plugin-header-based-rate-limiting-1.2.0-1.rockspec"] = "1c91b2d34a3e9a9cf6b4e6f0614a8e8a",
+   lua = {
+      kong = {
+         plugins = {
+            ["header-based-rate-limiting"] = {
+               ["access.lua"] = "95c3839cd363144bcaa0727ae26f56c1",
+               ["api.lua"] = "d12851c6ac70f4bc81289bf84c570cbb",
+               ["daos.lua"] = "f6920ac25f9105fd36eee013969cea43",
+               ["get_null_uuid.lua"] = "6470ccdbea4526a7fc64bdb7f06da7b1",
+               ["handler.lua"] = "418e641cb3b783bae4256104b7f3cf1d",
+               ["key_rank.lua"] = "e3f5b82160aab0a30b0e0382d6651168",
+               ["lookup_key_generator.lua"] = "3d3c9a62767775c0a86d7989ea2d18d9",
+               migrations = {
+                  ["cassandra.lua"] = "fb071e81106a8d706937d8004bda8ff3",
+                  ["postgres.lua"] = "ba97e5b1f8abb84a27eb85bffccd42f8"
+               },
+               ["rate_limit_key.lua"] = "89277c05a061314152f8a5196e2bba3c",
+               ["rate_limit_model.lua"] = "b56b4961321b32939aa844458cff4fff",
+               ["rate_limit_pool.lua"] = "26286fbc9ed7012747a42317bb977495",
+               ["rate_limit_rule.lua"] = "f097f8df8992f5d2e4cd857849399c84",
+               ["rate_limit_subject.lua"] = "69da6bb20f3371ba4139d90b89cf38a3",
+               ["redis_factory.lua"] = "58293658f5045fd77bac16bec49a8b98",
+               ["schema.lua"] = "796a70c3847911dcb85623258b4cc409"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,895 @@
+commands = {
+   luadepgraph = {
+      "depgraph/0.1.1-1"
+   },
+   luapak = {
+      "luapak/0.1.0.beta5-1"
+   },
+   luarocks = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks-5.1"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks-admin"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks-admin-5.1"] = {
+      "luarocks/2.4.4-1"
+   },
+   luasrcdiet = {
+      "luasrcdiet/0.3.0-2"
+   }
+}
+dependencies = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   brieflz = {
+      ["0.1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   depgraph = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 5, 0, string = "0.5.0"
+                  }
+               }
+            },
+            name = "argparse"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 6, 3, string = "1.6.3"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         }
+      }
+   },
+   ["lua-glob-pattern"] = {
+      ["0.2.1.20120406-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.6.3-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luapak = {
+      ["0.1.0.beta5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 1, 2, string = "0.1.2"
+                  }
+               }
+            },
+            name = "brieflz"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 1, string = "0.1"
+                  }
+               }
+            },
+            name = "depgraph"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 2, string = "0.2"
+                  }
+               }
+            },
+            name = "lua-glob-pattern"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 6, string = "1.6"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 4, string = "2.4"
+                  }
+               }
+            },
+            name = "luarocks"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 3, string = "0.3"
+                  }
+               }
+            },
+            name = "luasrcdiet"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 1, string = "1.1"
+                  }
+               }
+            },
+            name = "optparse"
+         }
+      }
+   },
+   luarocks = {
+      ["2.4.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasrcdiet = {
+      ["0.3.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   optparse = {
+      ["1.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.7.0-1"
+   },
+   brieflz = {
+      "brieflz/0.1.2-1"
+   },
+   depgraph = {
+      "depgraph/0.1.1-1"
+   },
+   ["depgraph.cli"] = {
+      "depgraph/0.1.1-1"
+   },
+   ["depgraph.luacheck.lexer"] = {
+      "depgraph/0.1.1-1"
+   },
+   ["depgraph.luacheck.linearize"] = {
+      "depgraph/0.1.1-1"
+   },
+   ["depgraph.luacheck.parser"] = {
+      "depgraph/0.1.1-1"
+   },
+   ["depgraph.luacheck.utils"] = {
+      "depgraph/0.1.1-1"
+   },
+   ["depgraph.scan"] = {
+      "depgraph/0.1.1-1"
+   },
+   globtopattern = {
+      "lua-glob-pattern/0.2.1.20120406-1"
+   },
+   lfs = {
+      "luafilesystem/1.6.3-2"
+   },
+   luapak = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.build.builtin"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.build.toolchain"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.build.toolchain.gnu"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.build.toolchain.msvc"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.build.toolchain.utils"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.build.warn_interceptor"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.cli.analyse_deps"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.cli.build_rock"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.cli.make"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.cli.merge"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.cli.minify"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.cli.wrapper"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.compat"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.deps_analyser"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.fs"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.logging"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.lua_finder"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.luarocks"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.luarocks.cfg_extra"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.luarocks.constants"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.luarocks.site_config"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.make"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.merger"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.minifier"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.optparse"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.pkgpath"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.utils"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.wrapper"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luapak.wrapper_tmpl"] = {
+      "luapak/0.1.0.beta5-1"
+   },
+   ["luarocks.add"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.admin_remove"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.build"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.build.builtin"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.build.cmake"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.build.command"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.build.make"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.cache"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.cfg"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.command_line"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.config_cmd"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.deps"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.dir"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.doc"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.download"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.cvs"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.git"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.git_file"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.git_http"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.git_https"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.git_ssh"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.hg"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.hg_http"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.hg_https"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.hg_ssh"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.sscm"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fetch.svn"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fs"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fs.lua"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fs.tools"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fs.unix"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fs.unix.tools"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fs.win32"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.fs.win32.tools"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.help"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.index"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.install"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.lint"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.list"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.loader"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.make"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.make_manifest"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.manif"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.manif_core"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.new_version"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.pack"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.path"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.path_cmd"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.persist"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.purge"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.refresh_cache"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.remove"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.repos"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.require"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.search"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.show"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.site_config"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.tools.patch"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.tools.tar"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.tools.zip"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.type_check"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.unpack"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.upload"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.upload.api"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.upload.multipart"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.util"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.validate"] = {
+      "luarocks/2.4.4-1"
+   },
+   ["luarocks.write_rockspec"] = {
+      "luarocks/2.4.4-1"
+   },
+   luasrcdiet = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.equiv"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.fs"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.llex"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.lparser"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.optlex"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.optparser"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.plugin.example"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.plugin.html"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.plugin.sloc"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   ["luasrcdiet.utils"] = {
+      "luasrcdiet/0.3.0-2"
+   },
+   optparse = {
+      "optparse/1.1.1-1"
+   },
+   ["optparse.version"] = {
+      "optparse/1.1.1-1"
+   }
+}
+repository = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   brieflz = {
+      ["0.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               brieflz = "brieflz.so"
+            }
+         }
+      }
+   },
+   depgraph = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luadepgraph = "luadepgraph"
+            },
+            dependencies = {
+               argparse = "0.7.0-1",
+               luafilesystem = "1.6.3-2"
+            },
+            modules = {
+               depgraph = "depgraph/init.lua",
+               ["depgraph.cli"] = "depgraph/cli.lua",
+               ["depgraph.luacheck.lexer"] = "depgraph/luacheck/lexer.lua",
+               ["depgraph.luacheck.linearize"] = "depgraph/luacheck/linearize.lua",
+               ["depgraph.luacheck.parser"] = "depgraph/luacheck/parser.lua",
+               ["depgraph.luacheck.utils"] = "depgraph/luacheck/utils.lua",
+               ["depgraph.scan"] = "depgraph/scan.lua"
+            }
+         }
+      }
+   },
+   ["lua-glob-pattern"] = {
+      ["0.2.1.20120406-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               globtopattern = "globtopattern.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.6.3-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luapak = {
+      ["0.1.0.beta5-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luapak = "luapak"
+            },
+            dependencies = {
+               argparse = "0.7.0-1",
+               brieflz = "0.1.2-1",
+               depgraph = "0.1.1-1",
+               ["lua-glob-pattern"] = "0.2.1.20120406-1",
+               luafilesystem = "1.6.3-2",
+               luarocks = "2.4.4-1",
+               luasrcdiet = "0.3.0-2",
+               optparse = "1.1.1-1"
+            },
+            modules = {
+               luapak = "luapak/init.lua",
+               ["luapak.build.builtin"] = "luapak/build/builtin.lua",
+               ["luapak.build.toolchain"] = "luapak/build/toolchain/init.lua",
+               ["luapak.build.toolchain.gnu"] = "luapak/build/toolchain/gnu.lua",
+               ["luapak.build.toolchain.msvc"] = "luapak/build/toolchain/msvc.lua",
+               ["luapak.build.toolchain.utils"] = "luapak/build/toolchain/utils.lua",
+               ["luapak.build.warn_interceptor"] = "luapak/build/warn_interceptor.lua",
+               ["luapak.cli.analyse_deps"] = "luapak/cli/analyse_deps.lua",
+               ["luapak.cli.build_rock"] = "luapak/cli/build_rock.lua",
+               ["luapak.cli.make"] = "luapak/cli/make.lua",
+               ["luapak.cli.merge"] = "luapak/cli/merge.lua",
+               ["luapak.cli.minify"] = "luapak/cli/minify.lua",
+               ["luapak.cli.wrapper"] = "luapak/cli/wrapper.lua",
+               ["luapak.compat"] = "luapak/compat.lua",
+               ["luapak.deps_analyser"] = "luapak/deps_analyser.lua",
+               ["luapak.fs"] = "luapak/fs.lua",
+               ["luapak.logging"] = "luapak/logging.lua",
+               ["luapak.lua_finder"] = "luapak/lua_finder.lua",
+               ["luapak.luarocks"] = "luapak/luarocks/init.lua",
+               ["luapak.luarocks.cfg_extra"] = "luapak/luarocks/cfg_extra.lua",
+               ["luapak.luarocks.constants"] = "luapak/luarocks/constants.lua",
+               ["luapak.luarocks.site_config"] = "luapak/luarocks/site_config.lua",
+               ["luapak.make"] = "luapak/make.lua",
+               ["luapak.merger"] = "luapak/merger.lua",
+               ["luapak.minifier"] = "luapak/minifier.lua",
+               ["luapak.optparse"] = "luapak/optparse.lua",
+               ["luapak.pkgpath"] = "luapak/pkgpath.lua",
+               ["luapak.utils"] = "luapak/utils.lua",
+               ["luapak.wrapper"] = "luapak/wrapper.lua",
+               ["luapak.wrapper_tmpl"] = "luapak/wrapper_tmpl.lua"
+            }
+         }
+      }
+   },
+   luarocks = {
+      ["2.4.4-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luarocks = "luarocks",
+               ["luarocks-5.1"] = "luarocks-5.1",
+               ["luarocks-admin"] = "luarocks-admin",
+               ["luarocks-admin-5.1"] = "luarocks-admin-5.1"
+            },
+            dependencies = {},
+            modules = {
+               ["luarocks.add"] = "luarocks/add.lua",
+               ["luarocks.admin_remove"] = "luarocks/admin_remove.lua",
+               ["luarocks.build"] = "luarocks/build.lua",
+               ["luarocks.build.builtin"] = "luarocks/build/builtin.lua",
+               ["luarocks.build.cmake"] = "luarocks/build/cmake.lua",
+               ["luarocks.build.command"] = "luarocks/build/command.lua",
+               ["luarocks.build.make"] = "luarocks/build/make.lua",
+               ["luarocks.cache"] = "luarocks/cache.lua",
+               ["luarocks.cfg"] = "luarocks/cfg.lua",
+               ["luarocks.command_line"] = "luarocks/command_line.lua",
+               ["luarocks.config_cmd"] = "luarocks/config_cmd.lua",
+               ["luarocks.deps"] = "luarocks/deps.lua",
+               ["luarocks.dir"] = "luarocks/dir.lua",
+               ["luarocks.doc"] = "luarocks/doc.lua",
+               ["luarocks.download"] = "luarocks/download.lua",
+               ["luarocks.fetch"] = "luarocks/fetch.lua",
+               ["luarocks.fetch.cvs"] = "luarocks/fetch/cvs.lua",
+               ["luarocks.fetch.git"] = "luarocks/fetch/git.lua",
+               ["luarocks.fetch.git_file"] = "luarocks/fetch/git_file.lua",
+               ["luarocks.fetch.git_http"] = "luarocks/fetch/git_http.lua",
+               ["luarocks.fetch.git_https"] = "luarocks/fetch/git_https.lua",
+               ["luarocks.fetch.git_ssh"] = "luarocks/fetch/git_ssh.lua",
+               ["luarocks.fetch.hg"] = "luarocks/fetch/hg.lua",
+               ["luarocks.fetch.hg_http"] = "luarocks/fetch/hg_http.lua",
+               ["luarocks.fetch.hg_https"] = "luarocks/fetch/hg_https.lua",
+               ["luarocks.fetch.hg_ssh"] = "luarocks/fetch/hg_ssh.lua",
+               ["luarocks.fetch.sscm"] = "luarocks/fetch/sscm.lua",
+               ["luarocks.fetch.svn"] = "luarocks/fetch/svn.lua",
+               ["luarocks.fs"] = "luarocks/fs.lua",
+               ["luarocks.fs.lua"] = "luarocks/fs/lua.lua",
+               ["luarocks.fs.tools"] = "luarocks/fs/tools.lua",
+               ["luarocks.fs.unix"] = "luarocks/fs/unix.lua",
+               ["luarocks.fs.unix.tools"] = "luarocks/fs/unix/tools.lua",
+               ["luarocks.fs.win32"] = "luarocks/fs/win32.lua",
+               ["luarocks.fs.win32.tools"] = "luarocks/fs/win32/tools.lua",
+               ["luarocks.help"] = "luarocks/help.lua",
+               ["luarocks.index"] = "luarocks/index.lua",
+               ["luarocks.install"] = "luarocks/install.lua",
+               ["luarocks.lint"] = "luarocks/lint.lua",
+               ["luarocks.list"] = "luarocks/list.lua",
+               ["luarocks.loader"] = "luarocks/loader.lua",
+               ["luarocks.make"] = "luarocks/make.lua",
+               ["luarocks.make_manifest"] = "luarocks/make_manifest.lua",
+               ["luarocks.manif"] = "luarocks/manif.lua",
+               ["luarocks.manif_core"] = "luarocks/manif_core.lua",
+               ["luarocks.new_version"] = "luarocks/new_version.lua",
+               ["luarocks.pack"] = "luarocks/pack.lua",
+               ["luarocks.path"] = "luarocks/path.lua",
+               ["luarocks.path_cmd"] = "luarocks/path_cmd.lua",
+               ["luarocks.persist"] = "luarocks/persist.lua",
+               ["luarocks.purge"] = "luarocks/purge.lua",
+               ["luarocks.refresh_cache"] = "luarocks/refresh_cache.lua",
+               ["luarocks.remove"] = "luarocks/remove.lua",
+               ["luarocks.repos"] = "luarocks/repos.lua",
+               ["luarocks.require"] = "luarocks/require.lua",
+               ["luarocks.search"] = "luarocks/search.lua",
+               ["luarocks.show"] = "luarocks/show.lua",
+               ["luarocks.site_config"] = "luarocks/site_config.lua",
+               ["luarocks.tools.patch"] = "luarocks/tools/patch.lua",
+               ["luarocks.tools.tar"] = "luarocks/tools/tar.lua",
+               ["luarocks.tools.zip"] = "luarocks/tools/zip.lua",
+               ["luarocks.type_check"] = "luarocks/type_check.lua",
+               ["luarocks.unpack"] = "luarocks/unpack.lua",
+               ["luarocks.upload"] = "luarocks/upload.lua",
+               ["luarocks.upload.api"] = "luarocks/upload/api.lua",
+               ["luarocks.upload.multipart"] = "luarocks/upload/multipart.lua",
+               ["luarocks.util"] = "luarocks/util.lua",
+               ["luarocks.validate"] = "luarocks/validate.lua",
+               ["luarocks.write_rockspec"] = "luarocks/write_rockspec.lua"
+            }
+         }
+      }
+   },
+   luasrcdiet = {
+      ["0.3.0-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               luasrcdiet = "luasrcdiet"
+            },
+            dependencies = {},
+            modules = {
+               luasrcdiet = "luasrcdiet/init.lua",
+               ["luasrcdiet.equiv"] = "luasrcdiet/equiv.lua",
+               ["luasrcdiet.fs"] = "luasrcdiet/fs.lua",
+               ["luasrcdiet.llex"] = "luasrcdiet/llex.lua",
+               ["luasrcdiet.lparser"] = "luasrcdiet/lparser.lua",
+               ["luasrcdiet.optlex"] = "luasrcdiet/optlex.lua",
+               ["luasrcdiet.optparser"] = "luasrcdiet/optparser.lua",
+               ["luasrcdiet.plugin.example"] = "luasrcdiet/plugin/example.lua",
+               ["luasrcdiet.plugin.html"] = "luasrcdiet/plugin/html.lua",
+               ["luasrcdiet.plugin.sloc"] = "luasrcdiet/plugin/sloc.lua",
+               ["luasrcdiet.utils"] = "luasrcdiet/utils.lua"
+            }
+         }
+      }
+   },
+   optparse = {
+      ["1.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               optparse = "optparse/init.lua",
+               ["optparse.version"] = "optparse/version.lua"
+            }
+         }
+      }
+   }
+}

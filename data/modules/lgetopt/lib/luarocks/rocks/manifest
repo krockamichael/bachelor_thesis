@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lgetopt = {
+      ["2.0.2-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lgetopt = {
+      "lgetopt/2.0.2-2"
+   }
+}
+repository = {
+   lgetopt = {
+      ["2.0.2-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lgetopt = "lgetopt.lua"
+            }
+         }
+      }
+   }
+}

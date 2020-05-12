@@ -1,0 +1,52 @@
+rock_manifest = {
+   bin = {
+      luapak = "dacacb6695eeedb3fdc467b07b07a0a9"
+   },
+   doc = {
+      LICENSE = "948cd8e59069fad992b0469af9ad7966",
+      ["README.adoc"] = "8eed77c3868a503b63d666f0174f22d9"
+   },
+   lua = {
+      luapak = {
+         build = {
+            ["builtin.lua"] = "8fa53ae96af2f479702455dc1092821a",
+            toolchain = {
+               ["gnu.lua"] = "9609d69382ee87e5d1342e67526ec932",
+               ["init.lua"] = "1cea4b6badcfa5af7596693838762b46",
+               ["msvc.lua"] = "9cc26ff43ebe712347c5c51d5f6b7e34",
+               ["utils.lua"] = "555679127c1fc78333f4f588b4d821dc"
+            },
+            ["warn_interceptor.lua"] = "5a850b77aba915d218890a481e5506fe"
+         },
+         cli = {
+            ["analyse_deps.lua"] = "fa5e935b470298a4877865923fc18532",
+            ["build_rock.lua"] = "28bae8e7f02406f292492242a94242e6",
+            ["make.lua"] = "74011074acddb49e77a2b2543ad7ee1a",
+            ["merge.lua"] = "9322d3f4d064a12acec8a50448343474",
+            ["minify.lua"] = "a0b7a7393cbcabc7e8638d1c7a9283d0",
+            ["wrapper.lua"] = "9e9935e22a3a639328fc28edbdf1ae0b"
+         },
+         ["compat.lua"] = "8216ccea8b0978166115408ded88ecef",
+         ["deps_analyser.lua"] = "07c306e56cb5317b2fc45bcec32f1eb8",
+         ["fs.lua"] = "fe1ebd8605eec35a9a23164fca804798",
+         ["init.lua"] = "2ad1cd3b674c45bc0e2ded5ec031c0e9",
+         ["logging.lua"] = "882a747b3fcabf57a13540b076c18014",
+         ["lua_finder.lua"] = "0096ce941fd14df8312150166f5e926f",
+         luarocks = {
+            ["cfg_extra.lua"] = "cc01e6021a9a95370d0b0fb5d6e734df",
+            ["constants.lua"] = "fc8bcc53df971404da3595f27a5c3608",
+            ["init.lua"] = "2082f62c001f8892f417421ca38fb11f",
+            ["site_config.lua"] = "dedd29b0688c55df029c98f2db785fd3"
+         },
+         ["make.lua"] = "fb2f34cd2ed01d1c3332a553a56d4aa6",
+         ["merger.lua"] = "59b8c3efec7c5d543f13a117eaabe3b9",
+         ["minifier.lua"] = "1a6004d5fb3c0653b4b84bc99cc88e28",
+         ["optparse.lua"] = "9471caafe09bd20c0444b36332478ba9",
+         ["pkgpath.lua"] = "32243ffd40fd6268bfc09c837e645797",
+         ["utils.lua"] = "3f4b84df86788eba953e6615cc945ceb",
+         ["wrapper.lua"] = "4d1da2143536e3e5c7b7d1f8c45b451c",
+         ["wrapper_tmpl.lua"] = "f213010234aa2fe9ab979555edfa0f98"
+      }
+   },
+   ["luapak-0.1.0.beta5-1.rockspec"] = "bfd673bd6b5eab6662511c6a6f972f3c"
+}

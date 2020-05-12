@@ -1,0 +1,1123 @@
+commands = {
+   ["lua.get_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lua.get_formatter_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lua.reformat"] = {
+      "lcf/5.1-2"
+   }
+}
+dependencies = {
+   lcf = {
+      ["5.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lcf.get_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.get_ast.get_params"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.get_formatter_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.get_formatter_ast.get_params"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.reformat"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.reformat.get_params"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.reformat.usage_text"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.base"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.file.as_string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.file.convert"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.file.exists"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.file.get_size"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.file.safe_open"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.file.text_file_as_string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.align_nodes"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.assignment"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.else_part"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.elseif_part"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.expression"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.function_call"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.function_params"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.generic_for_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.if_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.if_part"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.key_val"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.local_assignment"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.local_named_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.named_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.numeric_for_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.repeat_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.type_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.var_ref"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.handlers.while_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.move_comments"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.restruc_nodes"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.ast_transformer.run"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.get_result"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.expression"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.expressions.function_call"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.expressions.string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.expressions.table"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.expressions.type_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.expressions.var_ref"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.assignment"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.do_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.generic_for_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.if_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.local_named_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.named_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.numeric_for_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.repeat_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.while_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.break_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.comment"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.goto_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.label_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.local_assignment"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.statements.return_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.bracket_expr"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.colon_name"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.dot_list"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.dot_name"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.expr_list"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.func_args"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.function_params"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.name_list"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.name_parts"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.par_expr"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.handlers.wrappers.ref_list"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.process_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.process_block_multiline"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.process_block_oneline"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.process_list"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.process_list_variative"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.process_node"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.represent"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.representation_is_allowed"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.run"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper.enter_level"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper.get_child_state"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper.get_state"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper.leave_level"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper.set_child_state"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.state_keeper.set_state"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.formatter.variate"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.is_identifier"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.keywords"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.quote_string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.quote_string.custom_quotes"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.quote_string.dump"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.quote_string.intact"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.quote_string.linear"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.quote_string.quote_char"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.run_formatter"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.expression"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.qualifiers.var_or_call"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.assign_or_call"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.break_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.do_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.empty_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.function_body"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.generic_for_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.goto_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.if_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.label_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.local_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.named_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.numeric_for_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.repeat_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.return_statement"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.statements.while_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.type_boolean"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.type_function"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.type_nil"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.type_number"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.type_string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.type_table"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.words.comment"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.words.name"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.words.opt_spc"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.words.particles.long_bracket"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.words.syntel"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.words.vararg"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.words.word"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.wrappers.bracket_expr"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.wrappers.colon_name"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.wrappers.dot_name"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.wrappers.expr_list"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.wrappers.name_list"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.syntax.wrappers.par_expr"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua.transform_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table.save"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table.save.get_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table.save.install_node_handlers.minimal"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table.save.install_node_handlers.readable"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table.save.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table.save.serialize_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table_code.load"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table_code.save"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table_code.save.get_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table_code.save.install_node_handlers"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table_code.save.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.lua_table_code.save.serialize_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.formats.sh.load"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.frontend.text.print_msg_with_delta_time"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.lua.code.ast_as_code"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.lua.code.get_ast"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.lua.data_types"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.lua.string.quote"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.command_line_processor.assert_type_is_correct"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.command_line_processor.classify_item"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.command_line_processor.get_key_name"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.command_line_processor.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.command_line_processor.parse_args"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.command_line_processor.run"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.generic_file_converter"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.generic_file_converter.compile"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.generic_file_converter.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.generic_file_converter.run"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.generic_file_converter.say"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.generic_loader"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.geometry.1d.segments.is_inside"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.geometry.1d.segments.subtract_inner"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.graph.assembly_order"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.graph.dfs"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.graph.dfs.dfs"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.graph.dfs.get_children"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.graph.dfs.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.indents_table"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.name_giver"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.represent"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.units.binary_bytes"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.units.binary_units"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.units.frequency"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.units.general_number"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.units.general_time"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.number.representer.units.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.folder"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.folder.fold"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.folder.get_struc"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.folder.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.get_struc"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.handy"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.on_match"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.parse"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.parser.populate"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.processor.core"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.processor.core.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.processor.core.match"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.processor.core.on_match"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.processor.handy"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.processor.link"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.processor.optimize"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.block_read"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.get_segment"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.get_slot"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.set_next_position"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.set_relative_position"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string.get_length"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string.get_position"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string.match_regexp"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string.match_string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string.read"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.mergeable.string.set_position"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.sequence"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.sequence.get_position"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.sequence.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.sequence.read"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.sequence.set_position"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.streams.sequence.write"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.dec_indent"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.inc_indent"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.line"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.line.add"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.line.get_line"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.line.get_line_length"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.line.get_text_length"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.line.interface"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.add_curline"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.add_textline"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.get_block_width"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.get_text"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.get_text_width"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.include"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.new_line"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.on_clean_line"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.request_clean_line"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.request_empty_line"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.mechs.text_block.text.store_textline"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.number.represent_size"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.number.represent_time"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.string.content_attributes"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.string.lines.get_next_line"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.string.save_to_file"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.string.trim"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.string.trim_head"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.string.trim_linefeed"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.string.trim_tail"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.struc.compile"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.system.install_assert_functions"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.system.install_is_functions"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.as_string"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.clone"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.get_key_vals"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.map_values"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.merge"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.new"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.ordered_pass"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.ordered_pass.default_comparator"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.patch"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.replace"] = {
+      "lcf/5.1-2"
+   },
+   ["lcf.workshop.table.unfold"] = {
+      "lcf/5.1-2"
+   }
+}
+repository = {
+   lcf = {
+      ["5.1-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["lua.get_ast"] = "lua.get_ast",
+               ["lua.get_formatter_ast"] = "lua.get_formatter_ast",
+               ["lua.reformat"] = "lua.reformat"
+            },
+            dependencies = {},
+            modules = {
+               ["lcf.get_ast"] = "lcf/get_ast.lua",
+               ["lcf.get_ast.get_params"] = "lcf/get_ast/get_params.lua",
+               ["lcf.get_formatter_ast"] = "lcf/get_formatter_ast.lua",
+               ["lcf.get_formatter_ast.get_params"] = "lcf/get_formatter_ast/get_params.lua",
+               ["lcf.reformat"] = "lcf/reformat.lua",
+               ["lcf.reformat.get_params"] = "lcf/reformat/get_params.lua",
+               ["lcf.reformat.usage_text"] = "lcf/reformat/usage_text.lua",
+               ["lcf.workshop.base"] = "lcf/workshop/base.lua",
+               ["lcf.workshop.file.as_string"] = "lcf/workshop/file/as_string.lua",
+               ["lcf.workshop.file.convert"] = "lcf/workshop/file/convert.lua",
+               ["lcf.workshop.file.exists"] = "lcf/workshop/file/exists.lua",
+               ["lcf.workshop.file.get_size"] = "lcf/workshop/file/get_size.lua",
+               ["lcf.workshop.file.safe_open"] = "lcf/workshop/file/safe_open.lua",
+               ["lcf.workshop.file.text_file_as_string"] = "lcf/workshop/file/text_file_as_string.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.align_nodes"] = "lcf/workshop/formats/lua/ast_transformer/align_nodes.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.assignment"] = "lcf/workshop/formats/lua/ast_transformer/handlers/assignment.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.else_part"] = "lcf/workshop/formats/lua/ast_transformer/handlers/else_part.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.elseif_part"] = "lcf/workshop/formats/lua/ast_transformer/handlers/elseif_part.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.expression"] = "lcf/workshop/formats/lua/ast_transformer/handlers/expression.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.function_call"] = "lcf/workshop/formats/lua/ast_transformer/handlers/function_call.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.function_params"] = "lcf/workshop/formats/lua/ast_transformer/handlers/function_params.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.generic_for_block"] = "lcf/workshop/formats/lua/ast_transformer/handlers/generic_for_block.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.if_block"] = "lcf/workshop/formats/lua/ast_transformer/handlers/if_block.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.if_part"] = "lcf/workshop/formats/lua/ast_transformer/handlers/if_part.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.interface"] = "lcf/workshop/formats/lua/ast_transformer/handlers/interface.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.key_val"] = "lcf/workshop/formats/lua/ast_transformer/handlers/key_val.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.local_assignment"] = "lcf/workshop/formats/lua/ast_transformer/handlers/local_assignment.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.local_named_function"] = "lcf/workshop/formats/lua/ast_transformer/handlers/local_named_function.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.named_function"] = "lcf/workshop/formats/lua/ast_transformer/handlers/named_function.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.numeric_for_block"] = "lcf/workshop/formats/lua/ast_transformer/handlers/numeric_for_block.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.repeat_block"] = "lcf/workshop/formats/lua/ast_transformer/handlers/repeat_block.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.type_function"] = "lcf/workshop/formats/lua/ast_transformer/handlers/type_function.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.var_ref"] = "lcf/workshop/formats/lua/ast_transformer/handlers/var_ref.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.handlers.while_block"] = "lcf/workshop/formats/lua/ast_transformer/handlers/while_block.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.interface"] = "lcf/workshop/formats/lua/ast_transformer/interface.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.move_comments"] = "lcf/workshop/formats/lua/ast_transformer/move_comments.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.restruc_nodes"] = "lcf/workshop/formats/lua/ast_transformer/restruc_nodes.lua",
+               ["lcf.workshop.formats.lua.ast_transformer.run"] = "lcf/workshop/formats/lua/ast_transformer/run.lua",
+               ["lcf.workshop.formats.lua.formatter"] = "lcf/workshop/formats/lua/formatter/init.lua",
+               ["lcf.workshop.formats.lua.formatter.get_result"] = "lcf/workshop/formats/lua/formatter/get_result.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.expression"] = "lcf/workshop/formats/lua/formatter/handlers/expression.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.expressions.function_call"] = "lcf/workshop/formats/lua/formatter/handlers/expressions/function_call.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.expressions.string"] = "lcf/workshop/formats/lua/formatter/handlers/expressions/string.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.expressions.table"] = "lcf/workshop/formats/lua/formatter/handlers/expressions/table.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.expressions.type_function"] = "lcf/workshop/formats/lua/formatter/handlers/expressions/type_function.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.expressions.var_ref"] = "lcf/workshop/formats/lua/formatter/handlers/expressions/var_ref.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.interface"] = "lcf/workshop/formats/lua/formatter/handlers/interface.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements"] = "lcf/workshop/formats/lua/formatter/handlers/statements.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.assignment"] = "lcf/workshop/formats/lua/formatter/handlers/statements/assignment.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.do_block"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/do_block.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.generic_for_block"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/generic_for_block.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.if_block"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/if_block.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.local_named_function"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/local_named_function.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.named_function"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/named_function.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.numeric_for_block"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/numeric_for_block.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.repeat_block"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/repeat_block.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.blocks.while_block"] = "lcf/workshop/formats/lua/formatter/handlers/statements/blocks/while_block.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.break_statement"] = "lcf/workshop/formats/lua/formatter/handlers/statements/break_statement.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.comment"] = "lcf/workshop/formats/lua/formatter/handlers/statements/comment.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.goto_statement"] = "lcf/workshop/formats/lua/formatter/handlers/statements/goto_statement.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.label_statement"] = "lcf/workshop/formats/lua/formatter/handlers/statements/label_statement.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.local_assignment"] = "lcf/workshop/formats/lua/formatter/handlers/statements/local_assignment.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.statements.return_statement"] = "lcf/workshop/formats/lua/formatter/handlers/statements/return_statement.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.bracket_expr"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/bracket_expr.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.colon_name"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/colon_name.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.dot_list"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/dot_list.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.dot_name"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/dot_name.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.expr_list"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/expr_list.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.func_args"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/func_args.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.function_params"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/function_params.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.name_list"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/name_list.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.name_parts"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/name_parts.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.par_expr"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/par_expr.lua",
+               ["lcf.workshop.formats.lua.formatter.handlers.wrappers.ref_list"] = "lcf/workshop/formats/lua/formatter/handlers/wrappers/ref_list.lua",
+               ["lcf.workshop.formats.lua.formatter.interface"] = "lcf/workshop/formats/lua/formatter/interface.lua",
+               ["lcf.workshop.formats.lua.formatter.process_block"] = "lcf/workshop/formats/lua/formatter/process_block.lua",
+               ["lcf.workshop.formats.lua.formatter.process_block_multiline"] = "lcf/workshop/formats/lua/formatter/process_block_multiline.lua",
+               ["lcf.workshop.formats.lua.formatter.process_block_oneline"] = "lcf/workshop/formats/lua/formatter/process_block_oneline.lua",
+               ["lcf.workshop.formats.lua.formatter.process_list"] = "lcf/workshop/formats/lua/formatter/process_list.lua",
+               ["lcf.workshop.formats.lua.formatter.process_list_variative"] = "lcf/workshop/formats/lua/formatter/process_list_variative.lua",
+               ["lcf.workshop.formats.lua.formatter.process_node"] = "lcf/workshop/formats/lua/formatter/process_node.lua",
+               ["lcf.workshop.formats.lua.formatter.represent"] = "lcf/workshop/formats/lua/formatter/represent.lua",
+               ["lcf.workshop.formats.lua.formatter.representation_is_allowed"] = "lcf/workshop/formats/lua/formatter/representation_is_allowed.lua",
+               ["lcf.workshop.formats.lua.formatter.run"] = "lcf/workshop/formats/lua/formatter/run.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper"] = "lcf/workshop/formats/lua/formatter/state_keeper/init.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper.enter_level"] = "lcf/workshop/formats/lua/formatter/state_keeper/enter_level.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper.get_child_state"] = "lcf/workshop/formats/lua/formatter/state_keeper/get_child_state.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper.get_state"] = "lcf/workshop/formats/lua/formatter/state_keeper/get_state.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper.interface"] = "lcf/workshop/formats/lua/formatter/state_keeper/interface.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper.leave_level"] = "lcf/workshop/formats/lua/formatter/state_keeper/leave_level.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper.set_child_state"] = "lcf/workshop/formats/lua/formatter/state_keeper/set_child_state.lua",
+               ["lcf.workshop.formats.lua.formatter.state_keeper.set_state"] = "lcf/workshop/formats/lua/formatter/state_keeper/set_state.lua",
+               ["lcf.workshop.formats.lua.formatter.variate"] = "lcf/workshop/formats/lua/formatter/variate.lua",
+               ["lcf.workshop.formats.lua.is_identifier"] = "lcf/workshop/formats/lua/is_identifier.lua",
+               ["lcf.workshop.formats.lua.keywords"] = "lcf/workshop/formats/lua/keywords.lua",
+               ["lcf.workshop.formats.lua.quote_string"] = "lcf/workshop/formats/lua/quote_string.lua",
+               ["lcf.workshop.formats.lua.quote_string.custom_quotes"] = "lcf/workshop/formats/lua/quote_string/custom_quotes.lua",
+               ["lcf.workshop.formats.lua.quote_string.dump"] = "lcf/workshop/formats/lua/quote_string/dump.lua",
+               ["lcf.workshop.formats.lua.quote_string.intact"] = "lcf/workshop/formats/lua/quote_string/intact.lua",
+               ["lcf.workshop.formats.lua.quote_string.linear"] = "lcf/workshop/formats/lua/quote_string/linear.lua",
+               ["lcf.workshop.formats.lua.quote_string.quote_char"] = "lcf/workshop/formats/lua/quote_string/quote_char.lua",
+               ["lcf.workshop.formats.lua.run_formatter"] = "lcf/workshop/formats/lua/run_formatter.lua",
+               ["lcf.workshop.formats.lua.syntax"] = "lcf/workshop/formats/lua/syntax.lua",
+               ["lcf.workshop.formats.lua.syntax.expression"] = "lcf/workshop/formats/lua/syntax/expression.lua",
+               ["lcf.workshop.formats.lua.syntax.qualifiers.var_or_call"] = "lcf/workshop/formats/lua/syntax/qualifiers/var_or_call.lua",
+               ["lcf.workshop.formats.lua.syntax.statements"] = "lcf/workshop/formats/lua/syntax/statements.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.assign_or_call"] = "lcf/workshop/formats/lua/syntax/statements/assign_or_call.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.break_statement"] = "lcf/workshop/formats/lua/syntax/statements/break_statement.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.do_block"] = "lcf/workshop/formats/lua/syntax/statements/do_block.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.empty_statement"] = "lcf/workshop/formats/lua/syntax/statements/empty_statement.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.function_body"] = "lcf/workshop/formats/lua/syntax/statements/function_body.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.generic_for_block"] = "lcf/workshop/formats/lua/syntax/statements/generic_for_block.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.goto_statement"] = "lcf/workshop/formats/lua/syntax/statements/goto_statement.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.if_block"] = "lcf/workshop/formats/lua/syntax/statements/if_block.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.label_statement"] = "lcf/workshop/formats/lua/syntax/statements/label_statement.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.local_statement"] = "lcf/workshop/formats/lua/syntax/statements/local_statement.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.named_function"] = "lcf/workshop/formats/lua/syntax/statements/named_function.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.numeric_for_block"] = "lcf/workshop/formats/lua/syntax/statements/numeric_for_block.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.repeat_block"] = "lcf/workshop/formats/lua/syntax/statements/repeat_block.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.return_statement"] = "lcf/workshop/formats/lua/syntax/statements/return_statement.lua",
+               ["lcf.workshop.formats.lua.syntax.statements.while_block"] = "lcf/workshop/formats/lua/syntax/statements/while_block.lua",
+               ["lcf.workshop.formats.lua.syntax.type_boolean"] = "lcf/workshop/formats/lua/syntax/type_boolean.lua",
+               ["lcf.workshop.formats.lua.syntax.type_function"] = "lcf/workshop/formats/lua/syntax/type_function.lua",
+               ["lcf.workshop.formats.lua.syntax.type_nil"] = "lcf/workshop/formats/lua/syntax/type_nil.lua",
+               ["lcf.workshop.formats.lua.syntax.type_number"] = "lcf/workshop/formats/lua/syntax/type_number.lua",
+               ["lcf.workshop.formats.lua.syntax.type_string"] = "lcf/workshop/formats/lua/syntax/type_string.lua",
+               ["lcf.workshop.formats.lua.syntax.type_table"] = "lcf/workshop/formats/lua/syntax/type_table.lua",
+               ["lcf.workshop.formats.lua.syntax.words.comment"] = "lcf/workshop/formats/lua/syntax/words/comment.lua",
+               ["lcf.workshop.formats.lua.syntax.words.name"] = "lcf/workshop/formats/lua/syntax/words/name.lua",
+               ["lcf.workshop.formats.lua.syntax.words.opt_spc"] = "lcf/workshop/formats/lua/syntax/words/opt_spc.lua",
+               ["lcf.workshop.formats.lua.syntax.words.particles.long_bracket"] = "lcf/workshop/formats/lua/syntax/words/particles/long_bracket.lua",
+               ["lcf.workshop.formats.lua.syntax.words.syntel"] = "lcf/workshop/formats/lua/syntax/words/syntel.lua",
+               ["lcf.workshop.formats.lua.syntax.words.vararg"] = "lcf/workshop/formats/lua/syntax/words/vararg.lua",
+               ["lcf.workshop.formats.lua.syntax.words.word"] = "lcf/workshop/formats/lua/syntax/words/word.lua",
+               ["lcf.workshop.formats.lua.syntax.wrappers.bracket_expr"] = "lcf/workshop/formats/lua/syntax/wrappers/bracket_expr.lua",
+               ["lcf.workshop.formats.lua.syntax.wrappers.colon_name"] = "lcf/workshop/formats/lua/syntax/wrappers/colon_name.lua",
+               ["lcf.workshop.formats.lua.syntax.wrappers.dot_name"] = "lcf/workshop/formats/lua/syntax/wrappers/dot_name.lua",
+               ["lcf.workshop.formats.lua.syntax.wrappers.expr_list"] = "lcf/workshop/formats/lua/syntax/wrappers/expr_list.lua",
+               ["lcf.workshop.formats.lua.syntax.wrappers.name_list"] = "lcf/workshop/formats/lua/syntax/wrappers/name_list.lua",
+               ["lcf.workshop.formats.lua.syntax.wrappers.par_expr"] = "lcf/workshop/formats/lua/syntax/wrappers/par_expr.lua",
+               ["lcf.workshop.formats.lua.transform_ast"] = "lcf/workshop/formats/lua/transform_ast.lua",
+               ["lcf.workshop.formats.lua_table.save"] = "lcf/workshop/formats/lua_table/save/init.lua",
+               ["lcf.workshop.formats.lua_table.save.get_ast"] = "lcf/workshop/formats/lua_table/save/get_ast.lua",
+               ["lcf.workshop.formats.lua_table.save.install_node_handlers.minimal"] = "lcf/workshop/formats/lua_table/save/install_node_handlers/minimal.lua",
+               ["lcf.workshop.formats.lua_table.save.install_node_handlers.readable"] = "lcf/workshop/formats/lua_table/save/install_node_handlers/readable.lua",
+               ["lcf.workshop.formats.lua_table.save.interface"] = "lcf/workshop/formats/lua_table/save/interface.lua",
+               ["lcf.workshop.formats.lua_table.save.serialize_ast"] = "lcf/workshop/formats/lua_table/save/serialize_ast.lua",
+               ["lcf.workshop.formats.lua_table_code.load"] = "lcf/workshop/formats/lua_table_code/load.lua",
+               ["lcf.workshop.formats.lua_table_code.save"] = "lcf/workshop/formats/lua_table_code/save.lua",
+               ["lcf.workshop.formats.lua_table_code.save.get_ast"] = "lcf/workshop/formats/lua_table_code/save/get_ast.lua",
+               ["lcf.workshop.formats.lua_table_code.save.install_node_handlers"] = "lcf/workshop/formats/lua_table_code/save/install_node_handlers.lua",
+               ["lcf.workshop.formats.lua_table_code.save.interface"] = "lcf/workshop/formats/lua_table_code/save/interface.lua",
+               ["lcf.workshop.formats.lua_table_code.save.serialize_ast"] = "lcf/workshop/formats/lua_table_code/save/serialize_ast.lua",
+               ["lcf.workshop.formats.sh.load"] = "lcf/workshop/formats/sh/load.lua",
+               ["lcf.workshop.frontend.text.print_msg_with_delta_time"] = "lcf/workshop/frontend/text/print_msg_with_delta_time.lua",
+               ["lcf.workshop.lua.code.ast_as_code"] = "lcf/workshop/lua/code/ast_as_code.lua",
+               ["lcf.workshop.lua.code.get_ast"] = "lcf/workshop/lua/code/get_ast.lua",
+               ["lcf.workshop.lua.data_types"] = "lcf/workshop/lua/data_types.lua",
+               ["lcf.workshop.lua.string.quote"] = "lcf/workshop/lua/string/quote.lua",
+               ["lcf.workshop.mechs.command_line_processor.assert_type_is_correct"] = "lcf/workshop/mechs/command_line_processor/assert_type_is_correct.lua",
+               ["lcf.workshop.mechs.command_line_processor.classify_item"] = "lcf/workshop/mechs/command_line_processor/classify_item.lua",
+               ["lcf.workshop.mechs.command_line_processor.get_key_name"] = "lcf/workshop/mechs/command_line_processor/get_key_name.lua",
+               ["lcf.workshop.mechs.command_line_processor.interface"] = "lcf/workshop/mechs/command_line_processor/interface.lua",
+               ["lcf.workshop.mechs.command_line_processor.parse_args"] = "lcf/workshop/mechs/command_line_processor/parse_args.lua",
+               ["lcf.workshop.mechs.command_line_processor.run"] = "lcf/workshop/mechs/command_line_processor/run.lua",
+               ["lcf.workshop.mechs.generic_file_converter"] = "lcf/workshop/mechs/generic_file_converter/init.lua",
+               ["lcf.workshop.mechs.generic_file_converter.compile"] = "lcf/workshop/mechs/generic_file_converter/compile.lua",
+               ["lcf.workshop.mechs.generic_file_converter.interface"] = "lcf/workshop/mechs/generic_file_converter/interface.lua",
+               ["lcf.workshop.mechs.generic_file_converter.run"] = "lcf/workshop/mechs/generic_file_converter/run.lua",
+               ["lcf.workshop.mechs.generic_file_converter.say"] = "lcf/workshop/mechs/generic_file_converter/say.lua",
+               ["lcf.workshop.mechs.generic_loader"] = "lcf/workshop/mechs/generic_loader.lua",
+               ["lcf.workshop.mechs.geometry.1d.segments.is_inside"] = "lcf/workshop/mechs/geometry/1d/segments/is_inside.lua",
+               ["lcf.workshop.mechs.geometry.1d.segments.subtract_inner"] = "lcf/workshop/mechs/geometry/1d/segments/subtract_inner.lua",
+               ["lcf.workshop.mechs.graph.assembly_order"] = "lcf/workshop/mechs/graph/assembly_order.lua",
+               ["lcf.workshop.mechs.graph.dfs"] = "lcf/workshop/mechs/graph/dfs.lua",
+               ["lcf.workshop.mechs.graph.dfs.dfs"] = "lcf/workshop/mechs/graph/dfs/dfs.lua",
+               ["lcf.workshop.mechs.graph.dfs.get_children"] = "lcf/workshop/mechs/graph/dfs/get_children.lua",
+               ["lcf.workshop.mechs.graph.dfs.interface"] = "lcf/workshop/mechs/graph/dfs/interface.lua",
+               ["lcf.workshop.mechs.indents_table"] = "lcf/workshop/mechs/indents_table.lua",
+               ["lcf.workshop.mechs.name_giver"] = "lcf/workshop/mechs/name_giver.lua",
+               ["lcf.workshop.mechs.number.representer.interface"] = "lcf/workshop/mechs/number/representer/interface.lua",
+               ["lcf.workshop.mechs.number.representer.represent"] = "lcf/workshop/mechs/number/representer/represent.lua",
+               ["lcf.workshop.mechs.number.representer.units.binary_bytes"] = "lcf/workshop/mechs/number/representer/units/binary_bytes.lua",
+               ["lcf.workshop.mechs.number.representer.units.binary_units"] = "lcf/workshop/mechs/number/representer/units/binary_units.lua",
+               ["lcf.workshop.mechs.number.representer.units.frequency"] = "lcf/workshop/mechs/number/representer/units/frequency.lua",
+               ["lcf.workshop.mechs.number.representer.units.general_number"] = "lcf/workshop/mechs/number/representer/units/general_number.lua",
+               ["lcf.workshop.mechs.number.representer.units.general_time"] = "lcf/workshop/mechs/number/representer/units/general_time.lua",
+               ["lcf.workshop.mechs.number.representer.units.interface"] = "lcf/workshop/mechs/number/representer/units/interface.lua",
+               ["lcf.workshop.mechs.parser.folder"] = "lcf/workshop/mechs/parser/folder/init.lua",
+               ["lcf.workshop.mechs.parser.folder.fold"] = "lcf/workshop/mechs/parser/folder/fold.lua",
+               ["lcf.workshop.mechs.parser.folder.get_struc"] = "lcf/workshop/mechs/parser/folder/get_struc.lua",
+               ["lcf.workshop.mechs.parser.folder.interface"] = "lcf/workshop/mechs/parser/folder/interface.lua",
+               ["lcf.workshop.mechs.parser.get_struc"] = "lcf/workshop/mechs/parser/get_struc.lua",
+               ["lcf.workshop.mechs.parser.handy"] = "lcf/workshop/mechs/parser/handy.lua",
+               ["lcf.workshop.mechs.parser.on_match"] = "lcf/workshop/mechs/parser/on_match.lua",
+               ["lcf.workshop.mechs.parser.parse"] = "lcf/workshop/mechs/parser/parse.lua",
+               ["lcf.workshop.mechs.parser.populate"] = "lcf/workshop/mechs/parser/populate.lua",
+               ["lcf.workshop.mechs.processor.core"] = "lcf/workshop/mechs/processor/core/init.lua",
+               ["lcf.workshop.mechs.processor.core.interface"] = "lcf/workshop/mechs/processor/core/interface.lua",
+               ["lcf.workshop.mechs.processor.core.match"] = "lcf/workshop/mechs/processor/core/match.lua",
+               ["lcf.workshop.mechs.processor.core.on_match"] = "lcf/workshop/mechs/processor/core/on_match.lua",
+               ["lcf.workshop.mechs.processor.handy"] = "lcf/workshop/mechs/processor/handy.lua",
+               ["lcf.workshop.mechs.processor.link"] = "lcf/workshop/mechs/processor/link.lua",
+               ["lcf.workshop.mechs.processor.optimize"] = "lcf/workshop/mechs/processor/optimize.lua",
+               ["lcf.workshop.mechs.streams.mergeable"] = "lcf/workshop/mechs/streams/mergeable/init.lua",
+               ["lcf.workshop.mechs.streams.mergeable.block_read"] = "lcf/workshop/mechs/streams/mergeable/block_read.lua",
+               ["lcf.workshop.mechs.streams.mergeable.get_segment"] = "lcf/workshop/mechs/streams/mergeable/get_segment.lua",
+               ["lcf.workshop.mechs.streams.mergeable.get_slot"] = "lcf/workshop/mechs/streams/mergeable/get_slot.lua",
+               ["lcf.workshop.mechs.streams.mergeable.interface"] = "lcf/workshop/mechs/streams/mergeable/interface.lua",
+               ["lcf.workshop.mechs.streams.mergeable.set_next_position"] = "lcf/workshop/mechs/streams/mergeable/set_next_position.lua",
+               ["lcf.workshop.mechs.streams.mergeable.set_relative_position"] = "lcf/workshop/mechs/streams/mergeable/set_relative_position.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string"] = "lcf/workshop/mechs/streams/mergeable/string/init.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string.get_length"] = "lcf/workshop/mechs/streams/mergeable/string/get_length.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string.get_position"] = "lcf/workshop/mechs/streams/mergeable/string/get_position.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string.interface"] = "lcf/workshop/mechs/streams/mergeable/string/interface.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string.match_regexp"] = "lcf/workshop/mechs/streams/mergeable/string/match_regexp.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string.match_string"] = "lcf/workshop/mechs/streams/mergeable/string/match_string.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string.read"] = "lcf/workshop/mechs/streams/mergeable/string/read.lua",
+               ["lcf.workshop.mechs.streams.mergeable.string.set_position"] = "lcf/workshop/mechs/streams/mergeable/string/set_position.lua",
+               ["lcf.workshop.mechs.streams.sequence"] = "lcf/workshop/mechs/streams/sequence/init.lua",
+               ["lcf.workshop.mechs.streams.sequence.get_position"] = "lcf/workshop/mechs/streams/sequence/get_position.lua",
+               ["lcf.workshop.mechs.streams.sequence.interface"] = "lcf/workshop/mechs/streams/sequence/interface.lua",
+               ["lcf.workshop.mechs.streams.sequence.read"] = "lcf/workshop/mechs/streams/sequence/read.lua",
+               ["lcf.workshop.mechs.streams.sequence.set_position"] = "lcf/workshop/mechs/streams/sequence/set_position.lua",
+               ["lcf.workshop.mechs.streams.sequence.write"] = "lcf/workshop/mechs/streams/sequence/write.lua",
+               ["lcf.workshop.mechs.text_block"] = "lcf/workshop/mechs/text_block/init.lua",
+               ["lcf.workshop.mechs.text_block.dec_indent"] = "lcf/workshop/mechs/text_block/dec_indent.lua",
+               ["lcf.workshop.mechs.text_block.inc_indent"] = "lcf/workshop/mechs/text_block/inc_indent.lua",
+               ["lcf.workshop.mechs.text_block.interface"] = "lcf/workshop/mechs/text_block/interface.lua",
+               ["lcf.workshop.mechs.text_block.line"] = "lcf/workshop/mechs/text_block/line/init.lua",
+               ["lcf.workshop.mechs.text_block.line.add"] = "lcf/workshop/mechs/text_block/line/add.lua",
+               ["lcf.workshop.mechs.text_block.line.get_line"] = "lcf/workshop/mechs/text_block/line/get_line.lua",
+               ["lcf.workshop.mechs.text_block.line.get_line_length"] = "lcf/workshop/mechs/text_block/line/get_line_length.lua",
+               ["lcf.workshop.mechs.text_block.line.get_text_length"] = "lcf/workshop/mechs/text_block/line/get_text_length.lua",
+               ["lcf.workshop.mechs.text_block.line.interface"] = "lcf/workshop/mechs/text_block/line/interface.lua",
+               ["lcf.workshop.mechs.text_block.text.add_curline"] = "lcf/workshop/mechs/text_block/text/add_curline.lua",
+               ["lcf.workshop.mechs.text_block.text.add_textline"] = "lcf/workshop/mechs/text_block/text/add_textline.lua",
+               ["lcf.workshop.mechs.text_block.text.get_block_width"] = "lcf/workshop/mechs/text_block/text/get_block_width.lua",
+               ["lcf.workshop.mechs.text_block.text.get_text"] = "lcf/workshop/mechs/text_block/text/get_text.lua",
+               ["lcf.workshop.mechs.text_block.text.get_text_width"] = "lcf/workshop/mechs/text_block/text/get_text_width.lua",
+               ["lcf.workshop.mechs.text_block.text.include"] = "lcf/workshop/mechs/text_block/text/include.lua",
+               ["lcf.workshop.mechs.text_block.text.new_line"] = "lcf/workshop/mechs/text_block/text/new_line.lua",
+               ["lcf.workshop.mechs.text_block.text.on_clean_line"] = "lcf/workshop/mechs/text_block/text/on_clean_line.lua",
+               ["lcf.workshop.mechs.text_block.text.request_clean_line"] = "lcf/workshop/mechs/text_block/text/request_clean_line.lua",
+               ["lcf.workshop.mechs.text_block.text.request_empty_line"] = "lcf/workshop/mechs/text_block/text/request_empty_line.lua",
+               ["lcf.workshop.mechs.text_block.text.store_textline"] = "lcf/workshop/mechs/text_block/text/store_textline.lua",
+               ["lcf.workshop.number.represent_size"] = "lcf/workshop/number/represent_size.lua",
+               ["lcf.workshop.number.represent_time"] = "lcf/workshop/number/represent_time.lua",
+               ["lcf.workshop.string.content_attributes"] = "lcf/workshop/string/content_attributes.lua",
+               ["lcf.workshop.string.lines.get_next_line"] = "lcf/workshop/string/lines/get_next_line.lua",
+               ["lcf.workshop.string.save_to_file"] = "lcf/workshop/string/save_to_file.lua",
+               ["lcf.workshop.string.trim"] = "lcf/workshop/string/trim.lua",
+               ["lcf.workshop.string.trim_head"] = "lcf/workshop/string/trim_head.lua",
+               ["lcf.workshop.string.trim_linefeed"] = "lcf/workshop/string/trim_linefeed.lua",
+               ["lcf.workshop.string.trim_tail"] = "lcf/workshop/string/trim_tail.lua",
+               ["lcf.workshop.struc.compile"] = "lcf/workshop/struc/compile.lua",
+               ["lcf.workshop.system.install_assert_functions"] = "lcf/workshop/system/install_assert_functions.lua",
+               ["lcf.workshop.system.install_is_functions"] = "lcf/workshop/system/install_is_functions.lua",
+               ["lcf.workshop.table.as_string"] = "lcf/workshop/table/as_string.lua",
+               ["lcf.workshop.table.clone"] = "lcf/workshop/table/clone.lua",
+               ["lcf.workshop.table.get_key_vals"] = "lcf/workshop/table/get_key_vals.lua",
+               ["lcf.workshop.table.map_values"] = "lcf/workshop/table/map_values.lua",
+               ["lcf.workshop.table.merge"] = "lcf/workshop/table/merge.lua",
+               ["lcf.workshop.table.new"] = "lcf/workshop/table/new.lua",
+               ["lcf.workshop.table.ordered_pass"] = "lcf/workshop/table/ordered_pass.lua",
+               ["lcf.workshop.table.ordered_pass.default_comparator"] = "lcf/workshop/table/ordered_pass/default_comparator.lua",
+               ["lcf.workshop.table.patch"] = "lcf/workshop/table/patch.lua",
+               ["lcf.workshop.table.replace"] = "lcf/workshop/table/replace.lua",
+               ["lcf.workshop.table.unfold"] = "lcf/workshop/table/unfold.lua"
+            }
+         }
+      }
+   }
+}

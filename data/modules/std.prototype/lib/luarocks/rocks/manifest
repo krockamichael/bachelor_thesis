@@ -1,0 +1,71 @@
+commands = {}
+dependencies = {
+   ["std.prototype"] = {
+      ["1.0.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["std.prototype"] = {
+      "std.prototype/1.0.1-2"
+   },
+   ["std.prototype._base"] = {
+      "std.prototype/1.0.1-2"
+   },
+   ["std.prototype.container"] = {
+      "std.prototype/1.0.1-2"
+   },
+   ["std.prototype.object"] = {
+      "std.prototype/1.0.1-2"
+   },
+   ["std.prototype.set"] = {
+      "std.prototype/1.0.1-2"
+   },
+   ["std.prototype.strbuf"] = {
+      "std.prototype/1.0.1-2"
+   },
+   ["std.prototype.trie"] = {
+      "std.prototype/1.0.1-2"
+   },
+   ["std.prototype.version"] = {
+      "std.prototype/1.0.1-2"
+   }
+}
+repository = {
+   ["std.prototype"] = {
+      ["1.0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["std.prototype"] = "std/prototype/init.lua",
+               ["std.prototype._base"] = "std/prototype/_base.lua",
+               ["std.prototype.container"] = "std/prototype/container.lua",
+               ["std.prototype.object"] = "std/prototype/object.lua",
+               ["std.prototype.set"] = "std/prototype/set.lua",
+               ["std.prototype.strbuf"] = "std/prototype/strbuf.lua",
+               ["std.prototype.trie"] = "std/prototype/trie.lua",
+               ["std.prototype.version"] = "std/prototype/version.lua"
+            }
+         }
+      }
+   }
+}

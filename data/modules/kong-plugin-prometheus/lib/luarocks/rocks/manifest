@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-prometheus"] = {
+      ["0.1.1-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.prometheus.api"] = {
+      "kong-plugin-prometheus/0.1.1-1"
+   },
+   ["kong.plugins.prometheus.handler"] = {
+      "kong-plugin-prometheus/0.1.1-1"
+   },
+   ["kong.plugins.prometheus.logger"] = {
+      "kong-plugin-prometheus/0.1.1-1"
+   },
+   ["kong.plugins.prometheus.prometheus"] = {
+      "kong-plugin-prometheus/0.1.1-1"
+   },
+   ["kong.plugins.prometheus.schema"] = {
+      "kong-plugin-prometheus/0.1.1-1"
+   }
+}
+repository = {
+   ["kong-plugin-prometheus"] = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.prometheus.api"] = "kong/plugins/prometheus/api.lua",
+               ["kong.plugins.prometheus.handler"] = "kong/plugins/prometheus/handler.lua",
+               ["kong.plugins.prometheus.logger"] = "kong/plugins/prometheus/logger.lua",
+               ["kong.plugins.prometheus.prometheus"] = "kong/plugins/prometheus/prometheus.lua",
+               ["kong.plugins.prometheus.schema"] = "kong/plugins/prometheus/schema.lua"
+            }
+         }
+      }
+   }
+}

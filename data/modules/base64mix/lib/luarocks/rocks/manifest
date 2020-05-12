@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   base64mix = {
+      ["1.0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   base64mix = {
+      "base64mix/1.0.0-1"
+   }
+}
+repository = {
+   base64mix = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               base64mix = "base64mix.so"
+            }
+         }
+      }
+   }
+}

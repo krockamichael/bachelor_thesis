@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lint64 = {
+      ["20180730-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   int64 = {
+      "lint64/20180730-1"
+   }
+}
+repository = {
+   lint64 = {
+      ["20180730-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               int64 = "int64.so"
+            }
+         }
+      }
+   }
+}

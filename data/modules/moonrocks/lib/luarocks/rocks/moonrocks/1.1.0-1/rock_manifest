@@ -1,0 +1,18 @@
+rock_manifest = {
+   bin = {
+      moonrocks = "a9a47c601bffdc4faf64e7839b20173f"
+   },
+   doc = {
+      ["README.md"] = "c46f23bca931726b95f4d637ab367bc9"
+   },
+   lua = {
+      moonrocks = {
+         ["actions.lua"] = "bab84f5a5f8a075cae18598338986efe",
+         ["api.lua"] = "c1675450539fe6c2c522f9b7bfa662a6",
+         ["multipart.lua"] = "8d45089a1691cc8fdb6a8831043a22d1",
+         ["util.lua"] = "8f5dcf3ae4a9fc340e2f6205b1030e44",
+         ["version.lua"] = "1e3f35a76b75626f7390a3ef48cce9a8"
+      }
+   },
+   ["moonrocks-1.1.0-1.rockspec"] = "94cb9d332fb496b8c9d058503e9f74d3"
+}

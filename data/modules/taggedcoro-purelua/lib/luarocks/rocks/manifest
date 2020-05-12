@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["taggedcoro-purelua"] = {
+      ["1.0.0-1"] = {}
+   }
+}
+modules = {
+   taggedcoro = {
+      "taggedcoro-purelua/1.0.0-1"
+   },
+   ["taggedcoro.exception"] = {
+      "taggedcoro-purelua/1.0.0-1"
+   },
+   ["taggedcoro.iterator"] = {
+      "taggedcoro-purelua/1.0.0-1"
+   },
+   ["taggedcoro.nlr"] = {
+      "taggedcoro-purelua/1.0.0-1"
+   },
+   ["taggedcoro.stm"] = {
+      "taggedcoro-purelua/1.0.0-1"
+   }
+}
+repository = {
+   ["taggedcoro-purelua"] = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               taggedcoro = "taggedcoro.lua",
+               ["taggedcoro.exception"] = "taggedcoro/exception.lua",
+               ["taggedcoro.iterator"] = "taggedcoro/iterator.lua",
+               ["taggedcoro.nlr"] = "taggedcoro/nlr.lua",
+               ["taggedcoro.stm"] = "taggedcoro/stm.lua"
+            }
+         }
+      }
+   }
+}

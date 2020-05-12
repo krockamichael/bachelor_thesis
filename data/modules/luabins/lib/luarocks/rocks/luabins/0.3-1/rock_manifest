@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      README = "2e89378b22afed5204c7676b7ab3735f",
+      ["README.md"] = "2e89378b22afed5204c7676b7ab3735f"
+   },
+   lib = {
+      ["luabins.so"] = "a310c65d1d8a148dba5e6b309177df75"
+   },
+   ["luabins-0.3-1.rockspec"] = "cc41fd32492637cbfee2db7fccdbbefe"
+}

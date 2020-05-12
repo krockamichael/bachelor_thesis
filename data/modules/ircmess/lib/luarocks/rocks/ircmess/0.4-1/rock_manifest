@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      ["index.html"] = "4138b9ae46af8c0053ef2a381f8bf71c",
+      ["ldoc_pale.css"] = "9bf8097114673183aece60894158824b"
+   },
+   ["ircmess-0.4-1.rockspec"] = "79aa555eb63e07dd38fbc8386c352bd7",
+   lib = {
+      ["ircmess.so"] = "e5ced3bd4b5015089b6a085fc8e171be"
+   }
+}

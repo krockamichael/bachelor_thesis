@@ -1,0 +1,104 @@
+rock_manifest = {
+   etc = {
+      ["demo.lua"] = "17128696d88eda4bbb824a9fa67f086a",
+      ["doclinks.lua"] = "1b8a94865f0dceca40daa504e5559924",
+      lxsh = "97cb442615f8f7a5edc2685b18437c94",
+      ["styleswitcher.js"] = "a7e075e86294417804eb9462be816f5a"
+   },
+   examples = {
+      ["apr.lua"] = "9179a7a6d14f289eea030ab00e581eb9",
+      earendel = {
+         ["apr.lua.html"] = "3ca7f1ad0232480451ee62231535bacb",
+         ["apr.lua.pdf"] = "99c61ee424ebe20aba1c9286e4e94dcf",
+         ["apr.lua.rtf"] = "e4161ce2824908302a8995af506465a4",
+         ["entry.bib.html"] = "5607f13f53507ea0c621e7548bbbdbe4",
+         ["entry.bib.pdf"] = "26340b72d86593da3c62e00358130ee5",
+         ["entry.bib.rtf"] = "4b3a1d641e9670c746ace18960a1c4c7",
+         ["gvim.sh.html"] = "33aa8e15e28897096f6cba6c19fc549c",
+         ["gvim.sh.pdf"] = "2ed3279313de935ae83436fc773b303f",
+         ["gvim.sh.rtf"] = "f018c3c3f07ddc9f32e33c175a061466",
+         ["lua_apr.c.html"] = "c8ceaa1099c1053f3f49ff79fc14cebc",
+         ["lua_apr.c.pdf"] = "15731d25a49ee6f33eb9c08bd52b22da",
+         ["lua_apr.c.rtf"] = "73573cdc6d7279bd8977c6067a31e4a0",
+         ["prompt.lua.html"] = "5b191b2a9dcc2d6a42e3542ba8b67462",
+         ["prompt.lua.pdf"] = "224ac834fcd32b5848dbd413819a255c",
+         ["prompt.lua.rtf"] = "402d963e6ffb63f09e15c8cf5a077c14"
+      },
+      ["earendel.css"] = "dc99eddef4c2450a8ce8f3d30d8f0c57",
+      ["entry.bib"] = "93162887405a912d4ef148fd6549e5c4",
+      ["gvim.sh"] = "ca466e974dbcb8c7f8e354afe70aacb0",
+      ["lua_apr.c"] = "99c698a8578344af09f515c9e2a95077",
+      ["prompt.lua"] = "48a0c05d132cb470e296ba20d2991e14",
+      slate = {
+         ["apr.lua.html"] = "7d01eea0840955295df5a91931ed02e4",
+         ["apr.lua.pdf"] = "c708417e1c58cd76c92301a9838eba2b",
+         ["apr.lua.rtf"] = "a7d764b4ae487e4466a1caa44b29835d",
+         ["entry.bib.html"] = "c38350682943da2d25ee0d74ae5f0a1d",
+         ["entry.bib.pdf"] = "731b266c54e35fc1faa2cea6781f56e9",
+         ["entry.bib.rtf"] = "4b8f09cf6ead2e5f3b8ebaaecb44cf0e",
+         ["gvim.sh.html"] = "189a341bad01313d4de47a0f5abea742",
+         ["gvim.sh.pdf"] = "2c974ff57514773b82e0a6b40ac471a1",
+         ["gvim.sh.rtf"] = "ce6b40dd4bcb602c83b198ba7bfb5f3e",
+         ["lua_apr.c.html"] = "99f64a4aeae7362fd90ae0b57029db36",
+         ["lua_apr.c.pdf"] = "d072690bf0e66d73d57f221fcb679dfb",
+         ["lua_apr.c.rtf"] = "48cc7180b14980e1eb492f20cf6cac3b",
+         ["prompt.lua.html"] = "2011d48f2cd533c7f9c6f23653d8aca1",
+         ["prompt.lua.pdf"] = "acdf00a3ac24df5b1b931017dc7eb86b",
+         ["prompt.lua.rtf"] = "797902e5bffabec49a3842436a14ae1e"
+      },
+      ["slate.css"] = "21142bf56dfb04a22263d4941cd20b23",
+      wiki = {
+         ["apr.lua.html"] = "e9930508b3132aff1a81b86278549890",
+         ["apr.lua.pdf"] = "eccf9f52b4976a1ff2befa9df2ef85ea",
+         ["apr.lua.rtf"] = "6ecf437d5f1b0f34f71579ed9a887ffb",
+         ["entry.bib.html"] = "4960f74d7655f9e88e36d00a185d81a7",
+         ["entry.bib.pdf"] = "244459b593445d20b47d8bc56f68cf92",
+         ["entry.bib.rtf"] = "11ec93f511f5e3526ab6b471294e92eb",
+         ["gvim.sh.html"] = "0fd44a1f3d9c3df1df0b398d78b8d2f4",
+         ["gvim.sh.pdf"] = "aa0995534c188ee36882b27677090b87",
+         ["gvim.sh.rtf"] = "b2d2395de46816cfbe84bcd80f64f0e6",
+         ["lua_apr.c.html"] = "04373793b511c18778694ddff7cb386e",
+         ["lua_apr.c.pdf"] = "df277159c22fefb914c421dfc5a88687",
+         ["lua_apr.c.rtf"] = "b88db4af48fe76cb7bea5363931fcdb1",
+         ["prompt.lua.html"] = "e18bc4b03c9aa9264b76ff4b3010c561",
+         ["prompt.lua.pdf"] = "2bf90ae09e06cbdc42da772e05867ef8",
+         ["prompt.lua.rtf"] = "1cdf6442c5bcda4b30337f8f5a371613"
+      },
+      ["wiki.css"] = "c66c265e587281c944e2a00163af5b6e"
+   },
+   lua = {
+      lxsh = {
+         colors = {
+            ["earendel.lua"] = "f9ffe98b1161c1edd011aaa5002a30da",
+            ["slate.lua"] = "82fd04344a52ed2de01fca7b34558345",
+            ["wiki.lua"] = "0cc16a0f495ab61df54a8a50f7dffc00"
+         },
+         docs = {
+            ["bib.lua"] = "b3b4d7f6787c33aa8e0e99d7b02eaf9a",
+            ["c.lua"] = "9ac188e7c1a482e757acaa77ccbbba4c",
+            ["lua.lua"] = "04d9c42c14c1f7b9a46b390d156afb49"
+         },
+         formatters = {
+            ["html.lua"] = "9812fb565872d1c8293a0982f570bc7b",
+            ["latex.lua"] = "9ada12c5c3edd929c6fb07def8e0d3b5",
+            ["rtf.lua"] = "03170f9fe8b2cabc11ef27be1376a91d"
+         },
+         highlighters = {
+            ["bib.lua"] = "5e4c82c0680cca045e6c701a778ce234",
+            ["c.lua"] = "44adccd745f67d84f991e85ca3ad312b",
+            ["init.lua"] = "ebdd8eb4f2e2369f451bdc25f06b4e40",
+            ["lua.lua"] = "83a51d6821cd998ede15113def82071c",
+            ["sh.lua"] = "dfcbf5ed97d15a62b70d0f93a3b3eaba"
+         },
+         ["init.lua"] = "85b8b3d33359a3145a88311f2604d696",
+         lexers = {
+            ["bib.lua"] = "a2842b3f8dd09ab214d1ba12746cc5ed",
+            ["c.lua"] = "f53eb1ff391fffed3d56ee63aca29ac4",
+            ["init.lua"] = "5e9980c76b86ea954d6b9809fb89c1ee",
+            ["lua.lua"] = "999014ebbf085b8b3bcf6f822d12ab35",
+            ["sh.lua"] = "a3d2c05cbd1a10b65fdf1ae1affc0d6a"
+         }
+      }
+   },
+   ["lxsh-0.8.6-2.rockspec"] = "64353906bfe6220eed775c13bb4fef28"
+}

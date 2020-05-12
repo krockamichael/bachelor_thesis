@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      COPYING = "a6113fdce82defb795ee88552ca613c1",
+      ["README.md"] = "2df88b6c6c53ce94259a8c8a43f7eeb1"
+   },
+   lib = {
+      ["epoll.so"] = "86e7cc068daca965f80c370498e14671"
+   },
+   ["lua-epoll-1.0-1.rockspec"] = "032c8311c1d71a76c6a0190b6c49e457"
+}

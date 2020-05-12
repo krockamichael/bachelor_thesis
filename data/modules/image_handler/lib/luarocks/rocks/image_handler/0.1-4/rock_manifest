@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "dc5a517e4a992761f8910ce3177594ec",
+      ["README.md"] = "7e255e12c648beeef7b7af9c29f0d833"
+   },
+   ["image_handler-0.1-4.rockspec"] = "a7797b5c9ce1d5a7b3d25e9f62693ffe",
+   lua = {
+      ["image_handler.lua"] = "8baf1d15269dd969f39c74d30a5164e5"
+   }
+}

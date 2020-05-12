@@ -1,0 +1,12 @@
+rock_manifest = {
+   doc = {
+      ["ldecNumber.odt"] = "46042c3ea3a574bbe6cbcf44ee1a0077",
+      ["ldecNumber.pod"] = "c256ef9abfdfa354b1f96e5dfd1a28f6",
+      ["ldecNumber.wiki"] = "ffc1cc13575c8335d61f9d2eb5055b3b",
+      ["pod2html.pl"] = "3e5ec70d03acebea995458f1f9db85d5"
+   },
+   ["ldecnumber-2.1-3.rockspec"] = "ee7ded59e6a0e415d62c1e59874cc05e",
+   lib = {
+      ["ldecNumber.so"] = "8ca937600834a110b325a3437e6b18af"
+   }
+}

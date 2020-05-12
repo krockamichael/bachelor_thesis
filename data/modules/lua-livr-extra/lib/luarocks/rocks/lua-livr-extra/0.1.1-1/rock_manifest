@@ -1,0 +1,134 @@
+rock_manifest = {
+   docs = {
+      ["extra.md"] = "602bbc7b2412bbf000946e7e0d49d15b",
+      ["index.md"] = "9fd8512b08bdf7f8479326781fe73de6"
+   },
+   lua = {
+      LIVR = {
+         Rules = {
+            ["Extra.lua"] = "1a4fd2ec2a54e28fc66c452685a86791"
+         }
+      }
+   },
+   ["lua-livr-extra-0.1.1-1.rockspec"] = "39e31f7fc80220dca9b2bc3d38560d16",
+   test = {
+      ["00-require.t"] = "f0acaff2472ebb108546474a8d551a2b",
+      ["01-livr_test_suite.t"] = "0ee3120184d68856ba49a9e7847d44c6",
+      test_suite = {
+         negative = {
+            base64 = {
+               ["errors.json"] = "9e8807307ef6caff61722c06a32e7958",
+               ["input.json"] = "0a4c3e971acae82a4c592f28f195fdab",
+               ["rules.json"] = "da307c43a41c78524a11ef3b5e0328cf"
+            },
+            boolean = {
+               ["errors.json"] = "768f27e2a6a39bcd9bd83b6e6acdaa05",
+               ["input.json"] = "e108877123f845e837a84868c2938f08",
+               ["rules.json"] = "8201375a239e0e4addf7fe0208522233"
+            },
+            credit_card = {
+               ["errors.json"] = "dcd19e932d0ffeca4eb29a641266eb7e",
+               ["input.json"] = "57e14a7f5a3532fd619903b54149dcc0",
+               ["rules.json"] = "5ea339690e2838d8ccc13e856dcc28a8"
+            },
+            ipv4 = {
+               ["errors.json"] = "a433b43ac9db86cc8d197faa59904d6e",
+               ["input.json"] = "8bbcabcfde8465c1739912eee16a7d1c",
+               ["rules.json"] = "4f85edb2a53438cb54340a1e36f374de"
+            },
+            is = {
+               ["errors.json"] = "6af8336f5ad1882f430297f4bbfcd951",
+               ["input.json"] = "b96df12046b909fce56b91908cb1f2b0",
+               ["rules.json"] = "f46b7292b5d4cbd7420def336743aff3"
+            },
+            list_items_unique = {
+               ["errors.json"] = "6464a437ae1eca88ec01666d576d2ad8",
+               ["input.json"] = "466245bbb4edeee18c7e9c87d871ce3e",
+               ["rules.json"] = "3eacfbdfb64da0e16197fce683e1147a"
+            },
+            list_length = {
+               ["errors.json"] = "d2e0b8b261688737754d595b2a108c5b",
+               ["input.json"] = "2227f8888d088590aa23a0e52d46e109",
+               ["rules.json"] = "1ab9e1ad58ec881ffc6987020f6dbddc"
+            },
+            md5 = {
+               ["errors.json"] = "f9b9a2b682826591c6d48fbcaa3abea7",
+               ["input.json"] = "86020c2b96c47a4945704fb8b538c003",
+               ["rules.json"] = "1a76f86ea01db4f6b7b29a8f261393e6"
+            },
+            mongo_id = {
+               ["errors.json"] = "454cf2c7bab0728dfd1d7bfb294bc132",
+               ["input.json"] = "2945fa9617c05ddf9de47f778b2c1bd8",
+               ["rules.json"] = "e9b2b4eb4f5aa06d4d2853ad12225f7d"
+            },
+            required_if = {
+               ["errors.json"] = "94e36ea87e980b0942f9f96f993a9991",
+               ["input.json"] = "5435752bc865c9a3b50fbc1b76d736c4",
+               ["rules.json"] = "98d98b4c90847199003d6b636a642238"
+            },
+            uuid = {
+               ["errors.json"] = "16f31c1e236d5d32c04b757b01e4c8ac",
+               ["input.json"] = "21dd3d3168668d35d10cf6bdc1975e52",
+               ["rules.json"] = "dd14136f33ec543e34bfbcc38c85c4a9"
+            }
+         },
+         positive = {
+            base64 = {
+               ["input.json"] = "297aa00cee314238b1a11d5634b259ec",
+               ["output.json"] = "b1504f14634387ef7309e5317a94c9c1",
+               ["rules.json"] = "a5ed62aef586bd9366f2c27ea9ca36ae"
+            },
+            boolean = {
+               ["input.json"] = "113810758c290079c933cc6024463fac",
+               ["output.json"] = "9bda79b82ef7e173736fb5b585701851",
+               ["rules.json"] = "b5b66062f7b583c90e94257f749c1a5a"
+            },
+            credit_card = {
+               ["input.json"] = "e7a3a90584f4f35906c50e7ab57faded",
+               ["output.json"] = "e7a3a90584f4f35906c50e7ab57faded",
+               ["rules.json"] = "8dae3f22269ee366e1179a24289fa422"
+            },
+            ipv4 = {
+               ["input.json"] = "1d485c5dedd43db475b9de500b1b7d54",
+               ["output.json"] = "03c15e77c690080f4ce5f20c5649ef02",
+               ["rules.json"] = "30d8baf88dcea77e6d2c6037d0aca336"
+            },
+            is = {
+               ["input.json"] = "18105b2c53c465dd248b296b52de0c8f",
+               ["output.json"] = "1329fe1c1c5e6b0bcbb8226ff1bea054",
+               ["rules.json"] = "21f34aca4ffe8d67f092ef28e2d8e160"
+            },
+            list_items_unique = {
+               ["input.json"] = "29acbb5bb8fb953c8b51356b7cfb9504",
+               ["output.json"] = "f06524ea81702984ea2d7a74b764a06f",
+               ["rules.json"] = "2b95840a8ed3462521982348df20536f"
+            },
+            list_length = {
+               ["input.json"] = "d8ba7eeb8146c722370ec2b95c087387",
+               ["output.json"] = "135e7cd023e6d41ff256ae1b22fad93b",
+               ["rules.json"] = "668384d6bb84b35502624894903e6163"
+            },
+            md5 = {
+               ["input.json"] = "f878388b69ac2abc5ae37865554809ff",
+               ["output.json"] = "0e75d384e32133f311a509adb9f1babd",
+               ["rules.json"] = "ce45c18cdf64359059c9a698732b63bb"
+            },
+            mongo_id = {
+               ["input.json"] = "176b8f8f6ddb3d6080c0a691b1d6df0f",
+               ["output.json"] = "775edfa1ac77b53b1752a540f4a22fd5",
+               ["rules.json"] = "73b329f9ef56f233c2ddbecd46706646"
+            },
+            required_if = {
+               ["input.json"] = "4532a505e45f2ea1febdcda644101b61",
+               ["output.json"] = "1873e46217ae7ef0e838c5be0e5f46ea",
+               ["rules.json"] = "4ae0960af34b01e1e673afbe7e556b68"
+            },
+            uuid = {
+               ["input.json"] = "15238fcf18f9bae2752173dcb18c8a79",
+               ["output.json"] = "0693410512cc0587def76eda38e944d7",
+               ["rules.json"] = "79c0ad3209a2463d57f11603115b0fa4"
+            }
+         }
+      }
+   }
+}

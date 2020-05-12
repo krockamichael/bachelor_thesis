@@ -1,0 +1,51 @@
+commands = {}
+dependencies = {
+   optparse = {
+      ["1.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 5, string = "5.5"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   optparse = {
+      "optparse/1.4-1"
+   },
+   ["optparse._strict"] = {
+      "optparse/1.4-1"
+   },
+   ["optparse.version"] = {
+      "optparse/1.4-1"
+   }
+}
+repository = {
+   optparse = {
+      ["1.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               optparse = "optparse/init.lua",
+               ["optparse._strict"] = "optparse/_strict.lua",
+               ["optparse.version"] = "optparse/version.lua"
+            }
+         }
+      }
+   }
+}

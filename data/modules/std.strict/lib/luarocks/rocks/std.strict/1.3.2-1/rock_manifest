@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["index.html"] = "477d54592564b3921cc1a8346df9b1ea",
+      ["ldoc.css"] = "e2b04e90ff648f8e00d9d4d458de59d9"
+   },
+   lua = {
+      std = {
+         strict = {
+            ["_base.lua"] = "e26df87b37af051baa81c3d78b2e668c",
+            ["init.lua"] = "6182aaa551e7a29d912438a924c3080a",
+            ["version.lua"] = "fbf2ed281ade8c1f327075e8a4c942af"
+         }
+      }
+   },
+   ["std.strict-1.3.2-1.rockspec"] = "d1ab4ea5677ad4b648cdf7861fa5b287"
+}

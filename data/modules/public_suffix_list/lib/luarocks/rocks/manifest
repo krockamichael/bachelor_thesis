@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   public_suffix_list = {
+      ["1.0.202002-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   public_suffix_list = {
+      "public_suffix_list/1.0.202002-1"
+   }
+}
+repository = {
+   public_suffix_list = {
+      ["1.0.202002-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               public_suffix_list = "public_suffix_list.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "e32eadc6520b8934507a00917f0631be"
+   },
+   ["getsize-0.2-1.rockspec"] = "9cdc6c0c6ba1e063598d30f6eed4ad22",
+   lib = {
+      ["getsize.so"] = "2c015b3e484e025c5f2fef2de82f7e52"
+   }
+}

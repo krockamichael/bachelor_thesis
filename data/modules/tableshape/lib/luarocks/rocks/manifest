@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   tableshape = {
+      ["2.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   tableshape = {
+      "tableshape/2.1.0-1"
+   }
+}
+repository = {
+   tableshape = {
+      ["2.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               tableshape = "tableshape/init.lua"
+            }
+         }
+      }
+   }
+}

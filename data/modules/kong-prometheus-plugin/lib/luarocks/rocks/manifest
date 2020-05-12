@@ -1,0 +1,81 @@
+commands = {}
+dependencies = {
+   ["kong-prometheus-plugin"] = {
+      ["0.7.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 2, 0, string = "0.2.0"
+                  }
+               }
+            },
+            name = "lua-resty-counter"
+         }
+      }
+   },
+   ["lua-resty-counter"] = {
+      ["0.2.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.prometheus.api"] = {
+      "kong-prometheus-plugin/0.7.1-1"
+   },
+   ["kong.plugins.prometheus.exporter"] = {
+      "kong-prometheus-plugin/0.7.1-1"
+   },
+   ["kong.plugins.prometheus.handler"] = {
+      "kong-prometheus-plugin/0.7.1-1"
+   },
+   ["kong.plugins.prometheus.prometheus"] = {
+      "kong-prometheus-plugin/0.7.1-1"
+   },
+   ["kong.plugins.prometheus.schema"] = {
+      "kong-prometheus-plugin/0.7.1-1"
+   },
+   ["kong.plugins.prometheus.serve"] = {
+      "kong-prometheus-plugin/0.7.1-1"
+   },
+   ["kong.plugins.prometheus.status_api"] = {
+      "kong-prometheus-plugin/0.7.1-1"
+   },
+   ["resty.counter"] = {
+      "lua-resty-counter/0.2.0-1"
+   }
+}
+repository = {
+   ["kong-prometheus-plugin"] = {
+      ["0.7.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-counter"] = "0.2.0-1"
+            },
+            modules = {
+               ["kong.plugins.prometheus.api"] = "kong/plugins/prometheus/api.lua",
+               ["kong.plugins.prometheus.exporter"] = "kong/plugins/prometheus/exporter.lua",
+               ["kong.plugins.prometheus.handler"] = "kong/plugins/prometheus/handler.lua",
+               ["kong.plugins.prometheus.prometheus"] = "kong/plugins/prometheus/prometheus.lua",
+               ["kong.plugins.prometheus.schema"] = "kong/plugins/prometheus/schema.lua",
+               ["kong.plugins.prometheus.serve"] = "kong/plugins/prometheus/serve.lua",
+               ["kong.plugins.prometheus.status_api"] = "kong/plugins/prometheus/status_api.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-counter"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.counter"] = "resty/counter.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,306 @@
+commands = {
+   ljrepl = {
+      "ljlinenoise/0.1.3-2"
+   },
+   lrepl = {
+      "ljlinenoise/0.1.3-2"
+   }
+}
+dependencies = {
+   ljlinenoise = {
+      ["0.1.3-2"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 9, string = "0.9"
+                  }
+               }
+            },
+            name = "ljsyscall"
+         }
+      }
+   },
+   ljsyscall = {
+      ["0.12-1"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   linenoise = {
+      "ljlinenoise/0.1.3-2"
+   },
+   syscall = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.abi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.bit"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.compat"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.ffitypes"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.helpers"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.lfs"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.libc"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm64.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm64.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm64.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.arm64.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.c"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.cgroup"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.errors"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.fcntl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.mips.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.mips.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.mips.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.mips.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.netfilter"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.nl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc64le.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc64le.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc64le.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.ppc64le.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.sockopt"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.syscalls"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.types"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.util"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x64.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x64.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x64.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x64.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x86.constants"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x86.ffi"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x86.ioctl"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.linux.x86.nr"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.methods"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.shared.types"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.syscalls"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.types"] = {
+      "ljsyscall/0.12-1"
+   },
+   ["syscall.util"] = {
+      "ljsyscall/0.12-1"
+   }
+}
+repository = {
+   ljlinenoise = {
+      ["0.1.3-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               ljrepl = "ljrepl",
+               lrepl = "lrepl"
+            },
+            dependencies = {
+               ljsyscall = "0.12-1"
+            },
+            modules = {
+               linenoise = "linenoise.lua"
+            }
+         }
+      }
+   },
+   ljsyscall = {
+      ["0.12-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               syscall = "syscall.lua",
+               ["syscall.abi"] = "syscall/abi.lua",
+               ["syscall.bit"] = "syscall/bit.lua",
+               ["syscall.compat"] = "syscall/compat.lua",
+               ["syscall.ffitypes"] = "syscall/ffitypes.lua",
+               ["syscall.helpers"] = "syscall/helpers.lua",
+               ["syscall.lfs"] = "syscall/lfs.lua",
+               ["syscall.libc"] = "syscall/libc.lua",
+               ["syscall.linux.arm.constants"] = "syscall/linux/arm/constants.lua",
+               ["syscall.linux.arm.ffi"] = "syscall/linux/arm/ffi.lua",
+               ["syscall.linux.arm.ioctl"] = "syscall/linux/arm/ioctl.lua",
+               ["syscall.linux.arm.nr"] = "syscall/linux/arm/nr.lua",
+               ["syscall.linux.arm64.constants"] = "syscall/linux/arm64/constants.lua",
+               ["syscall.linux.arm64.ffi"] = "syscall/linux/arm64/ffi.lua",
+               ["syscall.linux.arm64.ioctl"] = "syscall/linux/arm64/ioctl.lua",
+               ["syscall.linux.arm64.nr"] = "syscall/linux/arm64/nr.lua",
+               ["syscall.linux.c"] = "syscall/linux/c.lua",
+               ["syscall.linux.cgroup"] = "syscall/linux/cgroup.lua",
+               ["syscall.linux.constants"] = "syscall/linux/constants.lua",
+               ["syscall.linux.errors"] = "syscall/linux/errors.lua",
+               ["syscall.linux.fcntl"] = "syscall/linux/fcntl.lua",
+               ["syscall.linux.ffi"] = "syscall/linux/ffi.lua",
+               ["syscall.linux.ioctl"] = "syscall/linux/ioctl.lua",
+               ["syscall.linux.mips.constants"] = "syscall/linux/mips/constants.lua",
+               ["syscall.linux.mips.ffi"] = "syscall/linux/mips/ffi.lua",
+               ["syscall.linux.mips.ioctl"] = "syscall/linux/mips/ioctl.lua",
+               ["syscall.linux.mips.nr"] = "syscall/linux/mips/nr.lua",
+               ["syscall.linux.netfilter"] = "syscall/linux/netfilter.lua",
+               ["syscall.linux.nl"] = "syscall/linux/nl.lua",
+               ["syscall.linux.nr"] = "syscall/linux/nr.lua",
+               ["syscall.linux.ppc.constants"] = "syscall/linux/ppc/constants.lua",
+               ["syscall.linux.ppc.ffi"] = "syscall/linux/ppc/ffi.lua",
+               ["syscall.linux.ppc.ioctl"] = "syscall/linux/ppc/ioctl.lua",
+               ["syscall.linux.ppc.nr"] = "syscall/linux/ppc/nr.lua",
+               ["syscall.linux.ppc64le.constants"] = "syscall/linux/ppc64le/constants.lua",
+               ["syscall.linux.ppc64le.ffi"] = "syscall/linux/ppc64le/ffi.lua",
+               ["syscall.linux.ppc64le.ioctl"] = "syscall/linux/ppc64le/ioctl.lua",
+               ["syscall.linux.ppc64le.nr"] = "syscall/linux/ppc64le/nr.lua",
+               ["syscall.linux.sockopt"] = "syscall/linux/sockopt.lua",
+               ["syscall.linux.syscalls"] = "syscall/linux/syscalls.lua",
+               ["syscall.linux.types"] = "syscall/linux/types.lua",
+               ["syscall.linux.util"] = "syscall/linux/util.lua",
+               ["syscall.linux.x64.constants"] = "syscall/linux/x64/constants.lua",
+               ["syscall.linux.x64.ffi"] = "syscall/linux/x64/ffi.lua",
+               ["syscall.linux.x64.ioctl"] = "syscall/linux/x64/ioctl.lua",
+               ["syscall.linux.x64.nr"] = "syscall/linux/x64/nr.lua",
+               ["syscall.linux.x86.constants"] = "syscall/linux/x86/constants.lua",
+               ["syscall.linux.x86.ffi"] = "syscall/linux/x86/ffi.lua",
+               ["syscall.linux.x86.ioctl"] = "syscall/linux/x86/ioctl.lua",
+               ["syscall.linux.x86.nr"] = "syscall/linux/x86/nr.lua",
+               ["syscall.methods"] = "syscall/methods.lua",
+               ["syscall.shared.types"] = "syscall/shared/types.lua",
+               ["syscall.syscalls"] = "syscall/syscalls.lua",
+               ["syscall.types"] = "syscall/types.lua",
+               ["syscall.util"] = "syscall/util.lua"
+            }
+         }
+      }
+   }
+}

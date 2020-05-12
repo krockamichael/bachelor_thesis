@@ -1,0 +1,114 @@
+commands = {}
+dependencies = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-jconv"] = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 3, 0, revision = 1, string = "5.3.0-1"
+                  }
+               }
+            },
+            name = "bit32"
+         }
+      }
+   }
+}
+modules = {
+   bit32 = {
+      "bit32/5.3.0-1"
+   },
+   buffer = {
+      "lua-jconv/0.1-0"
+   },
+   jconv = {
+      "lua-jconv/0.1-0"
+   },
+   ["tables.JIS"] = {
+      "lua-jconv/0.1-0"
+   },
+   ["tables.JISEXT"] = {
+      "lua-jconv/0.1-0"
+   },
+   ["tables.JISEXTInverted"] = {
+      "lua-jconv/0.1-0"
+   },
+   ["tables.JISInverted"] = {
+      "lua-jconv/0.1-0"
+   },
+   ["tables.SJIS"] = {
+      "lua-jconv/0.1-0"
+   },
+   ["tables.SJISInverted"] = {
+      "lua-jconv/0.1-0"
+   }
+}
+repository = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit32 = "bit32.so"
+            }
+         }
+      }
+   },
+   ["lua-jconv"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bit32 = "5.3.0-1"
+            },
+            modules = {
+               buffer = "buffer.lua",
+               jconv = "jconv.lua",
+               ["tables.JIS"] = "tables/JIS.lua",
+               ["tables.JISEXT"] = "tables/JISEXT.lua",
+               ["tables.JISEXTInverted"] = "tables/JISEXTInverted.lua",
+               ["tables.JISInverted"] = "tables/JISInverted.lua",
+               ["tables.SJIS"] = "tables/SJIS.lua",
+               ["tables.SJISInverted"] = "tables/SJISInverted.lua"
+            }
+         }
+      }
+   }
+}

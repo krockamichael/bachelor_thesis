@@ -1,0 +1,9 @@
+rock_manifest = {
+   ["densearrays-1.0-2.rockspec"] = "b0cf7ec2bf1043c6fc3b6f0a3f184d72",
+   doc = {
+      README = "e1e9b7b57d6c5ceb90b82a709428c12f"
+   },
+   lib = {
+      ["array.so"] = "d5280e8c15eea06e1d6af7451ff6f8c2"
+   }
+}

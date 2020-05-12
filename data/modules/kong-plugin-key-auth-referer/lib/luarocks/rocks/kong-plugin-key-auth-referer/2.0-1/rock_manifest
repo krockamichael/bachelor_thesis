@@ -1,0 +1,23 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "4283b727da81c473d5d391f1e23879f8",
+      ["README.md"] = "ccb92fcf1653caf402a85303066bb584"
+   },
+   ["kong-plugin-key-auth-referer-2.0-1.rockspec"] = "0249c6088dc6c9a96f9d22d9d7293d76",
+   lua = {
+      kong = {
+         plugins = {
+            ["key-auth-referer"] = {
+               ["api.lua"] = "35de0f7fc86ab7921d0cfe8a2bfb954f",
+               ["daos.lua"] = "23cea7d5172be8d8e755b74cd13a4287",
+               ["handler.lua"] = "91f46263252aa74c73d1e78f111b3914",
+               migrations = {
+                  ["cassandra.lua"] = "e6b715fc0821fd13f0f1446f4b4ade84",
+                  ["postgres.lua"] = "83261fdf8ede0267bca7aded834597e9"
+               },
+               ["schema.lua"] = "e4d25ddaf3b4f353cccd4c6891d49f82"
+            }
+         }
+      }
+   }
+}

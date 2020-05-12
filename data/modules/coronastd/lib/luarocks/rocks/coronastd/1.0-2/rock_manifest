@@ -1,0 +1,10 @@
+rock_manifest = {
+   ["coronastd-1.0-2.rockspec"] = "4fb68f98b4a4aefc260349606e909a3f",
+   doc = {
+      LICENSE = "c10cc4b44e3bcd5d443048d06c682957",
+      ["README.md"] = "d378bdc888f396b952dbcb149b79c712"
+   },
+   lua = {
+      ["coronastd.lua"] = "4de30fb06b6154003a3072ae186b080c"
+   }
+}

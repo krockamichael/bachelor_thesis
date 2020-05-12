@@ -1,0 +1,168 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-session"] = {
+      ["2.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     2, 24, string = "2.24"
+                  }
+               }
+            },
+            name = "lua-resty-session"
+         }
+      }
+   },
+   ["lua-resty-session"] = {
+      ["2.24-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.session.access"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["kong.plugins.session.daos"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["kong.plugins.session.handler"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["kong.plugins.session.migrations"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["kong.plugins.session.migrations.000_base_session"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["kong.plugins.session.schema"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["kong.plugins.session.session"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["kong.plugins.session.storage.kong"] = {
+      "kong-plugin-session/2.2.0-1"
+   },
+   ["resty.session"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.ciphers.aes"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.ciphers.none"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.encoders.base16"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.encoders.base64"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.encoders.hex"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.hmac.sha1"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.identifiers.random"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.serializers.json"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.storage.cookie"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.storage.memcache"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.storage.memcached"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.storage.redis"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.storage.shm"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.strategies.default"] = {
+      "lua-resty-session/2.24-1"
+   },
+   ["resty.session.strategies.regenerate"] = {
+      "lua-resty-session/2.24-1"
+   }
+}
+repository = {
+   ["kong-plugin-session"] = {
+      ["2.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-session"] = "2.24-1"
+            },
+            modules = {
+               ["kong.plugins.session.access"] = "kong/plugins/session/access.lua",
+               ["kong.plugins.session.daos"] = "kong/plugins/session/daos.lua",
+               ["kong.plugins.session.handler"] = "kong/plugins/session/handler.lua",
+               ["kong.plugins.session.migrations"] = "kong/plugins/session/migrations/init.lua",
+               ["kong.plugins.session.migrations.000_base_session"] = "kong/plugins/session/migrations/000_base_session.lua",
+               ["kong.plugins.session.schema"] = "kong/plugins/session/schema.lua",
+               ["kong.plugins.session.session"] = "kong/plugins/session/session.lua",
+               ["kong.plugins.session.storage.kong"] = "kong/plugins/session/storage/kong.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-session"] = {
+      ["2.24-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.session"] = "resty/session.lua",
+               ["resty.session.ciphers.aes"] = "resty/session/ciphers/aes.lua",
+               ["resty.session.ciphers.none"] = "resty/session/ciphers/none.lua",
+               ["resty.session.encoders.base16"] = "resty/session/encoders/base16.lua",
+               ["resty.session.encoders.base64"] = "resty/session/encoders/base64.lua",
+               ["resty.session.encoders.hex"] = "resty/session/encoders/hex.lua",
+               ["resty.session.hmac.sha1"] = "resty/session/hmac/sha1.lua",
+               ["resty.session.identifiers.random"] = "resty/session/identifiers/random.lua",
+               ["resty.session.serializers.json"] = "resty/session/serializers/json.lua",
+               ["resty.session.storage.cookie"] = "resty/session/storage/cookie.lua",
+               ["resty.session.storage.memcache"] = "resty/session/storage/memcache.lua",
+               ["resty.session.storage.memcached"] = "resty/session/storage/memcached.lua",
+               ["resty.session.storage.redis"] = "resty/session/storage/redis.lua",
+               ["resty.session.storage.shm"] = "resty/session/storage/shm.lua",
+               ["resty.session.strategies.default"] = "resty/session/strategies/default.lua",
+               ["resty.session.strategies.regenerate"] = "resty/session/strategies/regenerate.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "95e5ee383eb7a9e988a7cc4db557e251"
+   },
+   ["gcfn-0.2.1-1.rockspec"] = "b53325c2104544f1311ee1cbc1aeef40",
+   lib = {
+      ["gcfn.so"] = "3ee63b391c6ec7a07662fbd5029993f5"
+   }
+}

@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-signalfx"] = {
+      ["0.0.2-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.signalfx.api"] = {
+      "kong-plugin-signalfx/0.0.2-1"
+   },
+   ["kong.plugins.signalfx.handler"] = {
+      "kong-plugin-signalfx/0.0.2-1"
+   },
+   ["kong.plugins.signalfx.schema"] = {
+      "kong-plugin-signalfx/0.0.2-1"
+   }
+}
+repository = {
+   ["kong-plugin-signalfx"] = {
+      ["0.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.signalfx.api"] = "kong/plugins/signalfx/api.lua",
+               ["kong.plugins.signalfx.handler"] = "kong/plugins/signalfx/handler.lua",
+               ["kong.plugins.signalfx.schema"] = "kong/plugins/signalfx/schema.lua"
+            }
+         }
+      }
+   }
+}

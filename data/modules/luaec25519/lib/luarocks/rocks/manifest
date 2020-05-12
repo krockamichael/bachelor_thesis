@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   luaec25519 = {
+      ["0.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luaec25519 = {
+      "luaec25519/0.5-1"
+   }
+}
+repository = {
+   luaec25519 = {
+      ["0.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luaec25519 = "luaec25519.so"
+            }
+         }
+      }
+   }
+}

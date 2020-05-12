@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.rst"] = "df97d4b87f9c06dc240799c2d9cc8c7c"
+   },
+   ["lbuffer-0.1.0-1.rockspec"] = "a39b0353faa6c661b608243b8f98e280",
+   lib = {
+      ["buffer.so"] = "313069686aec3901604349e2d69daba4"
+   }
+}

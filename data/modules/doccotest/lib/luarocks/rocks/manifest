@@ -1,0 +1,565 @@
+commands = {
+   doccotest = {
+      "doccotest/0.3-1"
+   },
+   luacov = {
+      "luacov/0.14.0-1"
+   }
+}
+dependencies = {
+   ansicolors = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   doccotest = {
+      ["0.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, string = "1"
+                  }
+               }
+            },
+            name = "ansicolors"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 7, string = "0.7"
+                  }
+               }
+            },
+            name = "luacov"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, string = "1"
+                  }
+               }
+            },
+            name = "lualogging"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, string = "2"
+                  }
+               }
+            },
+            name = "lua_cliargs"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, string = "0"
+                  }
+               }
+            },
+            name = "i18n"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, string = "1"
+                  }
+               }
+            },
+            name = "rings"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, string = "0"
+                  }
+               }
+            },
+            name = "serpent"
+         }
+      }
+   },
+   i18n = {
+      ["0.9.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lua_cliargs = {
+      ["3.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luacov = {
+      ["0.14.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lualogging = {
+      ["1.3.0-1"] = {
+         {
+            constraints = {},
+            name = "luasocket"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   rings = {
+      ["1.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   serpent = {
+      ["0.28-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ansicolors = {
+      "ansicolors/1.0.2-3"
+   },
+   cliargs = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.config_loader"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.constants"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.core"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.parser"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.printer"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.disect"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.disect_argument"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.filter"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.lookup"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.shallow_copy"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.split"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.trim"] = {
+      "lua_cliargs/3.0-2"
+   },
+   ["cliargs.utils.wordwrap"] = {
+      "lua_cliargs/3.0-2"
+   },
+   doccotest = {
+      "doccotest/0.3-1"
+   },
+   ["doccotest.en"] = {
+      "doccotest/0.3-1"
+   },
+   i18n = {
+      "i18n/0.9.2-1"
+   },
+   ["i18n.interpolate"] = {
+      "i18n/0.9.2-1"
+   },
+   ["i18n.plural"] = {
+      "i18n/0.9.2-1"
+   },
+   ["i18n.variants"] = {
+      "i18n/0.9.2-1"
+   },
+   ["i18n.version"] = {
+      "i18n/0.9.2-1"
+   },
+   logging = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.console"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.email"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.file"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.rolling_file"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.socket"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.sql"] = {
+      "lualogging/1.3.0-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   luacov = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.defaults"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.hook"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.linescanner"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.reporter"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.reporter.default"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.runner"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.stats"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.tick"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.util"] = {
+      "luacov/0.14.0-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   rings = {
+      "rings/1.3.0-1"
+   },
+   serpent = {
+      "serpent/0.28-1"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   stable = {
+      "rings/1.3.0-1"
+   }
+}
+repository = {
+   ansicolors = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ansicolors = "ansicolors.lua"
+            }
+         }
+      }
+   },
+   doccotest = {
+      ["0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               doccotest = "doccotest"
+            },
+            dependencies = {
+               ansicolors = "1.0.2-3",
+               i18n = "0.9.2-1",
+               lua_cliargs = "3.0-2",
+               luacov = "0.14.0-1",
+               lualogging = "1.3.0-1",
+               luasocket = "3.0rc1-2",
+               rings = "1.3.0-1",
+               serpent = "0.28-1"
+            },
+            modules = {
+               doccotest = "doccotest.lua",
+               ["doccotest.en"] = "doccotest/en.lua"
+            }
+         }
+      }
+   },
+   i18n = {
+      ["0.9.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               i18n = "i18n/init.lua",
+               ["i18n.interpolate"] = "i18n/interpolate.lua",
+               ["i18n.plural"] = "i18n/plural.lua",
+               ["i18n.variants"] = "i18n/variants.lua",
+               ["i18n.version"] = "i18n/version.lua"
+            }
+         }
+      }
+   },
+   lua_cliargs = {
+      ["3.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cliargs = "cliargs.lua",
+               ["cliargs.config_loader"] = "cliargs/config_loader.lua",
+               ["cliargs.constants"] = "cliargs/constants.lua",
+               ["cliargs.core"] = "cliargs/core.lua",
+               ["cliargs.parser"] = "cliargs/parser.lua",
+               ["cliargs.printer"] = "cliargs/printer.lua",
+               ["cliargs.utils.disect"] = "cliargs/utils/disect.lua",
+               ["cliargs.utils.disect_argument"] = "cliargs/utils/disect_argument.lua",
+               ["cliargs.utils.filter"] = "cliargs/utils/filter.lua",
+               ["cliargs.utils.lookup"] = "cliargs/utils/lookup.lua",
+               ["cliargs.utils.shallow_copy"] = "cliargs/utils/shallow_copy.lua",
+               ["cliargs.utils.split"] = "cliargs/utils/split.lua",
+               ["cliargs.utils.trim"] = "cliargs/utils/trim.lua",
+               ["cliargs.utils.wordwrap"] = "cliargs/utils/wordwrap.lua"
+            }
+         }
+      }
+   },
+   luacov = {
+      ["0.14.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luacov = "luacov"
+            },
+            dependencies = {},
+            modules = {
+               luacov = "luacov.lua",
+               ["luacov.defaults"] = "luacov/defaults.lua",
+               ["luacov.hook"] = "luacov/hook.lua",
+               ["luacov.linescanner"] = "luacov/linescanner.lua",
+               ["luacov.reporter"] = "luacov/reporter.lua",
+               ["luacov.reporter.default"] = "luacov/reporter/default.lua",
+               ["luacov.runner"] = "luacov/runner.lua",
+               ["luacov.stats"] = "luacov/stats.lua",
+               ["luacov.tick"] = "luacov/tick.lua",
+               ["luacov.util"] = "luacov/util.lua"
+            }
+         }
+      }
+   },
+   lualogging = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               logging = "logging.lua",
+               ["logging.console"] = "logging/console.lua",
+               ["logging.email"] = "logging/email.lua",
+               ["logging.file"] = "logging/file.lua",
+               ["logging.rolling_file"] = "logging/rolling_file.lua",
+               ["logging.socket"] = "logging/socket.lua",
+               ["logging.sql"] = "logging/sql.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   rings = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rings = "rings.so",
+               stable = "stable.lua"
+            }
+         }
+      }
+   },
+   serpent = {
+      ["0.28-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               serpent = "serpent.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      README = "70a223405bd7bf3247d87cfdd7e64f52"
+   },
+   lib = {
+      ["interval.so"] = "a5a4cc735b190f111cdc2d2d1ca30bae"
+   },
+   ["linterval-20180729-1.rockspec"] = "db8e9862cfbe7512f85a81a3e0058b70"
+}

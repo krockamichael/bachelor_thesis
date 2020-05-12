@@ -1,0 +1,11 @@
+rock_manifest = {
+   doc = {
+      ["DIFFERENCE.md"] = "044982de5bd00b69da787487b9836f16",
+      LICENSE = "6eff54581b2d21cf8013940f674c689d",
+      ["README.markdown"] = "b4685f77042799f4467a8899c170c03d"
+   },
+   ["liquid-0.1.4-1.rockspec"] = "8a4d9a93b3edb757133e50a13c93d81d",
+   lua = {
+      ["liquid.lua"] = "90fd461a0ab8ca10ea2ceadb53145bb1"
+   }
+}

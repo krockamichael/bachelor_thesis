@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "1cfecbf1fb63a94b5e5c84f16f35795c",
+      ["README.md"] = "c61e3813db9fa56e5da19884c278c699"
+   },
+   lua = {
+      ["vida.lua"] = "c86b2bb6009553b58315ba5d6fc3ed52"
+   },
+   ["vida-v0.1-12.rockspec"] = "782d8cca32b55883d978a0cff528814c"
+}

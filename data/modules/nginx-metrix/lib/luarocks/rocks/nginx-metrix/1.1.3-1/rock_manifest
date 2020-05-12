@@ -1,0 +1,37 @@
+rock_manifest = {
+   doc = {
+      ["README.ru.md"] = "2cc04b4d0785b02b3bfd7d109e58d576",
+      ["screenshot.png"] = "f8d6b2f5d49c469489871d07b63326b4",
+      ["screenshot_preview.png"] = "f5c2a985b4de916c5dec852b8ea6764f"
+   },
+   lua = {
+      ["nginx-metrix"] = {
+         collectors = {
+            ["request.lua"] = "6bf3b16dbb2d236ff21568d5ef98d2ed",
+            ["status.lua"] = "a13986a26ee0f1cd1fdbe310e1ac2842",
+            ["upstream.lua"] = "cc5c79432c116b558be8aa8c8e9cbd11"
+         },
+         ["collectors.lua"] = "100dda2f58618768a5155bc48fd83133",
+         lib = {
+            ["is.lua"] = "5ed7cdcc88dc301f7ff4c2c238840e53"
+         },
+         ["listener.lua"] = "be838cefbb48469dd6403006de3e967e",
+         ["logger.lua"] = "1c530dc21082499105955f9bb2337ffa",
+         ["main.lua"] = "2b78ba9e4e0e38ca7694a72d9e34fd52",
+         output = {
+            ["helper.lua"] = "a004798a138dd0822a99826d0e9cc749",
+            ["renderer.lua"] = "609b268f38c05b46ae0ba9ffb1dafc75"
+         },
+         ["scheduler.lua"] = "f9e0cda3bc26d5e37065b151080648db",
+         storage = {
+            ["collector_wrapper_factory.lua"] = "64da2aeee513a6999eb33a4a36977728",
+            ["dict.lua"] = "8dab3b48f0d0d519afe3465813a084fb",
+            ["namespaces.lua"] = "08e033e36b6234e48a9714c0db341f42",
+            ["serializer.lua"] = "f016751fd65c34fab9d42d269e0c6972",
+            ["window.lua"] = "4d563a5f48d637b88233b934faea2665"
+         },
+         ["version.lua"] = "49142faab79deefadbbf550bf5320fae"
+      }
+   },
+   ["nginx-metrix-1.1.3-1.rockspec"] = "f3f7095a50f7ce539cd892e0092c20ff"
+}

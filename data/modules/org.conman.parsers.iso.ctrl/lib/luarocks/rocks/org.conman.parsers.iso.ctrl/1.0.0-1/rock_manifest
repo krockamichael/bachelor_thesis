@@ -1,0 +1,14 @@
+rock_manifest = {
+   lua = {
+      org = {
+         conman = {
+            parsers = {
+               iso = {
+                  ["ctrl.lua"] = "c3a02b260477491a8004821697956aa3"
+               }
+            }
+         }
+      }
+   },
+   ["org.conman.parsers.iso.ctrl-1.0.0-1.rockspec"] = "42073b0cf65966cc3509086f5ef0a8fc"
+}

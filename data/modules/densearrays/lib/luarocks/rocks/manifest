@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   densearrays = {
+      ["1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   array = {
+      "densearrays/1.0-2"
+   }
+}
+repository = {
+   densearrays = {
+      ["1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               array = "array.so"
+            }
+         }
+      }
+   }
+}

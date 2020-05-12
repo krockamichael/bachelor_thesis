@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lmathx = {
+      ["20120430.51-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   mathx = {
+      "lmathx/20120430.51-1"
+   }
+}
+repository = {
+   lmathx = {
+      ["20120430.51-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               mathx = "mathx.so"
+            }
+         }
+      }
+   }
+}

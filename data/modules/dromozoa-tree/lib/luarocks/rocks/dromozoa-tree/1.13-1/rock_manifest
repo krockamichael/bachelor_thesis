@@ -1,0 +1,19 @@
+rock_manifest = {
+   doc = {
+      COPYING = "d32239bcb673463ab874e80d47fae504",
+      ["README.md"] = "1e4a3c191042ffad6d2272913e91f3e7"
+   },
+   ["dromozoa-tree-1.13-1.rockspec"] = "92166f50f4d2adc4bcce8a3f75d5a956",
+   lua = {
+      dromozoa = {
+         tree = {
+            ["bfs.lua"] = "7e2b27908961a6c877b02d89d99e17ad",
+            ["dfs.lua"] = "62fb071fe6e59d6e9f538b0c5502102d",
+            ["graphviz.lua"] = "4c77123c86defb7be9e02da198107968",
+            ["model.lua"] = "d95ae58639398884aca7563954f82396",
+            ["node.lua"] = "a138013444c820226aa09ce44b8287bd"
+         },
+         ["tree.lua"] = "242a84d59a6f734da68317a8a30aaa27"
+      }
+   }
+}

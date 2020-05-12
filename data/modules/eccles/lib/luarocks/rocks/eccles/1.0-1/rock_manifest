@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "5771ea3d41df8729f4a93a1eb30aecef",
+      ["README.md"] = "fa46dce9eb07a0d9a573cfabb7089b4a"
+   },
+   ["eccles-1.0-1.rockspec"] = "53926a96a8ab8f28a77f1c9c9b38524d",
+   lua = {
+      eccles = {
+         ["Aspect.lua"] = "4c1e13c3e78b7aeeae2eaaff75fd2392",
+         ["EntitySystem.lua"] = "b632f47323c3926475ec40cd2a4dc760",
+         ["System.lua"] = "35a6fc6076fe1651b24d5dcd117d3446",
+         ["World.lua"] = "305c5f4ee68e3084af7f2bdbef9c77aa"
+      },
+      ["eccles.lua"] = "615b9598f90a311ea990363017d564a5"
+   }
+}

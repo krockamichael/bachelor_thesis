@@ -1,0 +1,29 @@
+rock_manifest = {
+   doc = {
+      ["dromozoa-image.html"] = "1266e09f9451ddafc19d5bede8b211ba",
+      ["dromozoa-image.js"] = "b3d9cc9cd990e3ab2f84d973110d5eb4",
+      ["lena-32x32.png"] = "7c1e4c07aab799970ba8ce62cc82d5f1",
+      ["lena-64x64.png"] = "847ff76bed2e96fc409d16bd1b1a5066"
+   },
+   ["dromozoa-image-1.0-1.rockspec"] = "0e9075117c9420f7ad16937a0c88f49b",
+   lua = {
+      dromozoa = {
+         image = {
+            ["magick_reader.lua"] = "30a21b11cca55bc67c724d4737931577",
+            ["magick_writer.lua"] = "bb59a1b3cbc1b5d61b882b5bac560358",
+            ["pam_writer.lua"] = "74fbdfbe0d02b31d68f4c293acb1baba",
+            ["pixel.lua"] = "2d6cd5abc6f3427cd7ff0a7538821931",
+            ["pixel1.lua"] = "936bdd93540f2a58081f1756e889cd59",
+            ["pixel2.lua"] = "9a7cbe3d08f30bea4a4cb02b1c2ee2ad",
+            ["pixel3.lua"] = "2ae3f5a9ce66388fc6e942f0ecd2c28f",
+            ["pixel4.lua"] = "4b3cd3270f1f1bf0a8295f86636caa94",
+            ["pnm_reader.lua"] = "269a37fa087d04c86ccbd0897dbbebc4",
+            ["sips_reader.lua"] = "9267a263869bad3bba131367dce126eb",
+            ["sips_writer.lua"] = "3ab14f8a38fc8d5ac13fba154c00d5a7",
+            ["tga_reader.lua"] = "b28f209d71a469123d9e81de01635e5d",
+            ["tga_writer.lua"] = "e4fdd21d6f82e64e69be7cee905425e9"
+         },
+         ["image.lua"] = "e2e4480574c3e6e2d43bf40dfd6df197"
+      }
+   }
+}

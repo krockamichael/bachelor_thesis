@@ -1,0 +1,16 @@
+rock_manifest = {
+   ["amqp-client-1.3.0-1.rockspec"] = "54f27e6d2c8e646fa4ec788c7e7da35b",
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "49fe4062ea843ae6e81d1019ce42e91e"
+   },
+   lua = {
+      amqp = {
+         ["buffer.lua"] = "42b88609c0f209a2005c55a45f9191e6",
+         ["consts.lua"] = "94f32aaab977f20bdf8a83c349a1b320",
+         ["frame.lua"] = "2c70223fcaec681b5739e2214a34d35b",
+         ["init.lua"] = "a2f8224b23d7db2e5d5ff5b48b950a31",
+         ["logger.lua"] = "a45e124d23bdcba32c5e5223e54f5f17"
+      }
+   }
+}

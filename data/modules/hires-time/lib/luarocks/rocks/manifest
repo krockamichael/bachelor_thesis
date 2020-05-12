@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["hires-time"] = {
+      ["0.1.0-0"] = {}
+   }
+}
+modules = {
+   hires_time = {
+      "hires-time/0.1.0-0"
+   }
+}
+repository = {
+   ["hires-time"] = {
+      ["0.1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               hires_time = "hires_time.so"
+            }
+         }
+      }
+   }
+}

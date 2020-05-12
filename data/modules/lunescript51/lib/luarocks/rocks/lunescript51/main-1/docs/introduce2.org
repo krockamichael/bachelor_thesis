@@ -1,0 +1,331 @@
+# -*- coding:utf-8 -*-
+#+AUTHOR: ifritJP
+#+STARTUP: nofold
+#+OPTIONS: ^:{}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org-mode-document.css" />
+
+#+TITLE: Lua のトランスコンパイラ LuneScript の紹介 2 
+
+LuneScript は、 Lua へのトランスコンパイルを目的とした言語です。
+
+LuneScript を利用することで、規模の大きい Lua スクリプトを効率良く開発出来ます。
+
+この記事は https://qiita.com/dwarfJP/items/21d4d4099ab0feb68eaf の続きです。
+
+上記の記事で紹介出来なかった機能について説明します。
+
+* subfile
+
+クラスの処理が大きくなると、それに伴ないファイルが肥大化する。
+
+ファイルの肥大化に良いことはないため、
+このような場合はクラスの責務を細分化し、
+それぞれのクラス毎にファイルを分けるのが一般的なリファクタリングである。
+
+しかし、綺麗に責務を分割できない場合や、
+分割すると他のモジュールに与える影響が大きくなってしまう事もよくある。
+このようにクラス分割による対応が出来ない場合の代替手段として、
+サブファイル化を行なう。
+
+サブファイル化は、
+本来 1 つのファイルで構成するモジュールを複数のファイルに分割することである。
+
+LuneScript は、原則 1 モジュール = 1 ファイルであるが、
+サブファイル化した場合は、1 モジュール = 複数ファイルとなる。
+
+サブファイルを利用するには、利用する側で次のように宣言する。
+
+#+BEGIN_SRC lns
+subfile use foo.bar.sub;
+#+END_SRC
+
+また、サブファイル側では次のように宣言する。
+
+#+BEGIN_SRC lns
+subfile owner foo.bar.main;
+#+END_SRC
+
+これにより、
+指定したモジュール(上記の例では foo.bar.sub)をサブファイルとして扱う。
+
+モジュールの宣言は、スクリプトの先頭で行なう必要がある。
+ただし、コメントは除く。
+
+subfile use は、1 つのファイル内で複数宣言できる。
+subfile owner は、一つだけ宣言できる。
+つまり、1 つのファイルは複数のサブファイルを持てるが、
+1つのサブファイルは1つのオーナからしか利用できない。
+
+subfile use を複数宣言した場合、宣言した順でサブファイルを処理する。
+
+
+サブファイルは C の #include と基本的には同じと考えて良いが、
+次の点で #include と異なる。
+
+- #include は、宣言した箇所にファイルを展開するが、 
+  LuneScript ではファイルの最終位置に展開する。
+- サブファイルは、 statement として完結している必要がある。
+  - #include のような、式の一部をサブファイル内には書けない。
+- サブファイルに対するメインファイルは 1 つでなければならない。
+- サブファイルから、さらにサブファイルを利用することはできない。
+
+例えば、次の main.lns, sub1.lns, sub2.lns があった場合、
+
+#+BEGIN_SRC lns
+//------ main.lns -------
+subfile use sub1;
+subfile use sub2;
+
+pub let val = 1;
+//------ sub1.lns -------
+subfile owner main;
+
+pub let val1 = 1;
+//------ sub2.lns -------
+subfile owner main;
+
+pub let val2 = 1;
+#+END_SRC
+
+main.lns は次のスクリプトと等価である。
+
+#+BEGIN_SRC lns
+//------ main.lns -------
+pub let val = 1;
+pub let val1 = 1;
+pub let val2 = 1;
+#+END_SRC
+
+* module
+
+Lua の外部モジュールは require で利用できる。
+しかし require の結果は stem 型であり、
+stem 型のまま LuneScript で扱うのは使い勝手が悪い。
+
+module は、外部モジュールの型を定義する。
+
+詳しくは次の記事を参考にしてください。
+
+- トランスコンパイラ LuneScript 入門 - require/module 編
+  - https://qiita.com/dwarfJP/items/d7965afcaa0746ad2f59
+
+** glue コード自動生成
+
+Lua の外部モジュールには、次の 2 つのケースがある。
+
+- Lua スクリプトで構成されるケース
+- C 等の Native Library を利用するケース
+
+Lua から Native Library を利用するには、
+Lua 用のインタフェースを持つ glue が必要である。
+
+LuneScript は、この glue を自動生成する機能を持つ。
+
+LuneScript の glue 自動生成機能は、
+swig に代表される C/C++ 等のソースから Lua の glue を自動生成する機能ではなく、
+LuneScript で module 宣言したモジュールの glue コードを自動生成する機能である。
+
+#+BEGIN_SRC txt
+swig:		C/C++ ==> glue
+LuneScript:	Lns   ==> glue
+#+END_SRC
+
+*** 使用方法
+
+glue を生成するには、 module 定義時に glue キーワードを指定する。
+    
+次は、 test.ext モジュールの glue を生成するサンプルである。
+
+#+BEGIN_SRC lns
+module External require "test.ext" glue 'hoge_' {
+   pub static fn create( val:int ): External;
+   pub fn add( val:int ):int;
+}
+
+let obj = External.create( 1 );
+print( obj.add( 10 ) ); // 11
+#+END_SRC
+
+ここで指定した "test.ext" と 'hoge_' は、 glue を生成する際に利用される。
+
+このソースから glue コードを生成するには、次のコマンドを実行する。
+
+#+BEGIN_SRC txt
+$ lua lune/base/base.lua src.lns glue [dir]
+#+END_SRC
+
+ここで、 src.lns は入力元のソースで、 dir は出力先のディレクトリのパスを指定する。
+
+このコマンドによって、次の 2 つの glue コードが生成される。
+
+- test_ext_glue.c
+- test_ext_glue.h  
+
+test_ext_glue.c は、次の内容を持つ。
+
+#+BEGIN_SRC c
+#include "test_ext_glue.h"
+static int lns_glue_create( lua_State * pLua );
+static int lns_glue_add( lua_State * pLua );
+static const char * s_full_class_name = "test_ext";
+static const luaL_Reg s_lua_func_info[] = {
+  { "create", lns_glue_create },
+  { NULL, NULL }
+};
+static const luaL_Reg s_lua_method_info[] = {
+  { "add", lns_glue_add },
+  { NULL, NULL }
+};
+void * lns_glue_get_test_ext( lua_State * pLua, int index )
+{
+    return luaL_checkudata( pLua, index, s_full_class_name);
+}
+
+static void lns_glue_setupObjMethod(
+    lua_State * pLua, const char * pName, const luaL_Reg * pReg )
+{
+    luaL_newmetatable(pLua, pName );
+    lua_pushvalue(pLua, -1);
+    lua_setfield(pLua, -2, "__index");
+
+#if LUA_VERSION_NUM >= 502
+    luaL_setfuncs(pLua, pReg, 0);
+
+    lua_pop(pLua, 1);
+#else
+    luaL_register(pLua, NULL, pReg );
+
+    lua_pop(pLua, 1);
+#endif
+}
+
+void * lns_glue_new_test_ext( lua_State * pLua, size_t size )
+{
+    void * pBuf = lua_newuserdata( pLua, size );
+    if ( pBuf == NULL ) {
+        return NULL;
+    }
+    
+#if LUA_VERSION_NUM >= 502
+    luaL_setmetatable( pLua, s_full_class_name );
+#else
+    luaL_getmetatable( pLua, s_full_class_name );
+    lua_setmetatable( pLua, -2 );
+#endif
+
+    return pBuf;
+}
+
+int luaopen_test_ext( lua_State * pLua )
+{
+    lns_glue_setupObjMethod( pLua, s_full_class_name, s_lua_method_info );
+
+#if LUA_VERSION_NUM >= 502
+    luaL_newlib( pLua, s_lua_func_info );
+#else
+    luaL_register( pLua, s_full_class_name, s_lua_func_info );
+#endif
+    return 1;
+}
+static int lns_glue_add( lua_State * pLua ){
+  int val = 0;
+  val = luaL_checkinteger( pLua, 2 );
+  return hoge_add( pLua, val);
+}
+static int lns_glue_create( lua_State * pLua ){
+  int val = 0;
+  val = luaL_checkinteger( pLua, 1 );
+  return hoge_create( pLua, val);
+}
+#+END_SRC
+
+この test_ext_glue.c は、
+LuneScript で定義している create() と add() のメソッドを Lua に登録するコードである。
+
+LuneScript で定義している create() と add() に対応する関数は、
+lns_glue_create() と lns_glue_add() が対応している。
+
+なお、この関数はそれぞれ hoge_create() と hoge_add() をコールしている。
+この *hoge_* は、 LuneScript のコード上で指定した glue の文字列が利用される。
+
+test_ext_glue.h は次の内容を持つ。
+
+#+BEGIN_SRC c
+#include <lauxlib.h>
+extern int hoge_create( lua_State * pLua, int val );
+extern int hoge_add( lua_State * pLua, int val );
+extern int luaopen_test_ext( lua_State * pLua );
+extern void * lns_glue_get_test_ext( lua_State * pLua, int index );
+extern void * lns_glue_new_test_ext( lua_State * pLua, size_t size );
+#+END_SRC
+
+ここで、hoge_create() と hoge_add() は次の型となっている。
+
+#+BEGIN_SRC c
+extern int hoge_create( lua_State * pLua, int val );
+extern int hoge_add( lua_State * pLua, int val );
+#+END_SRC
+
+第一引数の lua_State * と戻り値の int は、
+Lua の glue インタフェースと同じ意味を持つ。
+
+第二引数の int は、 LuneScript で定義しているメソッドの引数が入る。
+これは、 LuneScript で自動生成している test_ext_glue.c が
+Lua のスタックから値を取り出して値を設定している。
+
+Lua の glue では、関数引数を得るため API をコールする必要があるが、
+LuneScript で glue を生成した場合は、
+glue コード内で関数引数を得る API を実行している。
+これにより、 ユーザは関数引数を得る API をコールする必要はない。
+
+ただし、LuneScript 側で定義しているメソッドの引数の型が
+int(int!), real(real!), str(str!) 型以外だった場合、
+LuneScript で生成する glue では対応できないため、
+別途ユーザ側での対応が必要である。
+
+また glue の戻り値については、
+ユーザ側で Lua の glue インタフェースと同じ制御を行なう必要がある。
+
+
+hoge_create() と hoge_add() を別途定義することで、
+test.ext モジュールが完成する。
+
+例えば次のように定義する(glue.c)。
+
+#+BEGIN_SRC c
+// glue.c
+#include <test_ext_glue.h>
+
+typedef struct {
+    int val;
+} glue_t;
+
+int hoge_create( lua_State * pLua, int val )
+{
+    glue_t * pGlue = (glue_t*)lns_glue_new_test_ext( pLua, sizeof( glue_t ) );
+    pGlue->val = val;
+    return 1;
+}
+
+int hoge_add( lua_State * pLua, int val )
+{
+    glue_t * pGlue = lns_glue_get_test_ext( pLua, 1 );
+    lua_pushinteger( pLua, val + pGlue->val );
+    return 1;
+}
+#+END_SRC
+
+ちなみにビルドは次のように行なう。
+
+#+BEGIN_SRC txt
+$ gcc -std=c99 -fPIC -shared -o test/ext.so glue.c test_ext_glue.c 
+#+END_SRC
+
+* nil 条件演算子
+
+nil 条件演算子 については、次を参考にしてください。
+
+- トランスコンパイラ LuneScript 入門 - nil 条件演算子 編
+  - https://qiita.com/dwarfJP/items/e63893a19a507b63c561
+
+

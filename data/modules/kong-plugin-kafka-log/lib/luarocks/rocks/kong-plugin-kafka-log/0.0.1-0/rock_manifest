@@ -1,0 +1,19 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "a1580f4c08c902ec5105ab0e8e9676f8",
+      ["README.md"] = "00d8cb19c150139f44cc71f9f3997d43"
+   },
+   ["kong-plugin-kafka-log-0.0.1-0.rockspec"] = "4671c0e52f36918088e7b2ff3bc79a43",
+   lua = {
+      kong = {
+         plugins = {
+            ["kafka-log"] = {
+               ["handler.lua"] = "b1410d6fbcf0d74d16943eb36e132655",
+               ["producers.lua"] = "0a712c00f4f252241aaf4636bfdf3859",
+               ["schema.lua"] = "f07ef0e699ffcdcf6d03852383707895",
+               ["types.lua"] = "53cf6d8af0f79c33c5c1dc31f79d45fa"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,65 @@
+commands = {}
+dependencies = {
+   ["lua-livr"] = {
+      ["0.2.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["LIVR.Rules.Common"] = {
+      "lua-livr/0.2.1-1"
+   },
+   ["LIVR.Rules.Meta"] = {
+      "lua-livr/0.2.1-1"
+   },
+   ["LIVR.Rules.Modifiers"] = {
+      "lua-livr/0.2.1-1"
+   },
+   ["LIVR.Rules.Numeric"] = {
+      "lua-livr/0.2.1-1"
+   },
+   ["LIVR.Rules.Special"] = {
+      "lua-livr/0.2.1-1"
+   },
+   ["LIVR.Rules.String"] = {
+      "lua-livr/0.2.1-1"
+   },
+   ["LIVR.Validator"] = {
+      "lua-livr/0.2.1-1"
+   },
+   ["LIVR.helpers"] = {
+      "lua-livr/0.2.1-1"
+   }
+}
+repository = {
+   ["lua-livr"] = {
+      ["0.2.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["LIVR.Rules.Common"] = "LIVR/Rules/Common.lua",
+               ["LIVR.Rules.Meta"] = "LIVR/Rules/Meta.lua",
+               ["LIVR.Rules.Modifiers"] = "LIVR/Rules/Modifiers.lua",
+               ["LIVR.Rules.Numeric"] = "LIVR/Rules/Numeric.lua",
+               ["LIVR.Rules.Special"] = "LIVR/Rules/Special.lua",
+               ["LIVR.Rules.String"] = "LIVR/Rules/String.lua",
+               ["LIVR.Validator"] = "LIVR/Validator.lua",
+               ["LIVR.helpers"] = "LIVR/helpers.lua"
+            }
+         }
+      }
+   }
+}

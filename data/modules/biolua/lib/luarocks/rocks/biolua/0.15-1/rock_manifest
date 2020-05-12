@@ -1,0 +1,50 @@
+rock_manifest = {
+   bin = {
+      biolua = "ea272077a87e989d3357a48c4f2034fd"
+   },
+   ["biolua-0.15-1.rockspec"] = "060f0c4793bb076f6741870a910ae6d6",
+   docs = {
+      ["biolua.gif"] = "f1a2e3135ddc4e2cfc833a694fc345d8"
+   },
+   lua = {
+      biolua = {
+         ["init.lua"] = "1e1dc194cfc12594f8231934171a4f3d",
+         ["object.lua"] = "8931b435090feec047c68390bc1b946c",
+         parser = {
+            ["fasta.lua"] = "93d2597032240039372992a7a1b5b187",
+            ["genbank.lua"] = "9e973da769ea9f619719a79d1f7a9555",
+            ["parser.lua"] = "fb76538d52e5e12568d344a3a3df5714",
+            ["twobit.lua"] = "60f1effccb58ce45d690eaf8a14c2b9e"
+         },
+         sequence = {
+            ["amino.lua"] = "8bb53737afdfbecb253b40c398f6a311",
+            ["nucleic.lua"] = "b036d7f6db0f8336cd0a66272aa32861",
+            ["rosetta.lua"] = "a22f2cbd18f3f226fb357ca4cfc0f53f",
+            ["sequence.lua"] = "ca3845a7a2529c8b6b1b1f171fa92050"
+         },
+         shell = {
+            ["autocomplete.lua"] = "6718ec206c2f34570fe05dea1d22dabe",
+            ["demo.lua"] = "654630f0931975a8c11b0da0dc8420c1",
+            ["eval.lua"] = "6d2bdd12cf7fa474e5019ca09015aec7",
+            ["init.lua"] = "dd06dce8675cf867bb667ee6a942795e",
+            ["logo.lua"] = "d8bfc8d24356f59771809fe3380de961",
+            ["prettystring.lua"] = "c75decdd9a0784ef66e8aa38caba78c5"
+         },
+         ["test.lua"] = "1a7dca32da6b721ba7a1ad0bcab504cf"
+      }
+   },
+   tests = {
+      ["amino.lua"] = "ccda9bbe58c54ad3445321916efcc08c",
+      data = {
+         ["input.fasta"] = "d5ad60b535d6d2539709a746c44a3dcb",
+         ["input.gb"] = "4d221e75cd9abf5761ddff979c9dd13a"
+      },
+      ["fasta.lua"] = "8ee93d179a1c4174ddab7fb35c1ff277",
+      ["genbank.lua"] = "593bb42c4934b4f7ee4ef2ed5db7bd69",
+      ["init.lua"] = "62eee88c6563897f020d072eb4faf3a0",
+      ["nucleic.lua"] = "7d13b60e95abac535882727b9f46e773",
+      ["oop.lua"] = "4d885a89095f9e891c9297a622d2104d",
+      ["sequence.lua"] = "ae2a9a3d2974815d7b5b74cd43d9c270",
+      ["twobit.lua"] = "919990cc940d1a99a0b16bc089cc3b9d"
+   }
+}

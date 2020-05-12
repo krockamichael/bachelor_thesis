@@ -1,0 +1,237 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   classic = {
+      ["0.1.0-1"] = {}
+   },
+   ["kong-lib-logger"] = {
+      ["0.4.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "classic"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, 0, revision = 1, string = "2.1.0-1"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         }
+      }
+   },
+   ["kong-plugin-header-based-rate-limiting"] = {
+      ["1.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "classic"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, 0, revision = 1, string = "0.3.0-1"
+                  }
+               }
+            },
+            name = "kong-lib-logger"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   classic = {
+      "classic/0.1.0-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.access"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.api"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.daos"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.get_null_uuid"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.handler"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.key_rank"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.lookup_key_generator"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.migrations.cassandra"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.migrations.postgres"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.rate_limit_key"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.rate_limit_model"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.rate_limit_pool"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.rate_limit_rule"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.rate_limit_subject"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.redis_factory"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   ["kong.plugins.header-based-rate-limiting.schema"] = {
+      "kong-plugin-header-based-rate-limiting/1.2.0-1"
+   },
+   logger = {
+      "kong-lib-logger/0.4.0-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+repository = {
+   classic = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               classic = "classic.lua"
+            }
+         }
+      }
+   },
+   ["kong-lib-logger"] = {
+      ["0.4.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               classic = "0.1.0-1",
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               logger = "logger.lua"
+            }
+         }
+      }
+   },
+   ["kong-plugin-header-based-rate-limiting"] = {
+      ["1.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               classic = "0.1.0-1",
+               ["kong-lib-logger"] = "0.4.0-1",
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               ["kong.plugins.header-based-rate-limiting.access"] = "kong/plugins/header-based-rate-limiting/access.lua",
+               ["kong.plugins.header-based-rate-limiting.api"] = "kong/plugins/header-based-rate-limiting/api.lua",
+               ["kong.plugins.header-based-rate-limiting.daos"] = "kong/plugins/header-based-rate-limiting/daos.lua",
+               ["kong.plugins.header-based-rate-limiting.get_null_uuid"] = "kong/plugins/header-based-rate-limiting/get_null_uuid.lua",
+               ["kong.plugins.header-based-rate-limiting.handler"] = "kong/plugins/header-based-rate-limiting/handler.lua",
+               ["kong.plugins.header-based-rate-limiting.key_rank"] = "kong/plugins/header-based-rate-limiting/key_rank.lua",
+               ["kong.plugins.header-based-rate-limiting.lookup_key_generator"] = "kong/plugins/header-based-rate-limiting/lookup_key_generator.lua",
+               ["kong.plugins.header-based-rate-limiting.migrations.cassandra"] = "kong/plugins/header-based-rate-limiting/migrations/cassandra.lua",
+               ["kong.plugins.header-based-rate-limiting.migrations.postgres"] = "kong/plugins/header-based-rate-limiting/migrations/postgres.lua",
+               ["kong.plugins.header-based-rate-limiting.rate_limit_key"] = "kong/plugins/header-based-rate-limiting/rate_limit_key.lua",
+               ["kong.plugins.header-based-rate-limiting.rate_limit_model"] = "kong/plugins/header-based-rate-limiting/rate_limit_model.lua",
+               ["kong.plugins.header-based-rate-limiting.rate_limit_pool"] = "kong/plugins/header-based-rate-limiting/rate_limit_pool.lua",
+               ["kong.plugins.header-based-rate-limiting.rate_limit_rule"] = "kong/plugins/header-based-rate-limiting/rate_limit_rule.lua",
+               ["kong.plugins.header-based-rate-limiting.rate_limit_subject"] = "kong/plugins/header-based-rate-limiting/rate_limit_subject.lua",
+               ["kong.plugins.header-based-rate-limiting.redis_factory"] = "kong/plugins/header-based-rate-limiting/redis_factory.lua",
+               ["kong.plugins.header-based-rate-limiting.schema"] = "kong/plugins/header-based-rate-limiting/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,11 @@
+rock_manifest = {
+   ["brigid-1.4-1.rockspec"] = "23b84e2f325947e02a7fadb6c5d522ee",
+   doc = {
+      LICENSE = "eaa37f847ba622c33494e7a8a3e3fc5c",
+      ["README.md"] = "82604c7959a1b96645665e46f4d1f1ab"
+   },
+   lib = {
+      ["brigid.la"] = "16dc802616f980b95be7d5f5cfb6ad4d",
+      ["brigid.so"] = "2eaee5b3565ca950ca5aef27e10de2be"
+   }
+}

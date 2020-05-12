@@ -1,0 +1,10 @@
+rock_manifest = {
+   ["bitlib-23-2.rockspec"] = "bfced62a7e612af4b5e6b63867822b60",
+   doc = {
+      COPYING = "3840e4526a640dc7c48df12c2fb08bcd",
+      README = "bdccd918912929c14d0f761ab28481b0"
+   },
+   lib = {
+      ["bit.so"] = "9730224f1b8595b8ca8026b30b5dfddd"
+   }
+}

@@ -1,0 +1,9 @@
+rock_manifest = {
+   bin = {
+      lglob = "22b434e9388cd46c979232bfa5933771"
+   },
+   doc = {
+      ["README.md"] = "3ecf37daf7f9458ca883054c974f8727"
+   },
+   ["lglob-0.8-1.rockspec"] = "612b83d606d611cd8972fcb190c91882"
+}

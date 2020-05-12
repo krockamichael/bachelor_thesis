@@ -1,0 +1,10 @@
+rock_manifest = {
+   ["brieflz-0.2.0-1.rockspec"] = "d4fda879dd277c546ab450386e9cda27",
+   doc = {
+      LICENSE = "5aef9ade364028b3e4d15dcb9512ed0f",
+      ["README.adoc"] = "ae883a18c1c4882433296c5a28f7a5ee"
+   },
+   lib = {
+      ["brieflz.so"] = "81913ae014bc3b65526f96a664888eae"
+   }
+}

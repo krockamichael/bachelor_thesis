@@ -1,0 +1,11 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "dfeaf3dc4beef4f5a7bdbc35b197f39e",
+      ["README.LZO"] = "a84708af8c1396ddb648a4c018e12eae",
+      ["README.md"] = "4a5d56749e076878f65cd77d5c80c616"
+   },
+   lib = {
+      ["luaLZO.so"] = "14514cfa29279b1825032072e1508b42"
+   },
+   ["lualzo-0.5-1.rockspec"] = "f1a45577adc8ad6546a567eb04b7e2d9"
+}

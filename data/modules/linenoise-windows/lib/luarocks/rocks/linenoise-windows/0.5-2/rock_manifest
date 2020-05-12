@@ -1,0 +1,11 @@
+rock_manifest = {
+   doc = {
+      COPYING = "eecf09ac187913fa5e5ca9c12f86a60a",
+      ["README.md"] = "61b93e5546159e5c64fd87b12167bba3",
+      ["readline-readme.md"] = "57f4e6aabd7bc46592bf00bbd49e7f5a"
+   },
+   lib = {
+      ["linenoise.so"] = "dc3082f5fdd9448d6edf70c8ee2a54c3"
+   },
+   ["linenoise-windows-0.5-2.rockspec"] = "560b1932e75fcf041395b1bc788a8a1f"
+}

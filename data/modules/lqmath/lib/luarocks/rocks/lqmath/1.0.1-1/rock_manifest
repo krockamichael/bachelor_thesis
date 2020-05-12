@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      README = "69cfa5cf14a0395dd4b63a0e7d35761d"
+   },
+   lib = {
+      ["qmath.so"] = "9dc520b54ae8da8424999a61f136fe7a"
+   },
+   ["lqmath-1.0.1-1.rockspec"] = "c530b7b7ff64d3d9f4923ffb65c9da03"
+}

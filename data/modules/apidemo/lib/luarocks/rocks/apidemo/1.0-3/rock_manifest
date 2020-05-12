@@ -1,0 +1,9 @@
+rock_manifest = {
+   ["apidemo-1.0-3.rockspec"] = "70d5e2eda095be9bd141081b8590e488",
+   doc = {
+      ["readme.md"] = "6eb6fec6ae5928f016611280287a51d9"
+   },
+   lib = {
+      ["apidemo.so"] = "345345d42c47a5d6a995708f3f4dc074"
+   }
+}

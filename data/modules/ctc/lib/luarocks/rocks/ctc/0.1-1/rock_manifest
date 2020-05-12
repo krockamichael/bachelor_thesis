@@ -1,0 +1,10 @@
+rock_manifest = {
+   ["ctc-0.1-1.rockspec"] = "8459ca37a1aca1ffb935f5dd39d1426c",
+   doc = {
+      LICENSE = "71a52831f2bbba1383d42d9390458df8",
+      ["README.md"] = "2f46399cf3b120f90ef5053518c70d2b"
+   },
+   lib = {
+      ["ctc.so"] = "2d3bf612131c32d4659748ca02873e67"
+   }
+}

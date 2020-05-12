@@ -1,0 +1,10 @@
+rock_manifest = {
+   ["chacha-1.1-1.rockspec"] = "3d7d89aacdc3b2977a9f049b3733fe59",
+   doc = {
+      ["LICENSE.txt"] = "5d1b65028fe470882267c9ce7f925868",
+      ["README.md"] = "18c338c44bdc0f040d3d8611922116b1"
+   },
+   lib = {
+      ["chacha.so"] = "a6590a0e0799578b9c2b58a637751d1b"
+   }
+}

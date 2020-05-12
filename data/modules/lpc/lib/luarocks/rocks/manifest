@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lpc = {
+      ["1.0.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lpc = {
+      "lpc/1.0.0-2"
+   }
+}
+repository = {
+   lpc = {
+      ["1.0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpc = "lpc.so"
+            }
+         }
+      }
+   }
+}

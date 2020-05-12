@@ -1,0 +1,12 @@
+rock_manifest = {
+   doc = {
+      COPYING = "d32239bcb673463ab874e80d47fae504",
+      ["README.md"] = "dcd56e2e3f8c8d76d8f09c6b0f98e8af"
+   },
+   ["dromozoa-primitives-1.0-1.rockspec"] = "822963585d50fcaf0214938d8258dda4",
+   lib = {
+      dromozoa = {
+         ["primitives.so"] = "5d8e556ef8f76bb739cb0a95a2e0f136"
+      }
+   }
+}

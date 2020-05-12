@@ -1,0 +1,14 @@
+rock_manifest = {
+   bin = {
+      lcmark = "f7055b1dfaaf5bc8dca1077a0a181de4"
+   },
+   doc = {
+      LICENSE = "05b64fb46723f9d0d6b86be80a238ffb",
+      ["README.md"] = "4e25488d330e8c3b301d1ce44b644467",
+      ["lcmark.1.md"] = "a5af21de8fd8ddc3aa8f87a958d56c94"
+   },
+   ["lcmark-0.29.0-4.rockspec"] = "19c070d2fc296ee1521373e95c57fb06",
+   lua = {
+      ["lcmark.lua"] = "a5abe339ba7ab8bd0a7974baed2ee968"
+   }
+}

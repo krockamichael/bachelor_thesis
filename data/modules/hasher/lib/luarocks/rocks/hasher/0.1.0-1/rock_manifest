@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "4429759161167d8530a60d7817e63c86"
+   },
+   ["hasher-0.1.0-1.rockspec"] = "d8db1e6e1261d77894d0562abd346d8a",
+   lib = {
+      ["hasher.so"] = "350972f5b910ba556fd408eb0771d525"
+   }
+}

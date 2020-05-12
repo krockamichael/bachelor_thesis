@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["dromozoa-primitives"] = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   ["dromozoa.primitives"] = {
+      "dromozoa-primitives/1.0-1"
+   }
+}
+repository = {
+   ["dromozoa-primitives"] = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["dromozoa.primitives"] = "dromozoa/primitives.so"
+            }
+         }
+      }
+   }
+}

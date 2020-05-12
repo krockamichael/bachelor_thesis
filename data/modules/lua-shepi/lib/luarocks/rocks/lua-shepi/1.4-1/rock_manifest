@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "7400a041bcbaf7bee415310a7726babd"
+   },
+   lua = {
+      ["lua-shepi-datatypes.lua"] = "eb5047a6d968701d0409a31f9fa504e3",
+      ["lua-shepi.lua"] = "df2fd34c622ca18231f8a994167c40fe"
+   },
+   ["lua-shepi-1.4-1.rockspec"] = "00d9c0d51672e367735b7f0341651471"
+}

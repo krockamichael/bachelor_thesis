@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      README = "fb437d44ba376dededb4d002aeae85b1"
+   },
+   lib = {
+      ["imath.so"] = "24ea816f9b388270db6a895168798fa0"
+   },
+   ["limath-1.0.1-1.rockspec"] = "bfd6ac2dd7d3e5e4d7f7c65aa93a9c1a"
+}

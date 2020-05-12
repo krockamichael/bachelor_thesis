@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lascii85 = {
+      ["20120927-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ascii85 = {
+      "lascii85/20120927-1"
+   }
+}
+repository = {
+   lascii85 = {
+      ["20120927-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ascii85 = "ascii85.so"
+            }
+         }
+      }
+   }
+}

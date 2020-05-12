@@ -1,0 +1,9 @@
+rock_manifest = {
+   ["astar-0.1.1-1.rockspec"] = "f0ec1e050e4b772b8e4733df3e8ffa02",
+   doc = {
+      ["README.md"] = "6d77011d3f275a73ac6cd22f9ebed6eb"
+   },
+   lib = {
+      ["astar.so"] = "0d600fed0c0fbbb81677dda8e8e97885"
+   }
+}

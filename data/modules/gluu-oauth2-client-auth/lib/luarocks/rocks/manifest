@@ -1,0 +1,65 @@
+commands = {}
+dependencies = {
+   ["gluu-oauth2-client-auth"] = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.gluu-oauth2-client-auth.access"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   },
+   ["kong.plugins.gluu-oauth2-client-auth.api"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   },
+   ["kong.plugins.gluu-oauth2-client-auth.daos"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   },
+   ["kong.plugins.gluu-oauth2-client-auth.handler"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   },
+   ["kong.plugins.gluu-oauth2-client-auth.helper"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   },
+   ["kong.plugins.gluu-oauth2-client-auth.migrations.cassandra"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   },
+   ["kong.plugins.gluu-oauth2-client-auth.migrations.postgres"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   },
+   ["kong.plugins.gluu-oauth2-client-auth.schema"] = {
+      "gluu-oauth2-client-auth/1.0-0"
+   }
+}
+repository = {
+   ["gluu-oauth2-client-auth"] = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.gluu-oauth2-client-auth.access"] = "kong/plugins/gluu-oauth2-client-auth/access.lua",
+               ["kong.plugins.gluu-oauth2-client-auth.api"] = "kong/plugins/gluu-oauth2-client-auth/api.lua",
+               ["kong.plugins.gluu-oauth2-client-auth.daos"] = "kong/plugins/gluu-oauth2-client-auth/daos.lua",
+               ["kong.plugins.gluu-oauth2-client-auth.handler"] = "kong/plugins/gluu-oauth2-client-auth/handler.lua",
+               ["kong.plugins.gluu-oauth2-client-auth.helper"] = "kong/plugins/gluu-oauth2-client-auth/helper.lua",
+               ["kong.plugins.gluu-oauth2-client-auth.migrations.cassandra"] = "kong/plugins/gluu-oauth2-client-auth/migrations/cassandra.lua",
+               ["kong.plugins.gluu-oauth2-client-auth.migrations.postgres"] = "kong/plugins/gluu-oauth2-client-auth/migrations/postgres.lua",
+               ["kong.plugins.gluu-oauth2-client-auth.schema"] = "kong/plugins/gluu-oauth2-client-auth/schema.lua"
+            }
+         }
+      }
+   }
+}

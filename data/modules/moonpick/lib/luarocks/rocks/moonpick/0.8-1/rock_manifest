@@ -1,0 +1,16 @@
+rock_manifest = {
+   bin = {
+      moonpick = "f837e17b87720ea3903a1ce64dd0ba28"
+   },
+   doc = {
+      LICENSE = "ab02b706ab5606b9d93878d903b6f6f8",
+      ["README.md"] = "5927087f44dba381f91e26ab4a407a7f"
+   },
+   lua = {
+      moonpick = {
+         ["config.lua"] = "4f9a080cfc3ff81ff5da8cb8edcf7a4a",
+         ["init.lua"] = "a9d6d6745f76750be4fa3b5bca071c0f"
+      }
+   },
+   ["moonpick-0.8-1.rockspec"] = "4f0dcbcd5565b6bcb9408d50b607b255"
+}

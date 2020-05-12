@@ -1,0 +1,30 @@
+rock_manifest = {
+   doc = {
+      ["LICENSE.txt"] = "dcd8ce8d280f2f7938857a14279b07b2",
+      Makefile = "84cdd355daf94b623a12048a7cd12e4c",
+      ["bullet.png"] = "8169c44a9df49f0ca9f8602ec77cfa98",
+      ["doc.css"] = "bc4ded8a5c359775f422926d91b23615",
+      ["doc.lua"] = "f9b13be367edb7995a63dfeb326d3c0c",
+      examples = {
+         lua2png = "5727ad057ec4b1cf865f69de2cacc13e",
+         lua2riff = "7099b86887f556115783538bcda84d44",
+         ["png.lua"] = "146d0b7d10319a6c08b8add2b42eab8d",
+         png2lua = "f7a9cfcf5384f4bc0ac8da65961add17",
+         ["riff.lua"] = "d6558aa0a0c394b82b3a8d1286a8a145",
+         riff2lua = "f431d28afab9eea12cee6cb52f62e547",
+         ["util.lua"] = "1325e00029108186951fec822ae649ed"
+      },
+      ["examples.html"] = "ebc2ad30d54e58c00d620d3ae36fd96c",
+      ["index.html"] = "afd7710301878b1e60caca8fedef2b9b",
+      ["logo.png"] = "ebd6fed966af41db8aaebb92f949d7d0",
+      ["logo.ps"] = "3ac80d21a6cca5d78c661397471d69a2",
+      ["manual.html"] = "010e8f268e7881df65e2c21246883336"
+   },
+   lua = {
+      serial = {
+         ["util.lua"] = "8124a98b45e8069936700964ab7a345e"
+      },
+      ["serial.lua"] = "f8e5f30712f01ac47b44f2c3d96e2faa"
+   },
+   ["lunary-core-20181002-1.rockspec"] = "5d8c32c379de34b6835ca4dae132c6b2"
+}

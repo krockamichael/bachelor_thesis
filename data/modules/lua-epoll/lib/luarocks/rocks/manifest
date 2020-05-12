@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-epoll"] = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   epoll = {
+      "lua-epoll/1.0-1"
+   }
+}
+repository = {
+   ["lua-epoll"] = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               epoll = "epoll.so"
+            }
+         }
+      }
+   }
+}

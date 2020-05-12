@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   ["kong-consumer-route"] = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.consumer-route.api"] = {
+      "kong-consumer-route/1.0.1-1"
+   },
+   ["kong.plugins.consumer-route.daos"] = {
+      "kong-consumer-route/1.0.1-1"
+   },
+   ["kong.plugins.consumer-route.handler"] = {
+      "kong-consumer-route/1.0.1-1"
+   },
+   ["kong.plugins.consumer-route.migrations.postgres"] = {
+      "kong-consumer-route/1.0.1-1"
+   },
+   ["kong.plugins.consumer-route.schema"] = {
+      "kong-consumer-route/1.0.1-1"
+   }
+}
+repository = {
+   ["kong-consumer-route"] = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.consumer-route.api"] = "kong/plugins/consumer-route/api.lua",
+               ["kong.plugins.consumer-route.daos"] = "kong/plugins/consumer-route/daos.lua",
+               ["kong.plugins.consumer-route.handler"] = "kong/plugins/consumer-route/handler.lua",
+               ["kong.plugins.consumer-route.migrations.postgres"] = "kong/plugins/consumer-route/migrations/postgres.lua",
+               ["kong.plugins.consumer-route.schema"] = "kong/plugins/consumer-route/schema.lua"
+            }
+         }
+      }
+   }
+}

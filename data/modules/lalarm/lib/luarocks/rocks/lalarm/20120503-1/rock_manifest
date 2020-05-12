@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      README = "1a06b9269e7da789ddbe2d24a69065e6"
+   },
+   ["lalarm-20120503-1.rockspec"] = "caa8863c8bc9e8309b9b7b98033dcaec",
+   lib = {
+      ["alarm.so"] = "2b06fa07ddea8ad82e3f3ba83f98d4ea"
+   }
+}

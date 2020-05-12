@@ -1,0 +1,32 @@
+rock_manifest = {
+   doc = {
+      ["anybrowser.png"] = "ad3807d5ee4b30f26d9527ec9094a8cb",
+      ["htk-1.2.lua"] = "7dc3c75ef7f3d49ebd1ba95a3fc90b3b",
+      ["htk-2.0.1.lua"] = "37cc933a6b87d2ce818b89647f37f14a",
+      ["htk-2.0.3.lua"] = "8cae958915bdefc0d0806209bd8ee2f2",
+      ["htk-2.0.4.lua"] = "ce77e0573f05d861c8516be181f10be9",
+      ["htk-2.0.lua"] = "d6b766adcb471372ac93f51dca2d9ab8",
+      ["htk-3.0.1.lua"] = "6e9b79f3a88a6f343857bf4c1cdbedd9",
+      ["htk-3.0.2.lua"] = "f330302ce0ebbc5fd4e39b9681b56a11",
+      ["htk-3.0.3.lua"] = "cea03c12dfd72f83466a6ea6c7689001",
+      ["htk-3.0.lua"] = "ce77e0573f05d861c8516be181f10be9",
+      ["htk-3.1.1.lua"] = "2dd71480a01713d8d44dd00eca85b599",
+      ["htk-3.1.lua"] = "04dba03d8c527f4ee7e346d16a4cf64e",
+      ["htk-3.2.0.lua"] = "bab018cc7bd99da9bbe724dafbcdd234",
+      ["htk-3.3.0.lua"] = "3979b2ca7fac75bc42960494e62e8360",
+      ["htk-3.3.1.lua"] = "e24cbce1473061938c8c2209d0600901",
+      ["htk-3.3.2.lua"] = "1135a54b89d01a9c70477bd8c0fc2527",
+      ["htk.lua"] = "8abaa6f696b7051db33fd57dd331d348",
+      ["htmltoolkit.lua"] = "b99a44032b6852da909809c6d9df9d2a",
+      ["index.html"] = "5129037f00a7dea0f5dec766688dab66",
+      ["lua.png"] = "7d22808508d465314296771f9ad4216b",
+      ["vim.png"] = "3b9c21f9d48e4f5f0467fa2c32f611f9"
+   },
+   ["htk-3.4.0-2.rockspec"] = "96e450ca0afbe63f89c379b15defc123",
+   lua = {
+      ["htk.lua"] = "8abaa6f696b7051db33fd57dd331d348"
+   },
+   test = {
+      ["index.lua"] = "edd7b061e64dc07cbdcb09017aa7a146"
+   }
+}

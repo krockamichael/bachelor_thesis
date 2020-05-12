@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "0ce51de394c2d813c122ac144ba7a0ef"
+   },
+   lib = {
+      ["llthreads.so"] = "2ecdc474d5f5941e9a5d7d5120e06845"
+   },
+   ["lua-llthreads-1.2-1.rockspec"] = "6a0ddb7a049cc1c795d9b9ded03b2ab0"
+}

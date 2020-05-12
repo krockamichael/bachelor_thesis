@@ -1,0 +1,26 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "e80017ed353cd2b130e55ca0ba6bcfb8"
+   },
+   ["kong-plugin-upstream-basic-auth-0.2.1-1.rockspec"] = "598fbd4e814d43802fd0f5b772acf395",
+   lua = {
+      kong = {
+         plugins = {
+            ["upstream-basic-auth"] = {
+               ["access.lua"] = "c4295cc1fcbbf0c535d96bbf3b9752df",
+               ["api.lua"] = "70a7591d2acd4973c3a1dd95969ac449",
+               ["daos.lua"] = "48b8cac92803bff9a0d49e313d374366",
+               ["handler.lua"] = "5dd2da2fb5620f0ccf3236cc7199bcee",
+               migrations = {
+                  ["000_base_upstream_basic_auth.lua"] = "f308edefb7e40ec428fa351bb14661ee",
+                  ["001_14_to_15.lua"] = "3d44878e82d35a7b102130d961bee992",
+                  ["init.lua"] = "94dbb75b9f553e005e5f4216c083d31d"
+               },
+               ["schema.lua"] = "07aab19b1a2ae33152666e3a4c540f85",
+               ["upstreambasicauth_credentials.lua"] = "5a62a3854ab15c968c82f09a1d858fef"
+            }
+         }
+      }
+   }
+}

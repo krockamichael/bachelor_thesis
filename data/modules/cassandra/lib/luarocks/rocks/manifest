@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   cassandra = {
+      ["0.5-7"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cassandra = {
+      "cassandra/0.5-7"
+   },
+   ["cassandra.constants"] = {
+      "cassandra/0.5-7"
+   },
+   ["cassandra.decoding"] = {
+      "cassandra/0.5-7"
+   },
+   ["cassandra.encoding"] = {
+      "cassandra/0.5-7"
+   },
+   ["cassandra.protocol"] = {
+      "cassandra/0.5-7"
+   }
+}
+repository = {
+   cassandra = {
+      ["0.5-7"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cassandra = "cassandra.lua",
+               ["cassandra.constants"] = "cassandra/constants.lua",
+               ["cassandra.decoding"] = "cassandra/decoding.lua",
+               ["cassandra.encoding"] = "cassandra/encoding.lua",
+               ["cassandra.protocol"] = "cassandra/protocol.lua"
+            }
+         }
+      }
+   }
+}

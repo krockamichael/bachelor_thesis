@@ -1,0 +1,19 @@
+commands = {}
+dependencies = {
+   libsodium = {
+      ["0.1.1-1"] = {}
+   }
+}
+modules = {}
+repository = {
+   libsodium = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {}
+         }
+      }
+   }
+}

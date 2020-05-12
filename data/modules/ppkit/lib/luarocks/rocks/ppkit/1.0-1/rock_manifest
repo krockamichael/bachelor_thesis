@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "a54f4ace615f9207b998d0a2c83df9d7"
+   },
+   lua = {
+      ["ppkit.lua"] = "f76c66e3cdb4afa3691bff716beec158"
+   },
+   ["ppkit-1.0-1.rockspec"] = "a36a739832bd8cae2c49b39d494e45d8"
+}

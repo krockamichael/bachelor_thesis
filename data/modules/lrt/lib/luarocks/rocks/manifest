@@ -1,0 +1,25 @@
+commands = {
+   lrt = {
+      "lrt/1.5-0"
+   }
+}
+dependencies = {
+   lrt = {
+      ["1.5-0"] = {}
+   }
+}
+modules = {}
+repository = {
+   lrt = {
+      ["1.5-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               lrt = "lrt"
+            },
+            dependencies = {},
+            modules = {}
+         }
+      }
+   }
+}

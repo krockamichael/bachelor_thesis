@@ -1,0 +1,18 @@
+rock_manifest = {
+   ["amqp-1.1-1.rockspec"] = "763d449f96f9c6fc8752eb2f2d64952c",
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "7de701fc19119c063f6012abe0d34acf"
+   },
+   lua = {
+      amqp = {
+         ["bitnative.lua"] = "981c0db67dceca4cd521e74e23b9274f",
+         ["bitopers.lua"] = "25a9a0b13a5e5127de7acdb344c5b86a",
+         ["buffer.lua"] = "d9cf6d20b514f36439d2533c4a074f81",
+         ["consts.lua"] = "77a3cc51f285d2edca35c077a2d83713",
+         ["frame.lua"] = "ed8fa7ca59d95a4f643d84642a2f2d6d",
+         ["logger.lua"] = "d97864b31f8c64664dfc5ca77bd8ada2"
+      },
+      ["amqp.lua"] = "407e2c195d15c3c18bd5a8712fad4786"
+   }
+}

@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "437c5b8f354dafcecb29ce9380d93d6f"
+   },
+   ["hex-1.0.2-1.rockspec"] = "8d4fd74a8fba91b1b1a79d0ef217960c",
+   lib = {
+      ["hex.so"] = "03929d120e56a00f29f21c3f3216bfff"
+   }
+}

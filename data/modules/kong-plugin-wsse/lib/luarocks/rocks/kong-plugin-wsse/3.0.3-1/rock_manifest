@@ -1,0 +1,31 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "7ab0290dd5dc67b5a764d87328cad4d1",
+      ["README.md"] = "c1c992189c7fe61f979acc76af0c541b"
+   },
+   ["kong-plugin-wsse-3.0.3-1.rockspec"] = "b1d80ed649d938f3e2cef7e9b4b683b3",
+   lua = {
+      kong = {
+         plugins = {
+            wsse = {
+               ["access.lua"] = "344c99d41677ebf717d16e311c29743b",
+               ["api.lua"] = "7ad7f8f037337c2e14b6fcabe3c1c489",
+               ["cache_warmer.lua"] = "61e8b599294eed7169f1c417b2b7c5bd",
+               ["consumer_db.lua"] = "0fdfbdfa9e91a613a609a90a47350e60",
+               ["daos.lua"] = "aec0c33fffb87e3eeffed27a8202a121",
+               ["handler.lua"] = "864f9588436d250846f9c5b5127e048d",
+               ["init_worker.lua"] = "73315a4a69267a3d34eda4ae8c965e64",
+               ["key_db.lua"] = "8da12fa66e042aceff47f8574c4c4bf4",
+               migrations = {
+                  ["cassandra.lua"] = "fa6a48464b413468a0c2d98383bc293f",
+                  ["postgres.lua"] = "b7eaf2aad8f9b5d3b97af2c3f9961986"
+               },
+               ["plugin_config.lua"] = "611146e02fb16c40a7a6b848149ba338",
+               ["schema.lua"] = "80c2aff93524a4e20afee4bc15bc3e5b",
+               ["timeframe_validator.lua"] = "adb6eaf33de40e3e9503efd522216e50",
+               ["wsse_lib.lua"] = "7c9c85bb9ff1ecc5a66214c46c599e85"
+            }
+         }
+      }
+   }
+}

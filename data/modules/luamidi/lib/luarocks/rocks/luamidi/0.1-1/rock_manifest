@@ -1,0 +1,22 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "f818cec83208931de24ba9b20a446974",
+      ["README.md"] = "14de23bb47913b8faf66b8250f739d23"
+   },
+   lua = {
+      LuaMidi = {
+         ["Chunk.lua"] = "24d856d14b9135409403fc001570563d",
+         ["Constants.lua"] = "d292311266c48a57ce689e3d21e3471b",
+         ["MetaEvent.lua"] = "db960b94253cd2fcd2fe038c30cfed88",
+         ["NoteEvent.lua"] = "b9c452dc75d3b12279dba4e3be44ec2b",
+         ["NoteOffEvent.lua"] = "ab0deb5f384facd3f6ae9bdbf4dfa64d",
+         ["NoteOnEvent.lua"] = "d2d563c338c9b10e9caf11d6add74ebb",
+         ["ProgramChangeEvent.lua"] = "246735861d208ce297a3d360e944e0e4",
+         ["Track.lua"] = "49ea116b3912b0ab3192bc6716e14e1e",
+         ["Util.lua"] = "b5386468f63a48d6f6f8a8b2ebd8264a",
+         ["Writer.lua"] = "a0b6c9e86114f89b45b563ec47c81fa0"
+      },
+      ["LuaMidi.lua"] = "74be7beaecf65e50913d9dc22cb3c7af"
+   },
+   ["luamidi-0.1-1.rockspec"] = "e0dd4f566730f782f70473ccc1d11536"
+}

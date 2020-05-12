@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      COPYING = "60d4f26a2477d25d133fa8a749aae994",
+      README = "2a26f7a4ca4277d4b52be189d8a8d139"
+   },
+   lib = {
+      ["mtrace.so"] = "3344e38e45c8c1535e81d6ae2bdc6d1a"
+   },
+   ["lua-mtrace-0.1-1.rockspec"] = "f49facd4fc04c3c95d90ff74cd072244"
+}

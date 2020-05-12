@@ -1,0 +1,103 @@
+commands = {}
+dependencies = {
+   ansicolors = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lobject = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ppkit = {
+      ["1.0-1"] = {
+         {
+            constraints = {},
+            name = "lobject"
+         },
+         {
+            constraints = {},
+            name = "ansicolors"
+         }
+      }
+   }
+}
+modules = {
+   ansicolors = {
+      "ansicolors/1.0.2-3"
+   },
+   lobject = {
+      "lobject/1.0-1"
+   },
+   ppkit = {
+      "ppkit/1.0-1"
+   }
+}
+repository = {
+   ansicolors = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ansicolors = "ansicolors.lua"
+            }
+         }
+      }
+   },
+   lobject = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lobject = "lobject.lua"
+            }
+         }
+      }
+   },
+   ppkit = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ansicolors = "1.0.2-3",
+               lobject = "1.0-1"
+            },
+            modules = {
+               ppkit = "ppkit.lua"
+            }
+         }
+      }
+   }
+}

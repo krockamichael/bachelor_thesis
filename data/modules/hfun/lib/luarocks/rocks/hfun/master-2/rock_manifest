@@ -1,0 +1,34 @@
+rock_manifest = {
+   doc = {
+      Makefile = "6fdd4b0c5db6c613c7a08a6c3aa304ea",
+      _static = {
+         [".keep"] = "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      _templates = {
+         ["layout.html"] = "dbbb864252d7563012aba224cdf79b2d"
+      },
+      ["about.rst"] = "337430620c4980522cbdfe08f9d7b123",
+      ["basic.rst"] = "2c320e201ed640a5eb33acc712cf3c0e",
+      ["compositions.rst"] = "54ccd3ce7a1ad961ea81e7ac5a24aaf0",
+      ["conf.py"] = "e6da46d0ce6b3bacf0648a8586b52bbd",
+      ["filtering.rst"] = "4164ac5b2f9f5a263c03512ff5752740",
+      ["generators.rst"] = "912398566270b6dc1280bfdf87b28e64",
+      ["getting_started.rst"] = "bef8f9a573d924049fa2ea5d3af8efc1",
+      ["index.rst"] = "30809fc0e283f75e88fd91fa0c7373ac",
+      ["indexing.rst"] = "feed68e0906a71daf8d7d7481fb29753",
+      ["intro.rst"] = "847268446931be6034d48f22172fec2b",
+      ["logo.png"] = "ad4c4995bb1394f1eb914dce90d20c68",
+      ["logo.svg"] = "3798c8600f94b01f9a9e40486c7f79aa",
+      ["make.bat"] = "30a61c8f00d947f5a664028ff868e860",
+      ["operators.rst"] = "cd468b3fa676ba4336c63ebb320043d9",
+      ["reducing.rst"] = "c6dca4aaa68669bf5fdc66507f0dead8",
+      ["reference.rst"] = "7891c86078f074b8e6b7866fe425d7fd",
+      ["slicing.rst"] = "6629fc6f142eb3f49f66a3554dcab76d",
+      ["transformations.rst"] = "4c745e968a94036d9b963a8bf518d6fa",
+      ["under_the_hood.rst"] = "c83f8ebce960728f70a11164f53017fc"
+   },
+   ["hfun-master-2.rockspec"] = "80e71935606119f1e7bfa106743ba2cd",
+   lua = {
+      ["hfun.lua"] = "8ebeb12827399a338af5cc5b0416e3c8"
+   }
+}

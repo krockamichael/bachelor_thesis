@@ -1,0 +1,143 @@
+rock_manifest = {
+   bin = {
+      luacheck = "bf4b18b9159fcfc3d3d68699f1c5d3d1"
+   },
+   doc = {
+      _sources = {
+         ["cli.rst.txt"] = "3f90e7ac271706618d030269f17fd77d",
+         ["config.rst.txt"] = "07371dd3ff5b397a75da8392f750099a",
+         ["index.rst.txt"] = "ad22ff2a0aea6b2001d3fd50dd2fdb4f",
+         ["inline.rst.txt"] = "5f0819a58ffde98e137f14ed95437e36",
+         ["module.rst.txt"] = "31c7c1beeb9b0d8b105c871836eaa45b",
+         ["warnings.rst.txt"] = "190a36e590bd5ab9715e2d3534c0790f"
+      },
+      _static = {
+         ["ajax-loader.gif"] = "ae6667053ad118020b8e68ccf307b519",
+         ["basic.css"] = "81047bebed08d95d94692fa01bf9eae4",
+         ["comment-bright.png"] = "ca43c60728796aa9160b7027b36e01a6",
+         ["comment-close.png"] = "83e7b2332e16cd321db50e26111b9cc8",
+         ["comment.png"] = "7ed0c2b7fb278cc440c76768afe74662",
+         css = {
+            ["badge_only.css"] = "8a242c612c3c3f2448976f1e18ab121c",
+            ["theme.css"] = "0d13b595ecd6576e16e894270451b94c"
+         },
+         ["doctools.js"] = "bc09264fe523881b8961571702326aa2",
+         ["documentation_options.js"] = "3b6164a1329bf96da321ed9ea4141728",
+         ["down-pressed.png"] = "b7476a4885b1414399e86b671db699a2",
+         ["down.png"] = "24b6890f892eae0f6f71df68c0debbce",
+         ["file.png"] = "ba0c95766a77a6c598a7ca542f1db738",
+         fonts = {
+            Lato = {
+               ["lato-bold.eot"] = "a2fb219c999a8fa6b95ad7c24890072e",
+               ["lato-bold.ttf"] = "5b1b8b856d7a8cb1cb0bae6d0573f2e9",
+               ["lato-bold.woff"] = "d878b6c29b10beca227e9eef4246111b",
+               ["lato-bold.woff2"] = "cccb897485813c7c256901dbca54ecf2",
+               ["lato-bolditalic.eot"] = "7b48d663230528ecb6dbf730251bbe44",
+               ["lato-bolditalic.ttf"] = "71e8fd8ecaf5b352d6bee317985c2ee8",
+               ["lato-bolditalic.woff"] = "9c7e4e9eb485b4a121c760e61bc3707c",
+               ["lato-bolditalic.woff2"] = "0b6bb6725576b072c5d0b02ecdd1900d",
+               ["lato-italic.eot"] = "0acac3839ae2c89cf8b553c29943fceb",
+               ["lato-italic.ttf"] = "4ffc48d0549568bb624b9ef9c1cf2626",
+               ["lato-italic.woff"] = "f28f2d6482446544ef1ea1ccc6dd5892",
+               ["lato-italic.woff2"] = "4eb103b4d12be57cb1d040ed5e162e9d",
+               ["lato-regular.eot"] = "8ab18d934cfa1e51dc8273cd8585387e",
+               ["lato-regular.ttf"] = "6d4e78225df0cfd5fe1bf3e8547fefe4",
+               ["lato-regular.woff"] = "27bd77b9162d388cb8d4c4217c7c5e2a",
+               ["lato-regular.woff2"] = "bd03a2cc277bbbc338d464e679fe9942"
+            },
+            RobotoSlab = {
+               ["roboto-slab-v7-bold.eot"] = "81d9f943e859d1658a7da09dbdd21699",
+               ["roboto-slab-v7-bold.ttf"] = "d63ef23299458362f3edbf6cd8c2c510",
+               ["roboto-slab-v7-bold.woff"] = "bed5564a116b05148e3b3bea6fb1162a",
+               ["roboto-slab-v7-bold.woff2"] = "9984f4a9bda09be08e83f2506954adbe",
+               ["roboto-slab-v7-regular.eot"] = "29a21c4a0e370adcc0411fabe166d44e",
+               ["roboto-slab-v7-regular.ttf"] = "1ec06eed11bbcb1ee510b8f3522adea8",
+               ["roboto-slab-v7-regular.woff"] = "c1be9284088d487c5e3ff0a10a92e58c",
+               ["roboto-slab-v7-regular.woff2"] = "7abf5b8d04d26a2cafea937019bca958"
+            },
+            ["fontawesome-webfont.eot"] = "674f50d287a8c48dc19ba404d20fe713",
+            ["fontawesome-webfont.svg"] = "912ec66d7572ff821749319396470bde",
+            ["fontawesome-webfont.ttf"] = "b06871f281fee6b241d60582ae9369b9",
+            ["fontawesome-webfont.woff"] = "fee66e712a8a08eef5805a46892932ad",
+            ["fontawesome-webfont.woff2"] = "af7ae505a9eed503f8b8e6982036873e"
+         },
+         ["jquery-3.2.1.js"] = "09dd64a64ba840c31a812a3ca25eaeee",
+         ["jquery.js"] = "c9f5aeeca3ad37bf2aa006139b935f0a",
+         js = {
+            ["modernizr.min.js"] = "42306a279a9e831515347ae319181cd1",
+            ["theme.js"] = "8c37ce5f48e91a2af65435368ddb24c5"
+         },
+         ["minus.png"] = "36b1a4b05451c7acde7ced60b2f6bc21",
+         ["plus.png"] = "0d7849fd4d4148b7f78cab60a087633a",
+         ["pygments.css"] = "d333af43c416a54be77c5a73aca6437c",
+         ["searchtools.js"] = "bc51f427d88f5ebd67390f7613b580ee",
+         ["underscore-1.3.1.js"] = "4eb64db36175fefa3e36b9e57606512c",
+         ["underscore.js"] = "b538b8a3ed2c5519b19409eace25c38b",
+         ["up-pressed.png"] = "e4c170583ce14925793a311aa18476a8",
+         ["up.png"] = "996d2339e806acfcace088fcc2f66228",
+         ["websupport.js"] = "7ffbe1949a3378b10cd9b9583f7d7203"
+      },
+      ["cli.html"] = "5ed8cf895e50ff68ab4d77fcc4c60746",
+      ["config.html"] = "534ce8d4976d38e2c2844d0cd0e29c0f",
+      ["genindex.html"] = "1a126df01107d60c5c8bd6a7df1bc3bb",
+      ["index.html"] = "8caea5437fe3fba58b9659a6b70101ae",
+      ["inline.html"] = "228296d6658ed669da2ad1cefc2e5be6",
+      ["module.html"] = "fecf8d2d1d6526e8af31721e4410ca40",
+      ["objects.inv"] = "22955c6dd72bba3c205080b3fabacc96",
+      ["search.html"] = "78a9786f42d5cd508ba032b468064a38",
+      ["searchindex.js"] = "419072c2dd716dd6bd56d4335de3f02d",
+      ["warnings.html"] = "f85773e350a74545ab4efd8e7bba4673"
+   },
+   lua = {
+      luacheck = {
+         ["builtin_standards.lua"] = "3fa86a7285fc8068c6cdd701a34bca59",
+         ["cache.lua"] = "8a40a2f494883a3f52a1d86b3fd76e7e",
+         ["check.lua"] = "8ac94180aeb78b7fa34ff6921d62e89f",
+         ["check_state.lua"] = "24a84e7567d82be0b69bddf6b97f04ea",
+         ["config.lua"] = "6e0fbc77ff6fd930a67f377770c6857c",
+         ["core_utils.lua"] = "1588851537544c4e8852e9fc66320635",
+         ["decoder.lua"] = "c04495cdce0b8de9372b0a01576ac9ba",
+         ["expand_rockspec.lua"] = "9d7fa2487162c9c2252daa39addd50f1",
+         ["filter.lua"] = "7403418c1e876143bc1a8297b0ec76f0",
+         ["format.lua"] = "f9a809a5d9614aac17d38e5f22ebe1df",
+         ["fs.lua"] = "b8e9c8c86b51e41c803ac27682bc4409",
+         ["globbing.lua"] = "cc7a2b1907339004fcca4abc7d514fef",
+         ["init.lua"] = "119cacbd1c38d0b3fe19741f3c5df20f",
+         ["lexer.lua"] = "0376af52fe7fbf674abdc038ffff8a50",
+         ["love_standard.lua"] = "e968e1ce3908a9e9741a414ec8c5e465",
+         ["main.lua"] = "63d3b49809ad42d15b4cc596938f8ed5",
+         ["multithreading.lua"] = "71bc548f6ab6aca4b2c38beffac21b05",
+         ["ngx_standard.lua"] = "248788013e654dc2eb85323760cb430c",
+         ["options.lua"] = "62e14ce7cfad6c217d653f73a775cb4b",
+         ["parser.lua"] = "72802780dddfb65b24f9c7e6a9c78383",
+         ["profiler.lua"] = "a548ba692236952f6a433b09f561fc6f",
+         ["runner.lua"] = "03e817e2f11e56afafbc2a55834f95c0",
+         stages = {
+            ["detect_bad_whitespace.lua"] = "99dd7505786c4836089a18f8e3d08435",
+            ["detect_cyclomatic_complexity.lua"] = "a250f8773f70ef6df93bb6e090024558",
+            ["detect_empty_blocks.lua"] = "812448c4d59b70c2236a64fc23320442",
+            ["detect_empty_statements.lua"] = "39d9f7cfb8e4883eed28a440455485fe",
+            ["detect_globals.lua"] = "d8c3bcd6aafc524d8ad66bdaa32f24cb",
+            ["detect_reversed_fornum_loops.lua"] = "c0d4e8aa06e36aa49e54e7fd04233095",
+            ["detect_unbalanced_assignments.lua"] = "19feebe1c84e92e30c36f73c1cfce612",
+            ["detect_uninit_accesses.lua"] = "fa9046e6fbf15383c38b2472aedee729",
+            ["detect_unreachable_code.lua"] = "2a9993cbc15a316f00c7610ab869c28d",
+            ["detect_unused_fields.lua"] = "93787bf3710fbad57c1968c8bd51e8e5",
+            ["detect_unused_locals.lua"] = "b7389bab713df47e484c78fe14a7e4d1",
+            ["linearize.lua"] = "19dbfaea03be9c676dec7d3082923d1c",
+            ["name_functions.lua"] = "2ccc09760ed92a58a995b0ab7d82c7bc",
+            ["parse.lua"] = "cf11e1c37ee8713dfbcc3ff72245a52b",
+            ["parse_inline_options.lua"] = "e466f3414415078a590df4346a96dfb7",
+            ["resolve_locals.lua"] = "0b23f133cb8c4b0a72e7fa58bfa72bd8",
+            ["unwrap_parens.lua"] = "19a20fdc4658b64bfa5b2074b66c1e1e"
+         },
+         ["stages.lua"] = "429e396477fbf2b07e7af5361909ca53",
+         ["standards.lua"] = "a51eec6c6387cc3e4b0587f8d5142b4f",
+         ["unicode.lua"] = "29219d75d2cf955c6557225ab1a45bd8",
+         ["unicode_printability_boundaries.lua"] = "5e0230bac6bcb34c75ad0cca59afeb70",
+         ["utils.lua"] = "9a68c9f1c1cb970dc964d3f9bd1ee026",
+         ["version.lua"] = "32fddd92fc49f343f49cff01666b0c2a"
+      }
+   },
+   ["luacheck-0.23.0-1.rockspec"] = "164e9621268a2f432de1ff6334920f54"
+}

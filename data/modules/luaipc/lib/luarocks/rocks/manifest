@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   luaipc = {
+      ["c7b814e-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ipc = {
+      "luaipc/c7b814e-0"
+   }
+}
+repository = {
+   luaipc = {
+      ["c7b814e-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ipc = "ipc.so"
+            }
+         }
+      }
+   }
+}

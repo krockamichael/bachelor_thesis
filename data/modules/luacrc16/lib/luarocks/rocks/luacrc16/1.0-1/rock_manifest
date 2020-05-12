@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "c1510f340f32278d8fd67f95cdaf35ac",
+      ["README.md"] = "906cdb53414263b77a72baa253dafd42"
+   },
+   lib = {
+      ["crc16.so"] = "415194203f30932a03f42297beb7e1a2"
+   },
+   ["luacrc16-1.0-1.rockspec"] = "6156240ed1c93d428820645cadad5085"
+}

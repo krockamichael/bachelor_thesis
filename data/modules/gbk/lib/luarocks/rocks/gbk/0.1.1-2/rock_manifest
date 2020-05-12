@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "2964c28981da5c1b354b3ed9d2f82908"
+   },
+   ["gbk-0.1.1-2.rockspec"] = "86dc9763b91c8122c43ebdc16cfaaea5",
+   lib = {
+      ["gbk.so"] = "f7dcf9cdbd4153329e3c892f89bd212c",
+      ["pinyin.so"] = "d727058dc67ff9541a91305aa979daa6"
+   }
+}

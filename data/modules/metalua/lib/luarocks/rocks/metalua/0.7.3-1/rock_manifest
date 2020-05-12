@@ -1,0 +1,11 @@
+rock_manifest = {
+   bin = {
+      metalua = "5172eb859552462c0f33b13d4492d10b"
+   },
+   doc = {
+      ["README-compiler.md"] = "292523d759247d210d32fb2f6153e0f4",
+      ["README-parser.md"] = "b44e3673d96dd296f2c0e92a6c87ee18",
+      ["README.md"] = "20bfb490cddef9e101e44688791abcda"
+   },
+   ["metalua-0.7.3-1.rockspec"] = "bfae4203743b8c2fc0cff94c208cbb08"
+}

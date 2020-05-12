@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "818a1914937100fe15c345e88ef19245",
+      ["README.md"] = "fc52462ebbe56d302b6f2e9325db6c8c"
+   },
+   ["gnucrypt-0.0.1-0.rockspec"] = "d10f00e907d60dc9bdb083d887410200",
+   lib = {
+      ["gnucrypt.so"] = "aff8ce0460fb9fb1a2f7024dd9340514"
+   }
+}

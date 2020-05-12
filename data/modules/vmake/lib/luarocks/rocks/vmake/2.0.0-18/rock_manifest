@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      ["LICENSE.md"] = "9528b882c9178e2c3227a234ce7411d7",
+      ["README.md"] = "1be98fe9d95b5c53aca61690e5fba88d"
+   },
+   lua = {
+      ["vmake.lua"] = "f4854a0bdf6621957856e4dd172da058"
+   },
+   ["vmake-2.0.0-18.rockspec"] = "018274d03d0f59de8b2402c8ff1b0803"
+}

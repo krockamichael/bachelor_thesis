@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      README = "45975895eb81b4d512929c8141f38b19"
+   },
+   ["lbc-20180729-1.rockspec"] = "57f0b66e9008100ea731388b82a727bb",
+   lib = {
+      ["bc.so"] = "5e2917a05cffdab5cbf7458f0b9d9f87"
+   }
+}

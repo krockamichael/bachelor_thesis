@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "3b83ef96387f14655fc854ddc3c6bd57",
+      ["README.md"] = "e250c5cbcc6ff9a08288e6ed7fbea754"
+   },
+   lib = {
+      ["lz4.so"] = "90f9cb03f31773a82a81b7a8c99699a4"
+   },
+   ["lua-lz4-1.0-1.rockspec"] = "b0084425aee43c0d75a92d72016e6ea2"
+}

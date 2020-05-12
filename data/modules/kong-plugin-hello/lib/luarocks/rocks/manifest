@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-hello"] = {
+      ["0.1.1-2"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.hello.handler"] = {
+      "kong-plugin-hello/0.1.1-2"
+   },
+   ["kong.plugins.hello.schema"] = {
+      "kong-plugin-hello/0.1.1-2"
+   }
+}
+repository = {
+   ["kong-plugin-hello"] = {
+      ["0.1.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.hello.handler"] = "kong/plugins/hello/handler.lua",
+               ["kong.plugins.hello.schema"] = "kong/plugins/hello/schema.lua"
+            }
+         }
+      }
+   }
+}

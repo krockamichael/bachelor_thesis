@@ -1,0 +1,10 @@
+rock_manifest = {
+   doc = {
+      ["LICENSE.md"] = "0ee422e306c076c8dfe9804b2e0c3912",
+      ["README.md"] = "88d083be8cc864ee03fe56f616f25e47"
+   },
+   ["lgetopt-2.0.2-2.rockspec"] = "32982d66c114e0d9189df1670d9c312a",
+   lua = {
+      ["lgetopt.lua"] = "18ae16cb4d1855196b359a8c29f44f1a"
+   }
+}

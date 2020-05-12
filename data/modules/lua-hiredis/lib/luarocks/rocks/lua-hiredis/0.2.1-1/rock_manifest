@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "f3b96008f239cfcf20daee46cc6ef4e3"
+   },
+   lib = {
+      ["hiredis.so"] = "acad66d6b61ceb07b0cd4dc4bc17f506"
+   },
+   ["lua-hiredis-0.2.1-1.rockspec"] = "e13f1ab3dbe45936799ef34bd9a52e62"
+}

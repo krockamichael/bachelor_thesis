@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   cl = {
+      ["20100607-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cl = {
+      "cl/20100607-1"
+   }
+}
+repository = {
+   cl = {
+      ["20100607-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cl = "cl.so"
+            }
+         }
+      }
+   }
+}

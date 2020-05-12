@@ -1,0 +1,105 @@
+commands = {}
+dependencies = {
+   ["std._debug"] = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 5, string = "5.5"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["std.normalize"] = {
+      ["2.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "std._debug"
+         }
+      }
+   }
+}
+modules = {
+   ["std._debug"] = {
+      "std._debug/1.0.1-1"
+   },
+   ["std._debug.version"] = {
+      "std._debug/1.0.1-1"
+   },
+   ["std.normalize"] = {
+      "std.normalize/2.0.2-1"
+   },
+   ["std.normalize._base"] = {
+      "std.normalize/2.0.2-1"
+   },
+   ["std.normalize._strict"] = {
+      "std.normalize/2.0.2-1"
+   },
+   ["std.normalize._typecheck"] = {
+      "std.normalize/2.0.2-1"
+   },
+   ["std.normalize.version"] = {
+      "std.normalize/2.0.2-1"
+   }
+}
+repository = {
+   ["std._debug"] = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["std._debug"] = "std/_debug/init.lua",
+               ["std._debug.version"] = "std/_debug/version.lua"
+            }
+         }
+      }
+   },
+   ["std.normalize"] = {
+      ["2.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["std._debug"] = "1.0.1-1"
+            },
+            modules = {
+               ["std.normalize"] = "std/normalize/init.lua",
+               ["std.normalize._base"] = "std/normalize/_base.lua",
+               ["std.normalize._strict"] = "std/normalize/_strict.lua",
+               ["std.normalize._typecheck"] = "std/normalize/_typecheck.lua",
+               ["std.normalize.version"] = "std/normalize/version.lua"
+            }
+         }
+      }
+   }
+}

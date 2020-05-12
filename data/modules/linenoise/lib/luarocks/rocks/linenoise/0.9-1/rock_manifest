@@ -1,0 +1,11 @@
+rock_manifest = {
+   doc = {
+      COPYING = "1776efc6cc2994da53576b7d001ab04c",
+      ["README.md"] = "d81a10dc964ed0156d102447d22b2067",
+      ["readline-readme.md"] = "57f4e6aabd7bc46592bf00bbd49e7f5a"
+   },
+   lib = {
+      ["linenoise.so"] = "8b6552bd8d9b232b2d873c497eb5fa90"
+   },
+   ["linenoise-0.9-1.rockspec"] = "4a4ba6d62655f6c7cabf8f78aca27967"
+}

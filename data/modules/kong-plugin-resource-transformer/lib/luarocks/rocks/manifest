@@ -1,0 +1,65 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-resource-transformer"] = {
+      ["0.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.resource-transformer.access"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   },
+   ["kong.plugins.resource-transformer.api"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   },
+   ["kong.plugins.resource-transformer.daos"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   },
+   ["kong.plugins.resource-transformer.handler"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   },
+   ["kong.plugins.resource-transformer.hooks"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   },
+   ["kong.plugins.resource-transformer.migrations.cassandra"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   },
+   ["kong.plugins.resource-transformer.migrations.postgres"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   },
+   ["kong.plugins.resource-transformer.schema"] = {
+      "kong-plugin-resource-transformer/0.0.6-1"
+   }
+}
+repository = {
+   ["kong-plugin-resource-transformer"] = {
+      ["0.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.resource-transformer.access"] = "kong/plugins/resource-transformer/access.lua",
+               ["kong.plugins.resource-transformer.api"] = "kong/plugins/resource-transformer/api.lua",
+               ["kong.plugins.resource-transformer.daos"] = "kong/plugins/resource-transformer/daos.lua",
+               ["kong.plugins.resource-transformer.handler"] = "kong/plugins/resource-transformer/handler.lua",
+               ["kong.plugins.resource-transformer.hooks"] = "kong/plugins/resource-transformer/hooks.lua",
+               ["kong.plugins.resource-transformer.migrations.cassandra"] = "kong/plugins/resource-transformer/migrations/cassandra.lua",
+               ["kong.plugins.resource-transformer.migrations.postgres"] = "kong/plugins/resource-transformer/migrations/postgres.lua",
+               ["kong.plugins.resource-transformer.schema"] = "kong/plugins/resource-transformer/schema.lua"
+            }
+         }
+      }
+   }
+}

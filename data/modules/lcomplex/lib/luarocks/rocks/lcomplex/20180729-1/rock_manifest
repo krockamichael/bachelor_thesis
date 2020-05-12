@@ -1,0 +1,9 @@
+rock_manifest = {
+   doc = {
+      README = "c56fd698fa36a375da24d167c0cf1161"
+   },
+   ["lcomplex-20180729-1.rockspec"] = "39b961c4bd0059735ed90b4a69581d4e",
+   lib = {
+      ["complex.so"] = "7291242ed7a9e41ced6814fa3e955d74"
+   }
+}

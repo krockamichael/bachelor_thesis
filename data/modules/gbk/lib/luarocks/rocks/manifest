@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   gbk = {
+      ["0.1.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   gbk = {
+      "gbk/0.1.1-2"
+   },
+   pinyin = {
+      "gbk/0.1.1-2"
+   }
+}
+repository = {
+   gbk = {
+      ["0.1.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               gbk = "gbk.so",
+               pinyin = "pinyin.so"
+            }
+         }
+      }
+   }
+}

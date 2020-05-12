@@ -1,0 +1,25 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "37fc7d6e905b67c7d017a021285a90f0"
+   },
+   lua = {
+      resty = {
+         acme = {
+            ["autossl.lua"] = "769b70fcc01c7ae3f7a08f300cb22bca",
+            challenge = {
+               ["http-01.lua"] = "27ec191b1dcb4699e90c1303fc1a87bc"
+            },
+            ["client.lua"] = "efdac413ff84f2ce2d6e3235fd56c9df",
+            ["openssl.lua"] = "9b912c62ad4f8cd23c95111d53817f4f",
+            storage = {
+               ["file.lua"] = "07256a45c7ac025de63305da6e1109de",
+               ["redis.lua"] = "9008c38a3dd0b31a0a6b865fe948dbce",
+               ["shm.lua"] = "47e6584935da584a0d4bf7c4f7ffbe7a",
+               ["vault.lua"] = "362f12f72ae113259527aa92827c89b0"
+            },
+            ["util.lua"] = "cd0c9b2cd0f507e398df37162e13d866"
+         }
+      }
+   },
+   ["lua-resty-acme-0.4.3-1.rockspec"] = "e2540799bea61b7fcbd007cb579a19c2"
+}

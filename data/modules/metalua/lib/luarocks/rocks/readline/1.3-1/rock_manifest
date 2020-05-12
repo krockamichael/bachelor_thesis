@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      ["readline.html"] = "7c5d60b37b428f4503a19ea999314f37"
+   },
+   lib = {
+      ["C-readline.so"] = "427a6a405942b88ff6c36347da40f8e8"
+   },
+   lua = {
+      ["Readline.lua"] = "f017f08d03116da8d1f7e01ee18d6147"
+   },
+   ["readline-1.3-1.rockspec"] = "13ac186259e45f36b193cba0d5c52d72",
+   test = {
+      ["test_rl.lua"] = "85ac30bbd62676c23591c48ba0c0a120"
+   }
+}

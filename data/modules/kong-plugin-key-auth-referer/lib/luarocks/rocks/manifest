@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-key-auth-referer"] = {
+      ["2.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.key-auth-referer.api"] = {
+      "kong-plugin-key-auth-referer/2.0-1"
+   },
+   ["kong.plugins.key-auth-referer.daos"] = {
+      "kong-plugin-key-auth-referer/2.0-1"
+   },
+   ["kong.plugins.key-auth-referer.handler"] = {
+      "kong-plugin-key-auth-referer/2.0-1"
+   },
+   ["kong.plugins.key-auth-referer.migrations.cassandra"] = {
+      "kong-plugin-key-auth-referer/2.0-1"
+   },
+   ["kong.plugins.key-auth-referer.migrations.postgres"] = {
+      "kong-plugin-key-auth-referer/2.0-1"
+   },
+   ["kong.plugins.key-auth-referer.schema"] = {
+      "kong-plugin-key-auth-referer/2.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-key-auth-referer"] = {
+      ["2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.key-auth-referer.api"] = "kong/plugins/key-auth-referer/api.lua",
+               ["kong.plugins.key-auth-referer.daos"] = "kong/plugins/key-auth-referer/daos.lua",
+               ["kong.plugins.key-auth-referer.handler"] = "kong/plugins/key-auth-referer/handler.lua",
+               ["kong.plugins.key-auth-referer.migrations.cassandra"] = "kong/plugins/key-auth-referer/migrations/cassandra.lua",
+               ["kong.plugins.key-auth-referer.migrations.postgres"] = "kong/plugins/key-auth-referer/migrations/postgres.lua",
+               ["kong.plugins.key-auth-referer.schema"] = "kong/plugins/key-auth-referer/schema.lua"
+            }
+         }
+      }
+   }
+}

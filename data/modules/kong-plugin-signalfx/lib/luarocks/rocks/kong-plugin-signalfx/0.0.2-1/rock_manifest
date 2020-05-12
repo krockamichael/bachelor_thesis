@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "8c20cc523e8b912496b9678b61c9db48",
+      ["README.md"] = "81dc05328dea88f7e2f310b6536db75b"
+   },
+   ["kong-plugin-signalfx-0.0.2-1.rockspec"] = "26a139b28b844b49e8e2839668a796fc",
+   lua = {
+      kong = {
+         plugins = {
+            signalfx = {
+               ["api.lua"] = "b742bc5afce2919519f4fb2f6ed121bd",
+               ["handler.lua"] = "b2eaa46ff63098f93b52fb7e5194358c",
+               ["schema.lua"] = "558069f08050a1e3f0f996575e66aedc"
+            }
+         }
+      }
+   }
+}

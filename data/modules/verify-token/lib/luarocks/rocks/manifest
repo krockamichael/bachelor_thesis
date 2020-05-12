@@ -1,0 +1,101 @@
+commands = {}
+dependencies = {
+   ["lua-resty-jwt"] = {
+      ["0.1.11-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["verify-token"] = {
+      ["1.0.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 1, 11, revision = 0, string = "0.1.11-0"
+                  }
+               }
+            },
+            name = "lua-resty-jwt"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.verify-token.api"] = {
+      "verify-token/1.0.1-2"
+   },
+   ["kong.plugins.verify-token.daos"] = {
+      "verify-token/1.0.1-2"
+   },
+   ["kong.plugins.verify-token.handler"] = {
+      "verify-token/1.0.1-2"
+   },
+   ["kong.plugins.verify-token.migrations"] = {
+      "verify-token/1.0.1-2"
+   },
+   ["kong.plugins.verify-token.migrations.000_invalidated_tokens"] = {
+      "verify-token/1.0.1-2"
+   },
+   ["kong.plugins.verify-token.schema"] = {
+      "verify-token/1.0.1-2"
+   },
+   ["resty.evp"] = {
+      "lua-resty-jwt/0.1.11-0"
+   },
+   ["resty.hmac"] = {
+      "lua-resty-jwt/0.1.11-0"
+   },
+   ["resty.jwt"] = {
+      "lua-resty-jwt/0.1.11-0"
+   },
+   ["resty.jwt-validators"] = {
+      "lua-resty-jwt/0.1.11-0"
+   }
+}
+repository = {
+   ["lua-resty-jwt"] = {
+      ["0.1.11-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.evp"] = "resty/evp.lua",
+               ["resty.hmac"] = "resty/hmac.lua",
+               ["resty.jwt"] = "resty/jwt.lua",
+               ["resty.jwt-validators"] = "resty/jwt-validators.lua"
+            }
+         }
+      }
+   },
+   ["verify-token"] = {
+      ["1.0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-jwt"] = "0.1.11-0"
+            },
+            modules = {
+               ["kong.plugins.verify-token.api"] = "kong/plugins/verify-token/api.lua",
+               ["kong.plugins.verify-token.daos"] = "kong/plugins/verify-token/daos.lua",
+               ["kong.plugins.verify-token.handler"] = "kong/plugins/verify-token/handler.lua",
+               ["kong.plugins.verify-token.migrations"] = "kong/plugins/verify-token/migrations/init.lua",
+               ["kong.plugins.verify-token.migrations.000_invalidated_tokens"] = "kong/plugins/verify-token/migrations/000_invalidated_tokens.lua",
+               ["kong.plugins.verify-token.schema"] = "kong/plugins/verify-token/schema.lua"
+            }
+         }
+      }
+   }
+}

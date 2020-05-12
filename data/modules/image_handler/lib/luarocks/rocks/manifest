@@ -1,0 +1,156 @@
+commands = {}
+dependencies = {
+   image_handler = {
+      ["0.1-4"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "printable_chars"
+         },
+         {
+            constraints = {},
+            name = "magick"
+         }
+      }
+   },
+   magick = {
+      ["1.5.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   printable_chars = {
+      ["0.1-5"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   image_handler = {
+      "image_handler/0.1-4"
+   },
+   magick = {
+      "magick/1.5.0-1"
+   },
+   ["magick.base_image"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.enum"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.gmwand"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.gmwand.data"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.gmwand.image"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.gmwand.lib"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.thumb"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.version"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.wand"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.wand.data"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.wand.image"] = {
+      "magick/1.5.0-1"
+   },
+   ["magick.wand.lib"] = {
+      "magick/1.5.0-1"
+   },
+   printable_chars = {
+      "printable_chars/0.1-5"
+   }
+}
+repository = {
+   image_handler = {
+      ["0.1-4"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               magick = "1.5.0-1",
+               printable_chars = "0.1-5"
+            },
+            modules = {
+               image_handler = "image_handler.lua"
+            }
+         }
+      }
+   },
+   magick = {
+      ["1.5.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               magick = "magick/init.lua",
+               ["magick.base_image"] = "magick/base_image.lua",
+               ["magick.enum"] = "magick/enum.lua",
+               ["magick.gmwand"] = "magick/gmwand.lua",
+               ["magick.gmwand.data"] = "magick/gmwand/data.lua",
+               ["magick.gmwand.image"] = "magick/gmwand/image.lua",
+               ["magick.gmwand.lib"] = "magick/gmwand/lib.lua",
+               ["magick.thumb"] = "magick/thumb.lua",
+               ["magick.version"] = "magick/version.lua",
+               ["magick.wand"] = "magick/wand.lua",
+               ["magick.wand.data"] = "magick/wand/data.lua",
+               ["magick.wand.image"] = "magick/wand/image.lua",
+               ["magick.wand.lib"] = "magick/wand/lib.lua"
+            }
+         }
+      }
+   },
+   printable_chars = {
+      ["0.1-5"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               printable_chars = "printable_chars.lua"
+            }
+         }
+      }
+   }
+}
