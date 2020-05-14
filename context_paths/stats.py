@@ -4,6 +4,7 @@ import chardet
 import ast
 import numpy as np
 from context_paths.module_handler import ModuleHandler
+import matplotlib.pyplot as plt
 from console_progressbar import ProgressBar
 
 # update data_path to point to folder where all json files are stored IF a different dataset is selected
@@ -77,9 +78,25 @@ for file in files:
     pb.print_progress_bar(progress)
 
 np_nodes = np.asarray(nodes)
-# print(np.sort(np_nodes))
 np_path_lengths = np.asanyarray(path_lengths)
 np_context_paths = np.asarray(context_paths)
+
+fig = plt.figure(figsize=(9, 3))
+
+ax = plt.subplot(1, 3, 1)
+ax.boxplot(np_nodes)
+ax.set_title('Number of nodes')
+
+ax = plt.subplot(1, 3, 2)
+ax.boxplot(np_path_lengths)
+ax.set_title('Path lengths')
+
+ax = plt.subplot(1, 3, 3)
+ax.boxplot(np_context_paths)
+ax.set_yscale('log')
+ax.set_title('Number of context paths')
+
+plt.show()
 
 print('\nDownloaded repositories: {}'.format(len(os.listdir(modules_path))))
 print('Successfully processed repositories: {}'.format(len(os.listdir(data_path))))

@@ -63,7 +63,7 @@ with open(read_me_filename, 'w+') as f:
 
 # ----------------------------------------------------------------------------------------------------------------------
 # load data and split into train, validate and test (70, 20, 10)
-names, context_paths = loadFile('data/dataset.csv')
+names, context_paths = loadFile()
 train, validate, test = np.split(context_paths, [int(.7*len(context_paths)), int(.9*len(context_paths))])
 print('Loaded data.')
 

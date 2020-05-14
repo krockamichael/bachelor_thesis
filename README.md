@@ -13,6 +13,13 @@ Clustering neural network for Lua source code modules<br/>
 │&emsp;&ensp; ├── data_json<br/>
 │&emsp;&ensp; ├── modules<br/>
 │&emsp;&ensp; └── dataset.csv<br/>
+├── luadb_dependent<br/>
+│&emsp;&ensp; ├── all_packages.txt<br/>
+│&emsp;&ensp; ├── extract_dir.lua<br/>
+│&emsp;&ensp; ├── install_lua_packages.sh<br/>
+│&emsp;&ensp; ├── README.md<br/>
+│&emsp;&ensp; ├── run_in_single_package.sh<br/>
+│&emsp;&ensp; └── start_luadb_in_all_packages.sh<br/>
 ├── master_autoencoder<br/>
 │&emsp;&ensp; ├── autoencoder_plot.png<br/>
 │&emsp;&ensp; ├── master_autoencoder.h5<br/>
@@ -35,6 +42,7 @@ Clustering neural network for Lua source code modules<br/>
     - `data_json` subdirectory containing preprocessed Lua source code modules from `data\modules` into `json` files.
     - `modules` subdirectory containing original Lua modules.
     - `dataset.csv` is a preprocessed dataset from files in `data\data_json`
+- `luadb_dependet` directory contains scripts which download all lua modules (pre-downloaded in `data\modules`) and subsequently parses them into `json` files (pre-parsed in `data\data_json`)
 - `master_autoencoder` directory contains pre-trained master autoencoder and its graphs.
 - `testing` directory contains subdirectories of various tests that were conducted during implementation phase.
     - importantly contains `notes.md` which briefly describe each test.
@@ -44,7 +52,7 @@ Clustering neural network for Lua source code modules<br/>
 - `master.py` is the script for training a complete clustering model along with the autoencoder from scratch.
     - can be configured to load a pretrained master autoencoder, set `train_autoencoder` to `False`.
     - change the directory number where you wish to save a new test.
-        - not chaning directory number will overwrite old data in said directory.
+        - not changing directory number will overwrite old data in said directory.
 - `pipeline.py` script loads a single `json` file from `jsonpath` variable, preprocesses it, loads a model which then predicts the final label.
 - `utils.py` contains various complementary functions such as `loadFile` and others, along with visualisation functions.
 - `visualisation.py` is a standalone script which generates PCA, LDA, t-SNE graphs and a pairplot showcasing label correlations

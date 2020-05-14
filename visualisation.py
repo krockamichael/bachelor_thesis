@@ -13,8 +13,8 @@ from sklearn.manifold import TSNE
 # FIXME
 # update the file_number so that it points to an existing test subdirectory
 # and the n_clusters so that it matches the number of labels in the clustering model
-file_number = 43
-n_clusters = 200
+file_number = 41
+n_clusters = 10
 destination_folder = 'testing/test_{}/'.format(file_number)
 
 # ------------------------------------------------------------------------------ load data
