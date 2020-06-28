@@ -26,11 +26,11 @@ units_1 = 128  # dictates the output dimensionality of the first LSMT layer
 units_2 = 64   # dictates the output dimensionality of the second LSMT layer
 epochs = 1    # number of epochs for which to train autoencoder
 batch_size_auto = 128
-n_clusters = 10  # number of labels the data will be categorized into
+n_clusters = 20  # number of labels the data will be categorized into
 batch_size_clust = 256
 maxiter = 8000  # maximum iterations of the clustering model
 tol = 0.001  # the tolerance threshold, if this percent of data samples (or less) change label upon update interval, stop
-train_autoencoder = True  # if set to False, master autoencoder is loaded
+train_autoencoder = False  # if set to False, master autoencoder is loaded
 
 
 # ----------------------------------------------------------------------------------------------------------------------
