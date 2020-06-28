@@ -1,4 +1,4 @@
 
 [submodule "data"]
-	path = bachelor_thesis_data
+	path = data
 	url = https://github.com/krockamichael/bachelor_thesis_data
