@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      ["README.md"] = "bce44830e24a2a5036732d1cf758fb27"
-   },
-   lib = {
-      ["inih.so"] = "2b5bd57a0ec128f5fb43cd2223904e6c"
-   },
-   ["lua-inih-0.1-1.rockspec"] = "445d1a6df8b3145b0f972d7614bd7735"
-}

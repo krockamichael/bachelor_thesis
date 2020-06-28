@@ -1,7 +1,0 @@
-Help [[
-
-math.deg (x)
-------------
-
-  Returns the angle `x` (given in radians) in degrees.
-]]

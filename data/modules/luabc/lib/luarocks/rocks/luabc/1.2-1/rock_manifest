@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      README = "e57cd38d473fad7fd01418713037d883"
-   },
-   lib = {
-      ["bc.so"] = "5e2917a05cffdab5cbf7458f0b9d9f87"
-   },
-   ["luabc-1.2-1.rockspec"] = "b203c5a015cac2ae68bb9fc6faebb024"
-}

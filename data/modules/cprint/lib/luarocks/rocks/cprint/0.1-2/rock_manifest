@@ -1,9 +1,0 @@
-rock_manifest = {
-   ["cprint-0.1-2.rockspec"] = "85331eb358c7dfb804e5b56bcb63e896",
-   doc = {
-      ["README.md"] = "73a87e7e91f09b24b608e370767ce3c7"
-   },
-   lib = {
-      ["cprint.so"] = "70b535f15b800c9b9d2ba1300ad22ad0"
-   }
-}

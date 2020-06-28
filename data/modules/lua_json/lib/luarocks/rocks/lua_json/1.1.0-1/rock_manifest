@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      README = "6ddec02c6c735658dfe867f1c8cdd487"
-   },
-   lib = {
-      ["json.so"] = "ed3608b4729420077976c57774bbd969"
-   },
-   ["lua_json-1.1.0-1.rockspec"] = "f4687940623aa8fc1761d913a0189ef7"
-}

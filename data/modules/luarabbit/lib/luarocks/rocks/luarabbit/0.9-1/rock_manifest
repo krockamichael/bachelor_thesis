@@ -1,9 +1,0 @@
-rock_manifest = {
-   lib = {
-      ["luarabbit.so"] = "5bca72d464a36a075f4a14107fedb932"
-   },
-   ["luarabbit-0.9-1.rockspec"] = "76bd2c4b0af75d00c78b97340a38bea5",
-   test = {
-      ["test_luarabbit.lua"] = "0876cb96920d619b5913c1172a0e385e"
-   }
-}

@@ -1,7 +1,0 @@
-rock_manifest = {
-   doc = {
-      LICENSE = "47203c753972e855179dfffe15188bee",
-      ["README.markdown"] = "340431f794f8c6b02702d4e5ea7a03ad"
-   },
-   ["libsodium-0.1.1-1.rockspec"] = "cf9ccfa018b16cc1fccbdd641e34ea96"
-}

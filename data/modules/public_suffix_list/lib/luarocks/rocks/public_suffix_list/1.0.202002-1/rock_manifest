@@ -1,6 +1,0 @@
-rock_manifest = {
-   lua = {
-      ["public_suffix_list.lua"] = "5e2dbf6eed4ce9d5213c5517f37f6f85"
-   },
-   ["public_suffix_list-1.0.202002-1.rockspec"] = "d864854d8929223006ac957fb94b53a9"
-}

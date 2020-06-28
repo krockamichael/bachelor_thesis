@@ -1,9 +1,0 @@
--- Test used by test/subtest/loadfile.t
-
-require 'Test.More'
-
-pass"First"
-pass"Second"
-pass"Third"
-
-done_testing(3)

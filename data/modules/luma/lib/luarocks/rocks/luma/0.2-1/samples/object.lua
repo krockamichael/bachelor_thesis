@@ -1,3 +1,0 @@
-module("object", package.seeall)
-
-

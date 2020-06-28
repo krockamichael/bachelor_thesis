@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      README = "09871785be32d32f6910071009c7bd99"
-   },
-   ["lascii85-20120927-1.rockspec"] = "ab88e1f18a4b75986c82ea42853c7ca3",
-   lib = {
-      ["ascii85.so"] = "ac72bacc0aece3318cfc71e095364e16"
-   }
-}

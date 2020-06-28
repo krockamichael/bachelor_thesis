@@ -1,2 +1,0 @@
-# Luarocks
-    luarocks install luastream

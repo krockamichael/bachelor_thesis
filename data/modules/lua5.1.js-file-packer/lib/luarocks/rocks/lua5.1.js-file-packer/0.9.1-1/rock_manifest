@@ -1,9 +1,0 @@
-rock_manifest = {
-   bin = {
-      ["lua5.1.js-file-packer"] = "ae56a0d544ee7d654487b6fce346536c"
-   },
-   doc = {
-      ["README.md"] = "4f72e3ffd4034d7a267d3a7771d242e5"
-   },
-   ["lua5.1.js-file-packer-0.9.1-1.rockspec"] = "f135d3bad04ad76d9cbb13ec2cc08783"
-}

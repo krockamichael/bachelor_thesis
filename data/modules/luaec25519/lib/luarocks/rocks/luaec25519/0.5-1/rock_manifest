@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      ["README.md"] = "ac23450a6cae20be1bae615bd9acca03"
-   },
-   lib = {
-      ["luaec25519.so"] = "391cec02533ed12d4c327a03104aff54"
-   },
-   ["luaec25519-0.5-1.rockspec"] = "aa027fccc26bef5db20c16710045dc51"
-}

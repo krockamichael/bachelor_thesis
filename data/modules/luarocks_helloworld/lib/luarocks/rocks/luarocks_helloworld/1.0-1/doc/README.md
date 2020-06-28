@@ -1,1 +1,0 @@
-# luarocks_helloworld

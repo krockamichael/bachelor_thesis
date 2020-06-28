@@ -1,5 +1,0 @@
-#!/usr/bin/env lua
-
-lmc = require 'mud.mud-cli-rulebuilder'
-
-lmc.main(arg)

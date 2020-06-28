@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      ["README.md"] = "5d087ed43030ce3b71f320c067bc87bf"
-   },
-   ["geo-1.1.0-1.rockspec"] = "3539d88dbf5fb455f57eb923c985cab1",
-   lib = {
-      ["geo.so"] = "b50df2e3809462c9cfc84035b4f80362"
-   }
-}

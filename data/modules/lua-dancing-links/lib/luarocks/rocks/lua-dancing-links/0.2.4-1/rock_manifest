@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      ["README.md"] = "eea199da622356c5a5d819ffb4983e87"
-   },
-   lua = {
-      ["dlx.lua"] = "c4a3cedbc891d449e0c88c9ddd7f1d34"
-   },
-   ["lua-dancing-links-0.2.4-1.rockspec"] = "361c88c632e72c009f3b9c4d4d36967b"
-}

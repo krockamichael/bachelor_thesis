@@ -1,6 +1,0 @@
-rock_manifest = {
-   ["ipipx-beta-1.rockspec"] = "bf0ad79ae20316314ff994d336bb0a0f",
-   lib = {
-      ["ipipx.so"] = "22a39ff225ca772125cfdfe4a4f7d9b0"
-   }
-}

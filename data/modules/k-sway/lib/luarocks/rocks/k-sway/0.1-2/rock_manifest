@@ -1,6 +1,0 @@
-rock_manifest = {
-   ["k-sway-0.1-2.rockspec"] = "3ed58fa8dc0a04e0d4993c8799d18358",
-   lua = {
-      ["sway.lua"] = "9231dbb07d55c9b4d8a4e26b6d7b05c5"
-   }
-}

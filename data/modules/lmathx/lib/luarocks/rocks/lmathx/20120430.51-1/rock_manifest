@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      README = "7ddc930ca6ee244e79cc6c43c95340ed"
-   },
-   lib = {
-      ["mathx.so"] = "79d531e010bd96f6f7beb8e083cdfff3"
-   },
-   ["lmathx-20120430.51-1.rockspec"] = "0fdf4338067a8742bfbf7baefd466940"
-}

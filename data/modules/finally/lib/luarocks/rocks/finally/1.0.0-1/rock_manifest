@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      ["README.md"] = "83a7e55dc71b0cd212cae18f0968e953"
-   },
-   ["finally-1.0.0-1.rockspec"] = "7b2bc59314a9862db05791f837b8339b",
-   lib = {
-      ["finally.so"] = "4f38bcbc4d6d47900898797e991203b8"
-   }
-}

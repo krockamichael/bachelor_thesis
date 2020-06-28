@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      README = "16578ed2d111a5b856cdb9b38fd24b76"
-   },
-   lib = {
-      ["int64.so"] = "cd8d547163c898cc0f9f16a34c4f996e"
-   },
-   ["lint64-20180730-1.rockspec"] = "b46d0a3093758b0129071f4e6cf993fe"
-}

@@ -1,6 +1,0 @@
-rock_manifest = {
-   ["gerar_cpf_cnpj.lua-0.1.0-1.rockspec"] = "a2525921aed25ef386d9094c227c1e63",
-   lua = {
-      ["gerar_cpf_cnpj.lua"] = "aecf35a6bfc4f56a4378257c978c127e"
-   }
-}

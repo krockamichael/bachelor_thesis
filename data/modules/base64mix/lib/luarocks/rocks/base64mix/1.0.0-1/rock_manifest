@@ -1,9 +1,0 @@
-rock_manifest = {
-   ["base64mix-1.0.0-1.rockspec"] = "9854bd0e5025403a3abb334dd6dbe800",
-   doc = {
-      ["README.md"] = "ee9c060bb5ce87b3fccfa8c910eb5061"
-   },
-   lib = {
-      ["base64mix.so"] = "401cf48e7f1e5876f943162d264ceee1"
-   }
-}

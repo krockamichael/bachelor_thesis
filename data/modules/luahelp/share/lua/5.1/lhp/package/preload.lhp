@@ -1,7 +1,0 @@
-Help [[
-
-package.preload
----------------
-
-  A table to store loaders for specific modules.
-]]

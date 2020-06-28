@@ -1,6 +1,0 @@
-rock_manifest = {
-   bin = {
-      mooni = "f4eb9a916bae0f211b42b2334b537b31"
-   },
-   ["mooni-0.5-1.rockspec"] = "cec68fdca9eb65247592c1888a66a538"
-}

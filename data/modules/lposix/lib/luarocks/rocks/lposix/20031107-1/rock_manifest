@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      README = "92d7ee73e4109449198d383713455a28"
-   },
-   lib = {
-      ["posix.so"] = "582a2f456a9554497d7a702667e30eae"
-   },
-   ["lposix-20031107-1.rockspec"] = "f1c5817b715bd8507e98aadaf6bf3977"
-}

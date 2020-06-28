@@ -1,7 +1,0 @@
-Help [[
-
-math.ceil (x)
--------------
-
-  Returns the smallest integer larger than or equal to `x`.
-]]

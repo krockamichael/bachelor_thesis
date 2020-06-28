@@ -1,7 +1,0 @@
-Help [[
-
-math.floor (x)
---------------
-
-  Returns the largest integer smaller than or equal to `x`.
-]]

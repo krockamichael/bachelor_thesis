@@ -1,9 +1,0 @@
-rock_manifest = {
-   doc = {
-      README = "e0de96305534a783291ada104baf8530"
-   },
-   lua = {
-      ["DBI.lua"] = "e95a2efa56a2edae86b981d9afc3f9e8"
-   },
-   ["luadbi-0.5-1.rockspec"] = "3f427224be78dead31c69a7e1fcb2844"
-}
